@@ -1,0 +1,10 @@
+{
+    "title": "Go语言简明手册",
+    "plugins": ["atoc"],
+    "pluginsConfig": {
+        "atoc": {
+            "addClass": true,
+            "className": "atoc"
+        }
+    }
+}
