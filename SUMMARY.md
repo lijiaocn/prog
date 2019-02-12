@@ -1,6 +1,6 @@
 # 目录
 
-* [关于这本书]( ./README.md )
+* [实用编程速查手册]( ./README.md )
 * [C语言速查手册]( ./chapter-c/README.md )
   * [字符串处理]( ./chapter-c/strings.md )
   * [动态链接库]( ./chapter-c/dynamiclib.md )
