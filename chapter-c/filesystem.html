@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>C语言速查手册 · Go语言简明手册</title>
+        <title>文件系统 · Go语言简明手册</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="strings.html" />
+    <link rel="next" href="sysconfig.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="socket.html" />
     
 
     <!--Google ads -->
@@ -159,7 +159,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="./">
             
                 <a href="./">
             
@@ -290,7 +290,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.10" data-path="filesystem.html">
+        <li class="chapter active" data-level="1.2.10" data-path="filesystem.html">
             
                 <a href="filesystem.html">
             
@@ -380,7 +380,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >C语言速查手册</a>
+        <a href=".." >文件系统</a>
     </h1>
 </div>
 
@@ -408,8 +408,55 @@
 </div-->
 
 
-                                <h1 id="c&#x8BED;&#x8A00;&#x901F;&#x67E5;&#x624B;&#x518C;">C&#x8BED;&#x8A00;&#x901F;&#x67E5;&#x624B;&#x518C;</h1>
-<p>C&#x8BED;&#x8A00;&#x7F16;&#x7A0B;&#xFF08;&#x8FD9;&#x91CC;&#x7279;&#x6307;linux c&#xFF09;&#x4E2D;&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x7684;&#x8D44;&#x6599;&#x662F;man&#x624B;&#x518C;&#x548C;&#x5934;&#x6587;&#x4EF6;&#x3002;</p>
+                                <h1 id="&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x76F8;&#x5173;&#x64CD;&#x4F5C;">&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x76F8;&#x5173;&#x64CD;&#x4F5C;</h1>
+<!-- toc -->
+<ul>
+<li><a href="#libfuse&#x4F7F;&#x7528;">libfuse&#x4F7F;&#x7528;</a><ul>
+<li><a href="#fusegetcontext">fuse_get_context</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<h2 id="libfuse&#x4F7F;&#x7528;">libfuse&#x4F7F;&#x7528;</h2>
+<p>libfuse&#x7684;&#x7528;&#x9014;&#x4EE5;&#x53CA;&#x57FA;&#x7840;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x53C2;&#x8003;<a href="https://www.lijiaocn.com/%E6%8A%80%E5%B7%A7/2019/01/21/linux-fuse-filesystem-in-userspace-usage.html" target="_blank">&#x300A;Linux FUSE&#xFF08;&#x7528;&#x6237;&#x6001;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF09;&#x7684;&#x4F7F;&#x7528;&#xFF1A;&#x7528;libfuse&#x521B;&#x5EFA;FUSE&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x300B;</a>&#x3002;</p>
+<h3 id="fusegetcontext">fuse_get_context</h3>
+<p>fuse_get_context&#x7528;&#x4E8E;&#x5728;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x64CD;&#x4F5C;&#x65F6;&#x83B7;&#x53D6;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x5728;&#x5934;&#x6587;&#x4EF6;<code>fuse/fuse.h</code>&#x4E2D;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/**
+ * Get the current context
+ *
+ * The context is only valid for the duration of a filesystem
+ * operation, and thus must not be stored and used later.
+ *
+ * @return the context
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">struct</span> fuse_context *<span class="hljs-title">fuse_get_context</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x6784;&#x4F53;fuse_context&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/** Extra context that may be needed by some filesystems
+ *
+ * The uid, gid and pid fields are not filled in case of a writepage
+ * operation.
+ */</span>
+<span class="hljs-keyword">struct</span> fuse_context {
+    <span class="hljs-comment">/** Pointer to the fuse object */</span>
+    <span class="hljs-keyword">struct</span> fuse *fuse;
+
+    <span class="hljs-comment">/** User ID of the calling process */</span>
+    <span class="hljs-keyword">uid_t</span> uid;
+
+    <span class="hljs-comment">/** Group ID of the calling process */</span>
+    <span class="hljs-keyword">gid_t</span> gid;
+
+    <span class="hljs-comment">/** Thread ID of the calling process */</span>
+    <span class="hljs-keyword">pid_t</span> pid;
+
+    <span class="hljs-comment">/** Private filesystem data */</span>
+    <span class="hljs-keyword">void</span> *private_data;
+
+    <span class="hljs-comment">/** Umask of the calling process (introduced in version 2.8) */</span>
+    <span class="hljs-keyword">mode_t</span> umask;
+};
+</code></pre>
 <script type="text/javascript">var className='atoc';</script>
                                 
 <div>
@@ -437,12 +484,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 实用编程速查手册">
+                <a href="socket.html" class="navigation navigation-prev " aria-label="Previous page: socket通信">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="strings.html" class="navigation navigation-next " aria-label="Next page: 字符串处理">
+                <a href="sysconfig.html" class="navigation navigation-next " aria-label="Next page: 系统配置">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -453,7 +500,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"C语言速查手册","level":"1.2","depth":1,"next":{"title":"字符串处理","level":"1.2.1","depth":2,"path":"chapter-c/strings.md","ref":"./chapter-c/strings.md","articles":[]},"previous":{"title":"实用编程速查手册","level":"1.1","depth":1,"path":"README.md","ref":"./README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["atoc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go语言简明手册","gitbook":"*"},"file":{"path":"chapter-c/README.md","mtime":"2019-02-12T03:43:10.803Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-15T08:43:03.368Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"文件系统","level":"1.2.10","depth":2,"next":{"title":"系统配置","level":"1.2.11","depth":2,"path":"chapter-c/sysconfig.md","ref":"./chapter-c/sysconfig.md","articles":[]},"previous":{"title":"socket通信","level":"1.2.9","depth":2,"path":"chapter-c/socket.md","ref":"./chapter-c/socket.md","articles":[]},"dir":"ltr"},"config":{"plugins":["atoc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go语言简明手册","gitbook":"*"},"file":{"path":"chapter-c/filesystem.md","mtime":"2019-02-13T07:38:03.327Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-15T08:43:03.368Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

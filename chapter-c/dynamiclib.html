@@ -64,7 +64,7 @@
     <link rel="next" href="signal.html" />
     
     
-    <link rel="prev" href="strings.html" />
+    <link rel="prev" href="time.html" />
     
 
     <!--Google ads -->
@@ -186,7 +186,20 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="dynamiclib.html">
+        <li class="chapter " data-level="1.2.2" data-path="time.html">
+            
+                <a href="time.html">
+            
+                    
+                    时间操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="dynamiclib.html">
             
                 <a href="dynamiclib.html">
             
@@ -199,7 +212,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="signal.html">
+        <li class="chapter " data-level="1.2.4" data-path="signal.html">
             
                 <a href="signal.html">
             
@@ -212,7 +225,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="memory.html">
+        <li class="chapter " data-level="1.2.5" data-path="memory.html">
             
                 <a href="memory.html">
             
@@ -225,7 +238,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="print.html">
+        <li class="chapter " data-level="1.2.6" data-path="print.html">
             
                 <a href="print.html">
             
@@ -238,7 +251,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="file.html">
+        <li class="chapter " data-level="1.2.7" data-path="file.html">
             
                 <a href="file.html">
             
@@ -251,12 +264,64 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7" data-path="process.html">
+        <li class="chapter " data-level="1.2.8" data-path="process.html">
             
                 <a href="process.html">
             
                     
                     进程管理操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    socket通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="filesystem.html">
+            
+                <a href="filesystem.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="sysconfig.html">
+            
+                <a href="sysconfig.html">
+            
+                    
+                    系统配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="namespace.html">
+            
+                <a href="namespace.html">
+            
+                    
+                    Namespace操作
             
                 </a>
             
@@ -343,25 +408,46 @@
 </div-->
 
 
-                                <!-- toc -->
+                                <h1 id="&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x64CD;&#x4F5C;">&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x64CD;&#x4F5C;</h1>
+<!-- toc -->
 <ul>
-<li><a href="#&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x64CD;&#x4F5C;">&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x64CD;&#x4F5C;</a><ul>
 <li><a href="#&#x6253;&#x5F00;&#x5173;&#x95ED;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;">&#x6253;&#x5F00;/&#x5173;&#x95ED;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;</a></li>
-</ul>
-</li>
+<li><a href="#&#x8BFB;&#x53D6;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x7684;&#x64CD;&#x4F5C;&#x9519;&#x8BEF;">&#x8BFB;&#x53D6;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x7684;&#x64CD;&#x4F5C;&#x9519;&#x8BEF;</a></li>
+<li><a href="#&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x4E2D;&#x7684;&#x7B26;&#x53F7;&#x5730;&#x5740;">&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x4E2D;&#x7684;&#x7B26;&#x53F7;&#x5730;&#x5740;</a></li>
 </ul>
 <!-- tocstop -->
-<h1 id="&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x64CD;&#x4F5C;">&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x64CD;&#x4F5C;</h1>
 <h2 id="&#x6253;&#x5F00;&#x5173;&#x95ED;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;">&#x6253;&#x5F00;/&#x5173;&#x95ED;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;</h2>
 <pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;dlfcn.h&gt;</span></span>
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> *<span class="hljs-title">dlopen</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *filename, <span class="hljs-keyword">int</span> flag)</span></span>;
 
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">dlclose</span><span class="hljs-params">(<span class="hljs-keyword">void</span> *handle)</span></span>;
+</code></pre>
+<h2 id="&#x8BFB;&#x53D6;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x7684;&#x64CD;&#x4F5C;&#x9519;&#x8BEF;">&#x8BFB;&#x53D6;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x7684;&#x64CD;&#x4F5C;&#x9519;&#x8BEF;</h2>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;dlfcn.h&gt;</span></span>
+
 <span class="hljs-function"><span class="hljs-keyword">char</span> *<span class="hljs-title">dlerror</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+</code></pre>
+<h2 id="&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x4E2D;&#x7684;&#x7B26;&#x53F7;&#x5730;&#x5740;">&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x4E2D;&#x7684;&#x7B26;&#x53F7;&#x5730;&#x5740;</h2>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;dlfcn.h&gt;</span></span>
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> *<span class="hljs-title">dlsym</span><span class="hljs-params">(<span class="hljs-keyword">void</span> *handle, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *symbol)</span></span>;
+</code></pre>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">do_proc_open</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *path, <span class="hljs-keyword">struct</span> fuse_file_info *fi)</span>
+</span>{
+    <span class="hljs-keyword">int</span> (*proc_open)(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *path, <span class="hljs-keyword">struct</span> fuse_file_info *fi);
+    <span class="hljs-keyword">char</span> *error;
+    dlerror();    <span class="hljs-comment">/* Clear any existing error */</span>
+    proc_open = (<span class="hljs-keyword">int</span> (*)(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *path, <span class="hljs-keyword">struct</span> fuse_file_info *fi)) dlsym(dlopen_handle, <span class="hljs-string">&quot;proc_open&quot;</span>);
+    error = dlerror();
+    <span class="hljs-keyword">if</span> (error != <span class="hljs-literal">NULL</span>) {
+        lxcfs_error(<span class="hljs-string">&quot;%s\n&quot;</span>, error);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    }
 
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">dlclose</span><span class="hljs-params">(<span class="hljs-keyword">void</span> *handle)</span></span>;
+    <span class="hljs-keyword">return</span> proc_open(path, fi);
+}
 </code></pre>
 <script type="text/javascript">var className='atoc';</script>
                                 
@@ -390,7 +476,7 @@
 
             
                 
-                <a href="strings.html" class="navigation navigation-prev " aria-label="Previous page: 字符串处理">
+                <a href="time.html" class="navigation navigation-prev " aria-label="Previous page: 时间操作">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -406,7 +492,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"动态链接库","level":"1.2.2","depth":2,"next":{"title":"信号量操作","level":"1.2.3","depth":2,"path":"chapter-c/signal.md","ref":"./chapter-c/signal.md","articles":[]},"previous":{"title":"字符串处理","level":"1.2.1","depth":2,"path":"chapter-c/strings.md","ref":"./chapter-c/strings.md","articles":[]},"dir":"ltr"},"config":{"plugins":["atoc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go语言简明手册","gitbook":"*"},"file":{"path":"chapter-c/dynamiclib.md","mtime":"2019-02-12T03:33:52.238Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-12T03:33:53.176Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"动态链接库","level":"1.2.3","depth":2,"next":{"title":"信号量操作","level":"1.2.4","depth":2,"path":"chapter-c/signal.md","ref":"./chapter-c/signal.md","articles":[]},"previous":{"title":"时间操作","level":"1.2.2","depth":2,"path":"chapter-c/time.md","ref":"./chapter-c/time.md","articles":[]},"dir":"ltr"},"config":{"plugins":["atoc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go语言简明手册","gitbook":"*"},"file":{"path":"chapter-c/dynamiclib.md","mtime":"2019-02-13T07:36:31.716Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-15T08:43:03.368Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

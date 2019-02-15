@@ -1,0 +1,669 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>系统配置 · Go语言简明手册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="namespace.html" />
+    
+    
+    <link rel="prev" href="filesystem.html" />
+    
+
+    <!--Google ads -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8176866190626448",
+        enable_page_level_ads: true
+      });
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105389858-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-105389858-1');
+    </script>
+    
+    <!--百度统计-->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8f59ea10145df28da8932c8743ec1d60";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    
+    <!--百度收录-->
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+    <style type="text/css">
+    .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal a {color: #4183c4;}
+    </style>
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                
+<div style="text-align:center">
+	<h2><a href="https://www.lijiaocn.com" style="color:#afa790">www.lijiaocn.com</a></h2>
+	<h4><a href="https://www.lijiaocn.com/linux" style="color:#afa790">《Linux实用手册》</a></h4>
+	<h4><a href="https://www.lijiaocn.com/go" style="color:#afa790">《Go语言简明手册》</a></h4>
+	<h4><a href="https://www.lijiaocn.com/nginx" style="color:#afa790">《Nginx、Openresty、Lua和Kong》</a></h4>
+	<h4><a href="https://www.lijiaocn.com/programming" style="color:#afa790">《实用编程速查手册》</a></h4>
+</div>
+
+
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    实用编程速查手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    C语言速查手册
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="strings.html">
+            
+                <a href="strings.html">
+            
+                    
+                    字符串处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="time.html">
+            
+                <a href="time.html">
+            
+                    
+                    时间操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="dynamiclib.html">
+            
+                <a href="dynamiclib.html">
+            
+                    
+                    动态链接库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="signal.html">
+            
+                <a href="signal.html">
+            
+                    
+                    信号量操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="memory.html">
+            
+                <a href="memory.html">
+            
+                    
+                    内存管理操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="print.html">
+            
+                <a href="print.html">
+            
+                    
+                    格式化打印输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="file.html">
+            
+                <a href="file.html">
+            
+                    
+                    文件&设备操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="process.html">
+            
+                <a href="process.html">
+            
+                    
+                    进程管理操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    socket通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="filesystem.html">
+            
+                <a href="filesystem.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.11" data-path="sysconfig.html">
+            
+                <a href="sysconfig.html">
+            
+                    
+                    系统配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="namespace.html">
+            
+                <a href="namespace.html">
+            
+                    
+                    Namespace操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.lijiaocn.com" target="blank" class="gitbook-link">
+           以上内容由 www.lijiaocn.com 提供
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+                
+<div style="text-align:center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Summary_Bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="2156601384"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >系统配置</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                
+<!-- Page_Top -->
+<!--div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="5702052586"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div-->
+
+
+                                <h1 id="&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x8BFB;&#x53D6;">&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x8BFB;&#x53D6;</h1>
+<!-- toc -->
+<ul>
+<li><a href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#x83B7;&#x53D6;">&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#x83B7;&#x53D6;</a><ul>
+<li><a href="#sysconf">sysconf</a></li>
+<li><a href="#pathconf-&#x548C;-fpathconf">pathconf &#x548C; fpathconf</a></li>
+<li><a href="#confstr">confstr</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<h2 id="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#x83B7;&#x53D6;">&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#x83B7;&#x53D6;</h2>
+<p>sysconf&#xFF1A;   &#x83B7;&#x53D6;&#x6570;&#x503C;&#x7C7B;&#x578B;&#x7684;&#x914D;&#x7F6E;&#x9879;</p>
+<p>fpathconf&#xFF1A; &#x83B7;&#x53D6;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x5BF9;&#x5E94;&#x7684;&#x914D;&#x7F6E;&#x9879;</p>
+<p>pathconf&#xFF1A;  &#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x5BF9;&#x5E94;&#x7684;&#x914D;&#x7F6E;&#x9879;</p>
+<p>confstr&#xFF1A;   &#x83B7;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x7684;&#x914D;&#x7F6E;&#x9879;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-title">sysconf</span><span class="hljs-params">(<span class="hljs-keyword">int</span> name)</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-title">fpathconf</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd, <span class="hljs-keyword">int</span> name)</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-title">pathconf</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *path, <span class="hljs-keyword">int</span> name)</span></span>;
+<span class="hljs-keyword">size_t</span> confstr(<span class="hljs-keyword">int</span> name, <span class="hljs-keyword">char</span> *buf, <span class="hljs-keyword">size_t</span> len);
+</code></pre>
+<h3 id="sysconf">sysconf</h3>
+<p>sysconf&#x7528;&#x4E8E;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x83B7;&#x53D6;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x5E38;&#x91CF;&#xFF0C;&#x4E3B;&#x8981;&#x662F;POSIX&#x4E2D;&#x89C4;&#x5B9A;&#x4E00;&#x4E9B;&#x53C2;&#x6570;&#xFF0C;&#x4F8B;&#x5982;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x3001;&#x6700;&#x5927;&#x6570;&#x503C;&#x7B49;&#x3002;</p>
+<p><code>man 3 sysconf</code></p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-title">sysconf</span><span class="hljs-params">(<span class="hljs-keyword">int</span> name)</span></span>;
+</code></pre>
+<p><code>sysconf</code>&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#xFF1A;</p>
+<p>First, the POSIX.1 compatible values.</p>
+<pre><code>ARG_MAX - _SC_ARG_MAX
+    The maximum length of the arguments to the exec(3) family of functions.  Must not be less than _POSIX_ARG_MAX (4096).
+
+CHILD_MAX - _SC_CHILD_MAX
+    The maximum number of simultaneous processes per user ID.  Must not be less than _POSIX_CHILD_MAX (25).
+
+HOST_NAME_MAX - _SC_HOST_NAME_MAX
+    Maximum length of a hostname, not including the terminating null byte, as returned by gethostname(2).  Must not be less than _POSIX_HOST_NAME_MAX (255).
+
+LOGIN_NAME_MAX - _SC_LOGIN_NAME_MAX
+    Maximum length of a login name, including the terminating null byte.  Must not be less than _POSIX_LOGIN_NAME_MAX (9).
+
+clock ticks - _SC_CLK_TCK
+    The  number  of  clock  ticks per second.  The corresponding variable is obsolete.  It was of course called CLK_TCK.  (Note: the macro CLOCKS_PER_SEC does not give information: it must
+    equal 1000000.)
+
+OPEN_MAX - _SC_OPEN_MAX
+    The maximum number of files that a process can have open at any time.  Must not be less than _POSIX_OPEN_MAX (20).
+
+PAGESIZE - _SC_PAGESIZE
+    Size of a page in bytes.  Must not be less than 1.  (Some systems use PAGE_SIZE instead.)
+
+RE_DUP_MAX - _SC_RE_DUP_MAX
+    The number of repeated occurrences of a BRE permitted by regexec(3) and regcomp(3).  Must not be less than _POSIX2_RE_DUP_MAX (255).
+
+STREAM_MAX - _SC_STREAM_MAX
+    The maximum number of streams that a process can have open at any time.  If defined, it has the same value as the standard C macro FOPEN_MAX.  Must not be less  than  _POSIX_STREAM_MAX
+    (8).
+
+SYMLOOP_MAX - _SC_SYMLOOP_MAX
+    The maximum number of symbolic links seen in a pathname before resolution returns ELOOP.  Must not be less than _POSIX_SYMLOOP_MAX (8).
+
+TTY_NAME_MAX - _SC_TTY_NAME_MAX
+    The maximum length of terminal device name, including the terminating null byte.  Must not be less than _POSIX_TTY_NAME_MAX (9).
+
+TZNAME_MAX - _SC_TZNAME_MAX
+    The maximum number of bytes in a timezone name.  Must not be less than _POSIX_TZNAME_MAX (6).
+
+_POSIX_VERSION - _SC_VERSION
+    indicates the year and month the POSIX.1 standard was approved in the format YYYYMML; the value 199009L indicates the Sept. 1990 revision.
+</code></pre><p>Next, the POSIX.2 values, giving limits for utilities.</p>
+<pre><code>BC_BASE_MAX - _SC_BC_BASE_MAX
+    indicates the maximum obase value accepted by the bc(1) utility.
+
+BC_DIM_MAX - _SC_BC_DIM_MAX
+    indicates the maximum value of elements permitted in an array by bc(1).
+
+BC_SCALE_MAX - _SC_BC_SCALE_MAX
+    indicates the maximum scale value allowed by bc(1).
+
+BC_STRING_MAX - _SC_BC_STRING_MAX
+    indicates the maximum length of a string accepted by bc(1).
+
+COLL_WEIGHTS_MAX - _SC_COLL_WEIGHTS_MAX
+    indicates the maximum numbers of weights that can be assigned to an entry of the LC_COLLATE order keyword in the locale definition file,
+
+EXPR_NEST_MAX - _SC_EXPR_NEST_MAX
+    is the maximum number of expressions which can be nested within parentheses by expr(1).
+
+LINE_MAX - _SC_LINE_MAX
+    The maximum length of a utility&apos;s input line, either from standard input or from a file.  This includes space for a trailing newline.
+
+RE_DUP_MAX - _SC_RE_DUP_MAX
+    The maximum number of repeated occurrences of a regular expression when the interval notation \{m,n\} is used.
+
+POSIX2_VERSION - _SC_2_VERSION
+    indicates the version of the POSIX.2 standard in the format of YYYYMML.
+
+POSIX2_C_DEV - _SC_2_C_DEV
+    indicates whether the POSIX.2 C language development facilities are supported.
+
+POSIX2_FORT_DEV - _SC_2_FORT_DEV
+    indicates whether the POSIX.2 FORTRAN development utilities are supported.
+
+POSIX2_FORT_RUN - _SC_2_FORT_RUN
+    indicates whether the POSIX.2 FORTRAN run-time utilities are supported.
+
+_POSIX2_LOCALEDEF - _SC_2_LOCALEDEF
+    indicates whether the POSIX.2 creation of locates via localedef(1) is supported.
+
+POSIX2_SW_DEV - _SC_2_SW_DEV
+    indicates whether the POSIX.2 software development utilities option is supported.
+</code></pre><p>These values also exist, but may not be standard.</p>
+<pre><code> - _SC_PHYS_PAGES
+    The number of pages of physical memory.  Note that it is possible for the product of this value and the value of _SC_PAGESIZE to overflow.
+
+ - _SC_AVPHYS_PAGES
+    The number of currently available pages of physical memory.
+
+ - _SC_NPROCESSORS_CONF
+    The number of processors configured.
+
+     - _SC_NPROCESSORS_ONLN
+           The number of processors currently online (available).
+</code></pre><h3 id="pathconf-&#x548C;-fpathconf">pathconf &#x548C; fpathconf</h3>
+<p><code>man  pathconf</code></p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-title">fpathconf</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd, <span class="hljs-keyword">int</span> name)</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-title">pathconf</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *path, <span class="hljs-keyword">int</span> name)</span></span>;
+</code></pre>
+<p>Setting name equal to one of the following constants returns the following configuration options:</p>
+<pre><code>_PC_LINK_MAX
+    returns the maximum number of links to the file.  If fd or path refer to a directory, then the value applies to the whole directory.  The corresponding macro is _POSIX_LINK_MAX.
+
+_PC_MAX_CANON
+    returns the maximum length of a formatted input line, where fd or path must refer to a terminal.  The corresponding macro is _POSIX_MAX_CANON.
+
+_PC_MAX_INPUT
+    returns the maximum length of an input line, where fd or path must refer to a terminal.  The corresponding macro is _POSIX_MAX_INPUT.
+
+_PC_NAME_MAX
+    returns the maximum length of a filename in the directory path or fd that the process is allowed to create.  The corresponding macro is _POSIX_NAME_MAX.
+
+_PC_PATH_MAX
+    returns the maximum length of a relative pathname when path or fd is the current working directory.  The corresponding macro is _POSIX_PATH_MAX.
+
+_PC_PIPE_BUF
+    returns the size of the pipe buffer, where fd must refer to a pipe or FIFO and path must refer to a FIFO.  The corresponding macro is _POSIX_PIPE_BUF.
+
+_PC_CHOWN_RESTRICTED
+    returns nonzero if the chown(2) call may not be used on this file.  If fd or path refer to a directory, then this applies to all files in that directory.  The  corresponding  macro  is
+    _POSIX_CHOWN_RESTRICTED.
+
+_PC_NO_TRUNC
+    returns nonzero if accessing filenames longer than _POSIX_NAME_MAX generates an error.  The corresponding macro is _POSIX_NO_TRUNC.
+
+_PC_VDISABLE
+    returns nonzero if special character processing can be disabled, where fd or path must refer to a terminal.
+</code></pre><h3 id="confstr">confstr</h3>
+<p>The name argument is the system variable to be queried.  The following variables are supported:</p>
+<pre><code>_CS_GNU_LIBC_VERSION (GNU C library only; since glibc 2.3.2)
+    A string which identifies the GNU C library version on this system (e.g, &quot;glibc 2.3.4&quot;).
+
+_CS_GNU_LIBPTHREAD_VERSION (GNU C library only; since glibc 2.3.2)
+    A string which identifies the POSIX implementation supplied by this C library (e.g, &quot;NPTL 2.3.4&quot; or &quot;linuxthreads-0.10&quot;).
+
+_CS_PATH
+    A value for the PATH variable which indicates where all the POSIX.2 standard utilities can be found.
+</code></pre><script type="text/javascript">var className='atoc';</script>
+                                
+<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Page_Bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="7945072540"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="filesystem.html" class="navigation navigation-prev " aria-label="Previous page: 文件系统">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="namespace.html" class="navigation navigation-next " aria-label="Next page: Namespace操作">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"系统配置","level":"1.2.11","depth":2,"next":{"title":"Namespace操作","level":"1.2.12","depth":2,"path":"chapter-c/namespace.md","ref":"./chapter-c/namespace.md","articles":[]},"previous":{"title":"文件系统","level":"1.2.10","depth":2,"path":"chapter-c/filesystem.md","ref":"./chapter-c/filesystem.md","articles":[]},"dir":"ltr"},"config":{"plugins":["atoc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go语言简明手册","gitbook":"*"},"file":{"path":"chapter-c/sysconfig.md","mtime":"2019-02-13T07:40:34.955Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-15T08:43:03.368Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>C语言速查手册 · Go语言简明手册</title>
+        <title>Namespace操作 · Go语言简明手册</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="strings.html" />
     
-    
-    <link rel="prev" href="../" />
+    <link rel="prev" href="sysconfig.html" />
     
 
     <!--Google ads -->
@@ -159,7 +157,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="./">
             
                 <a href="./">
             
@@ -316,7 +314,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.12" data-path="namespace.html">
+        <li class="chapter active" data-level="1.2.12" data-path="namespace.html">
             
                 <a href="namespace.html">
             
@@ -380,7 +378,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >C语言速查手册</a>
+        <a href=".." >Namespace操作</a>
     </h1>
 </div>
 
@@ -408,9 +406,30 @@
 </div-->
 
 
-                                <h1 id="c&#x8BED;&#x8A00;&#x901F;&#x67E5;&#x624B;&#x518C;">C&#x8BED;&#x8A00;&#x901F;&#x67E5;&#x624B;&#x518C;</h1>
-<p>C&#x8BED;&#x8A00;&#x7F16;&#x7A0B;&#xFF08;&#x8FD9;&#x91CC;&#x7279;&#x6307;linux c&#xFF09;&#x4E2D;&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x7684;&#x8D44;&#x6599;&#x662F;man&#x624B;&#x518C;&#x548C;&#x5934;&#x6587;&#x4EF6;&#x3002;</p>
-<script type="text/javascript">var className='atoc';</script>
+                                <h1 id="namespace&#x76F8;&#x5173;&#x64CD;&#x4F5C;">Namespace&#x76F8;&#x5173;&#x64CD;&#x4F5C;</h1>
+<!-- toc -->
+<ul>
+<li><a href="#&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x5173;&#x8054;&#x5230;&#x6307;&#x5B9A;&#x7684;namespace">&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x5173;&#x8054;&#x5230;&#x6307;&#x5B9A;&#x7684;namespace</a></li>
+</ul>
+<!-- tocstop -->
+<h2 id="&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x5173;&#x8054;&#x5230;&#x6307;&#x5B9A;&#x7684;namespace">&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x5173;&#x8054;&#x5230;&#x6307;&#x5B9A;&#x7684;namespace</h2>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> _GNU_SOURCE             <span class="hljs-comment">/* See feature_test_macros(7) */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sched.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">setns</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd, <span class="hljs-keyword">int</span> nstype)</span></span>;
+</code></pre>
+<p>fd&#x662F;<code>/proc/&#x8FDB;&#x7A0B;&#x53F7;/ns/</code>&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x6253;&#x5F00;&#x540E;&#x7684;&#x53E5;&#x67C4;&#xFF0C;nstype&#x53EF;&#x4EE5;&#x53D6;&#x4EE5;&#x4E0B;&#x503C;&#xFF1A;</p>
+<pre><code>0      Allow any type of namespace to be joined.
+
+CLONE_NEWIPC
+       fd must refer to an IPC namespace.
+
+CLONE_NEWNET
+       fd must refer to a network namespace.
+
+CLONE_NEWUTS
+       fd must refer to a UTS namespace.
+</code></pre><script type="text/javascript">var className='atoc';</script>
                                 
 <div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -437,14 +456,10 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 实用编程速查手册">
+                <a href="sysconfig.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 系统配置">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="strings.html" class="navigation navigation-next " aria-label="Next page: 字符串处理">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -453,7 +468,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"C语言速查手册","level":"1.2","depth":1,"next":{"title":"字符串处理","level":"1.2.1","depth":2,"path":"chapter-c/strings.md","ref":"./chapter-c/strings.md","articles":[]},"previous":{"title":"实用编程速查手册","level":"1.1","depth":1,"path":"README.md","ref":"./README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["atoc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go语言简明手册","gitbook":"*"},"file":{"path":"chapter-c/README.md","mtime":"2019-02-12T03:43:10.803Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-15T08:43:03.368Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Namespace操作","level":"1.2.12","depth":2,"previous":{"title":"系统配置","level":"1.2.11","depth":2,"path":"chapter-c/sysconfig.md","ref":"./chapter-c/sysconfig.md","articles":[]},"dir":"ltr"},"config":{"plugins":["atoc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go语言简明手册","gitbook":"*"},"file":{"path":"chapter-c/namespace.md","mtime":"2019-02-13T07:59:47.743Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-15T08:43:03.368Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
