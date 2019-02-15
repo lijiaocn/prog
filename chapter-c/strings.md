@@ -1,5 +1,5 @@
-<!-- toc -->
 # C语言中的字符串操作
+<!-- toc -->
 
 编程过程中，如果不是在处理数值，就是在处理字符串。  by me ...
 
@@ -62,3 +62,52 @@ char *strtok(char *str, const char *delim);
 
 char *strtok_r(char *str, const char *delim, char **saveptr);
 ```
+
+## 定位指定字符
+
+```c
+#include <string.h>
+
+char *strchr(const char *s, int c);
+
+char *strrchr(const char *s, int c);
+
+#define _GNU_SOURCE         /* See feature_test_macros(7) */
+#include <string.h>
+
+char *strchrnul(const char *s, int c);
+```
+
+## 定位子字符串
+
+```c
+#include <string.h>
+
+char *strstr(const char *haystack, const char *needle);
+
+#define _GNU_SOURCE         /* See feature_test_macros(7) */
+
+#include <string.h>
+
+char *strcasestr(const char *haystack, const char *needle);
+```
+
+## 输入字符串转换
+
+`man scanf` 
+
+```c
+#include <stdio.h>
+
+int scanf(const char *format, ...);
+int fscanf(FILE *stream, const char *format, ...);
+int sscanf(const char *str, const char *format, ...);
+
+#include <stdarg.h>
+
+int vscanf(const char *format, va_list ap);
+int vsscanf(const char *str, const char *format, va_list ap);
+int vfscanf(FILE *stream, const char *format, va_list ap);
+```
+
+fscanf和sscanf可能有妙用。
