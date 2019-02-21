@@ -63,6 +63,29 @@ char *strtok(char *str, const char *delim);
 char *strtok_r(char *str, const char *delim, char **saveptr);
 ```
 
+示例：
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char *argv[])
+{
+    char str[100];
+    sprintf(str,"a b c d e f");
+    char *delim = " ";
+    char *token = NULL;
+
+    token = strtok(str, delim);
+    while (NULL != token) {
+        printf("%s\n", token);
+        token = strtok(NULL, delim);
+    }
+
+    return 0;
+}
+```
+
 ## 定位指定字符
 
 ```c

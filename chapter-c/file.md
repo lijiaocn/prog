@@ -1,6 +1,17 @@
 # 文件&设备操作
 <!-- toc -->
 
+## 检查对某个文件的操作权限
+
+检查对相对某个目录下的某文件的操作权限，`man faccessat`：
+
+```c
+#include <fcntl.h> /* Definition of AT_* constants */
+#include <unistd.h>
+
+int faccessat(int dirfd, const char *pathname, int mode, int flags);
+```
+
 ## 获取文件状态
 
 `man 2 stat`
