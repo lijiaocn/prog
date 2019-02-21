@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>进程管理操作 · Go语言简明手册</title>
+        <title>硬件信息读取 · Go语言简明手册</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="concurrent.html" />
     
-    
-    <link rel="prev" href="file.html" />
+    <link rel="prev" href="namespace.html" />
     
 
     <!--Google ads -->
@@ -264,7 +262,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.8" data-path="process.html">
+        <li class="chapter " data-level="1.2.8" data-path="process.html">
             
                 <a href="process.html">
             
@@ -342,7 +340,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.14" data-path="hardware.html">
+        <li class="chapter active" data-level="1.2.14" data-path="hardware.html">
             
                 <a href="hardware.html">
             
@@ -406,7 +404,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >进程管理操作</a>
+        <a href=".." >硬件信息读取</a>
     </h1>
 </div>
 
@@ -434,79 +432,15 @@
 </div-->
 
 
-                                <h1 id="&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;&#x64CD;&#x4F5C;">&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;&#x64CD;&#x4F5C;</h1>
-<!-- toc -->
-<ul>
-<li><a href="#&#x83B7;&#x53D6;&#x8FDB;&#x7A0B;id">&#x83B7;&#x53D6;&#x8FDB;&#x7A0B;ID</a></li>
-<li><a href="#&#x521B;&#x5EFA;&#x5B50;&#x8FDB;&#x7A0B;">&#x521B;&#x5EFA;&#x5B50;&#x8FDB;&#x7A0B;</a><ul>
-<li><a href="#fork">fork</a></li>
-<li><a href="#clone">clone</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-<h2 id="&#x83B7;&#x53D6;&#x8FDB;&#x7A0B;id">&#x83B7;&#x53D6;&#x8FDB;&#x7A0B;ID</h2>
-<p><code>man pid</code></p>
-<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/types.h&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+                                <h1 id="&#x786C;&#x4EF6;&#x4FE1;&#x606F;&#x8BFB;&#x53D6;">&#x786C;&#x4EF6;&#x4FE1;&#x606F;&#x8BFB;&#x53D6;</h1>
+<h2 id="&#x8BFB;&#x53D6;cpu&#x4E2A;&#x6570;">&#x8BFB;&#x53D6;CPU&#x4E2A;&#x6570;</h2>
+<p>&#x8BFB;&#x53D6;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x7684;cpu&#x4E2A;&#x6570;&#x548C;&#x53EF;&#x7528;&#x7684;cpu&#x4E2A;&#x6570;&#x548C;&#xFF0C;<code>man get_nprocs</code>&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/sysinfo.h&gt;</span></span>
 
-<span class="hljs-keyword">pid_t</span> getpid(<span class="hljs-keyword">void</span>);
-<span class="hljs-keyword">pid_t</span> getppid(<span class="hljs-keyword">void</span>);
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">get_nprocs_conf</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">get_nprocs</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
 </code></pre>
-<p>&#x5206;&#x522B;&#x662F;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;id&#xFF0C;&#x548C;&#x7236;&#x8FDB;&#x7A0B;id&#x3002;</p>
-<h2 id="&#x521B;&#x5EFA;&#x5B50;&#x8FDB;&#x7A0B;">&#x521B;&#x5EFA;&#x5B50;&#x8FDB;&#x7A0B;</h2>
-<h3 id="fork">fork</h3>
-<p><code>man fork</code></p>
-<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
-
-<span class="hljs-keyword">pid_t</span> fork(<span class="hljs-keyword">void</span>);
-</code></pre>
-<p>&#x5B50;&#x8FDB;&#x7A0B;&#x521B;&#x5EFA;&#x5931;&#x8D25;&#x8FD4;&#x56DE;<code>-1</code>&#xFF0C;&#x521B;&#x5EFA;&#x6210;&#x529F;&#xFF0C;&#x5728;&#x7236;&#x8FDB;&#x7A0B;&#x4E2D;&#x8FD4;&#x56DE;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;<code>&#x8FDB;&#x7A0B;&#x53F7;</code>&#xFF0C;&#x5728;&#x5B50;&#x8FDB;&#x7A0B;&#x4E2D;&#x8FD4;&#x56DE;<code>0</code>&#x3002;</p>
-<h3 id="clone">clone</h3>
-<p><code>man clone</code></p>
-<p><code>clone()</code>&#x6BD4;<code>fork()</code>&#x529F;&#x80FD;&#x66F4;&#x5F3A;&#x5927;&#xFF0C;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x8FD0;&#x884C;&#x51FD;&#x6570;&#xFF0C;&#x4EE5;&#x53CA;&#x8BBE;&#x7F6E;namespace&#x7B49;&#x3002;</p>
-<pre><code class="lang-c">#include &lt;sched.h&gt;
-
-int clone(int (*fn)(void *), void *child_stack,
-          int flags, void *arg, ...
-          /* pid_t *ptid, struct user_desc *tls, pid_t *ctid */ );
-
-/* Prototype for the raw system call */
-
-long clone(unsigned long flags, void *child_stack,
-          void *ptid, void *ctid,
-          struct pt_regs *regs);
-</code></pre>
-<p>&#x4E0A;&#x9762;&#x7B2C;&#x4E00;&#x4E2A;&#x5B9A;&#x4E49;&#x662F;glibc&#x63D0;&#x4F9B;&#x7684;&#xFF0C;&#x5C01;&#x88C5;&#x4E86;&#x539F;&#x59CB;&#x7684;clone&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B9A;&#x4E49;&#x662F;&#x539F;&#x59CB;&#x7684;clone&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x5B9A;&#x4E49;&#x3002;</p>
-<p>&#x5173;&#x952E;&#x662F;&#x53C2;&#x6570;<code>flags</code>&#xFF0C;&#x5B83;&#x7684;bit&#x4F4D;&#x6709;&#x7279;&#x6B8A;&#x542B;&#x4E49;&#xFF0C;&#x5206;&#x522B;&#x662F;&#x9000;&#x51FA;&#x65F6;&#x5411;&#x7236;&#x8FDB;&#x7A0B;&#x53D1;&#x9001;&#x7684;&#x4FE1;&#x53F7;&#x91CF;&#x548C;&#x4E0B;&#x9762;&#x7684;&#x6807;&#x5FD7;&#x4F4D;&#xFF08;&#x5177;&#x4F53;&#x8BF4;&#x660E;&#x67E5;&#x9605;&#x624B;&#x518C;<code>man clone</code>&#xFF09;&#xFF1A;</p>
-<pre><code>CLONE_CHILD_CLEARTID (since Linux 2.5.49)
-CLONE_CHILD_SETTID (since Linux 2.5.49)
-CLONE_FILES (since Linux 2.0)
-CLONE_FS (since Linux 2.0)
-CLONE_IO (since Linux 2.6.25)
-CLONE_NEWIPC (since Linux 2.6.19)
-CLONE_NEWNET (since Linux 2.6.24)
-CLONE_NEWNS (since Linux 2.4.19)
-CLONE_NEWPID (since Linux 2.6.24)
-CLONE_NEWUTS (since Linux 2.6.19)
-CLONE_PARENT (since Linux 2.3.12)
-CLONE_PARENT_SETTID (since Linux 2.5.49)
-CLONE_PID (obsolete)
-CLONE_PTRACE (since Linux 2.2)
-CLONE_SETTLS (since Linux 2.5.32)
-CLONE_SIGHAND (since Linux 2.0)
-CLONE_STOPPED (since Linux 2.6.0-test2)
-CLONE_SYSVSEM (since Linux 2.5.10)
-CLONE_THREAD (since Linux 2.4.0-test8)
-CLONE_UNTRACED (since Linux 2.5.46)
-CLONE_VFORK (since Linux 2.2)
-CLONE_VM (since Linux 2.0)
-</code></pre><p>&#x4F8B;&#x5982;&#x5B50;&#x8FDB;&#x7A0B;&#x9000;&#x51FA;&#x65F6;&#x5411;&#x7236;&#x8FDB;&#x7A0B;&#x53D1;&#x9001;SIGCHLD&#x4FE1;&#x53F7;&#xFF1A;</p>
-<pre><code class="lang-c">pid = clone(childFunc, stackTop, CLONE_NEWUTS | SIGCHLD, argv[<span class="hljs-number">1</span>]);
-<span class="hljs-keyword">if</span> (pid == <span class="hljs-number">-1</span>)
-    errExit(<span class="hljs-string">&quot;clone&quot;</span>);
-<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;clone() returned %ld\n&quot;</span>, (<span class="hljs-keyword">long</span>) pid);
-</code></pre>
+<p><code>get_nprocs_conf()</code>&#x8FD4;&#x56DE;&#x7684;&#x914D;&#x7F6E;&#x7684;CPU&#x4E2A;&#x6570;&#x53EF;&#x80FD;&#x4F1A;&#x5927;&#x4E8E;<code>get_nprocs()</code>&#x8FD4;&#x56DE;&#x7684;&#x53EF;&#x7528;&#x7684;CPU&#x4E2A;&#x6570;&#xFF0C;&#x56E0;&#x4E3A;CPU&#x53EF;&#x80FD;&#x79BB;&#x7EBF;&#xFF08;offline&#xFF09;&#x4E0D;&#x53EF;&#x7528;&#x3002;</p>
 <script type="text/javascript">var className='atoc';</script>
                                 
 <div>
@@ -534,14 +468,10 @@ CLONE_VM (since Linux 2.0)
 
             
                 
-                <a href="file.html" class="navigation navigation-prev " aria-label="Previous page: 文件&设备操作">
+                <a href="namespace.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Namespace操作">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="concurrent.html" class="navigation navigation-next " aria-label="Next page: 并发编程">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -550,7 +480,7 @@ CLONE_VM (since Linux 2.0)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"进程管理操作","level":"1.2.8","depth":2,"next":{"title":"并发编程","level":"1.2.9","depth":2,"path":"chapter-c/concurrent.md","ref":"./chapter-c/concurrent.md","articles":[]},"previous":{"title":"文件&设备操作","level":"1.2.7","depth":2,"path":"chapter-c/file.md","ref":"./chapter-c/file.md","articles":[]},"dir":"ltr"},"config":{"plugins":["atoc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go语言简明手册","gitbook":"*"},"file":{"path":"chapter-c/process.md","mtime":"2019-02-18T02:27:23.137Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-21T06:09:06.281Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"硬件信息读取","level":"1.2.14","depth":2,"previous":{"title":"Namespace操作","level":"1.2.13","depth":2,"path":"chapter-c/namespace.md","ref":"./chapter-c/namespace.md","articles":[]},"dir":"ltr"},"config":{"plugins":["atoc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go语言简明手册","gitbook":"*"},"file":{"path":"chapter-c/hardware.md","mtime":"2019-02-19T10:25:24.427Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-21T06:09:06.281Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
