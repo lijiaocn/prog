@@ -487,7 +487,12 @@
 
 <span class="hljs-function"><span class="hljs-keyword">char</span> *<span class="hljs-title">strtok_r</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *str, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *delim, <span class="hljs-keyword">char</span> **saveptr)</span></span>;
 </code></pre>
-<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;</p>
+<ol>
+<li>strtok&#x662F;&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x9700;&#x8981;&#x4F7F;&#x7528;strtok_r&#x3002;</li>
+<li>&#x4F20;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x88AB;&#x6539;&#x5199;&#xFF0C;&#x7528;<code>\0</code>&#x5206;&#x5272;&#x6210;&#x4E86;&#x591A;&#x4E2A;token&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x4FDD;&#x7559;&#x539F;&#x5148;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x9700;&#x8981;&#x590D;&#x5236;&#x4FDD;&#x7559;&#x3002;</li>
+</ol>
+<p>&#x793A;&#x4F8B;1&#xFF1A;</p>
 <pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span>
 
@@ -503,6 +508,50 @@
         <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s\n&quot;</span>, token);
         token = strtok(<span class="hljs-literal">NULL</span>, delim);
     }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x793A;&#x4F8B;2:</p>
+<pre><code class="lang-c"><span class="hljs-comment">/*
+ * main.c
+ * Copyright (C) 2019 lijiaocn &lt;lijiaocn@foxmail.com&gt;
+ *
+ * Distributed under terms of the GPL license.
+ */</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> str_iterate_parts(__iterator, __splitme, __separators)            \
+    for (char *__p = NULL, *__it = strtok_r(__splitme, __separators, &amp;__p); \
+            (__iterator = __it);                                            \
+            __iterator = __it = strtok_r(NULL, __separators, &amp;__p))</span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> *argv[])</span>
+</span>{
+    <span class="hljs-keyword">char</span> str[<span class="hljs-number">100</span>];
+    <span class="hljs-built_in">sprintf</span>(str,<span class="hljs-string">&quot;a b c d e f&quot;</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;before: %s\n&quot;</span>, str);
+    <span class="hljs-keyword">char</span> *delim = <span class="hljs-string">&quot; &quot;</span>;
+    <span class="hljs-keyword">char</span> *token = <span class="hljs-literal">NULL</span>;
+    <span class="hljs-keyword">char</span> *saveptr = <span class="hljs-literal">NULL</span>;
+
+<span class="hljs-comment">/*
+    token = strtok_r(str, delim, &amp;saveptr);
+    while (NULL != token) {
+        printf(&quot;%s\n&quot;, token);
+        token = strtok_r(NULL, delim, &amp;saveptr);
+    }
+*/</span>
+
+    <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
+    str_iterate_parts(token, str, delim){
+        <span class="hljs-keyword">if</span> (i &gt;= <span class="hljs-number">3</span> ) <span class="hljs-keyword">break</span>;
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s\n&quot;</span>, token);
+        i++;
+    }
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;after : %s\n&quot;</span>, str);
 
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 }
@@ -588,7 +637,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"字符串处理","level":"1.2.1","depth":2,"next":{"title":"时间操作","level":"1.2.2","depth":2,"path":"chapter-c/time.md","ref":"./chapter-c/time.md","articles":[]},"previous":{"title":"C语言速查手册","level":"1.2","depth":1,"path":"chapter-c/README.md","ref":"./chapter-c/README.md","articles":[{"title":"字符串处理","level":"1.2.1","depth":2,"path":"chapter-c/strings.md","ref":"./chapter-c/strings.md","articles":[]},{"title":"时间操作","level":"1.2.2","depth":2,"path":"chapter-c/time.md","ref":"./chapter-c/time.md","articles":[]},{"title":"动态链接库","level":"1.2.3","depth":2,"path":"chapter-c/dynamiclib.md","ref":"./chapter-c/dynamiclib.md","articles":[]},{"title":"信号量操作","level":"1.2.4","depth":2,"path":"chapter-c/signal.md","ref":"./chapter-c/signal.md","articles":[]},{"title":"内存管理操作","level":"1.2.5","depth":2,"path":"chapter-c/memory.md","ref":"./chapter-c/memory.md","articles":[]},{"title":"格式化打印输出","level":"1.2.6","depth":2,"path":"chapter-c/print.md","ref":"./chapter-c/print.md","articles":[]},{"title":"文件&设备操作","level":"1.2.7","depth":2,"path":"chapter-c/file.md","ref":"./chapter-c/file.md","articles":[]},{"title":"进程管理操作","level":"1.2.8","depth":2,"path":"chapter-c/process.md","ref":"./chapter-c/process.md","articles":[]},{"title":"并发编程","level":"1.2.9","depth":2,"path":"chapter-c/concurrent.md","ref":"./chapter-c/concurrent.md","articles":[]},{"title":"socket通信","level":"1.2.10","depth":2,"path":"chapter-c/socket.md","ref":"./chapter-c/socket.md","articles":[]},{"title":"文件系统","level":"1.2.11","depth":2,"path":"chapter-c/filesystem.md","ref":"./chapter-c/filesystem.md","articles":[]},{"title":"系统配置","level":"1.2.12","depth":2,"path":"chapter-c/sysconfig.md","ref":"./chapter-c/sysconfig.md","articles":[]},{"title":"Namespace操作","level":"1.2.13","depth":2,"path":"chapter-c/namespace.md","ref":"./chapter-c/namespace.md","articles":[]},{"title":"硬件信息读取","level":"1.2.14","depth":2,"path":"chapter-c/hardware.md","ref":"./chapter-c/hardware.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["atoc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go语言简明手册","gitbook":"*"},"file":{"path":"chapter-c/strings.md","mtime":"2019-02-21T06:07:43.403Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-21T06:09:06.281Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"字符串处理","level":"1.2.1","depth":2,"next":{"title":"时间操作","level":"1.2.2","depth":2,"path":"chapter-c/time.md","ref":"./chapter-c/time.md","articles":[]},"previous":{"title":"C语言速查手册","level":"1.2","depth":1,"path":"chapter-c/README.md","ref":"./chapter-c/README.md","articles":[{"title":"字符串处理","level":"1.2.1","depth":2,"path":"chapter-c/strings.md","ref":"./chapter-c/strings.md","articles":[]},{"title":"时间操作","level":"1.2.2","depth":2,"path":"chapter-c/time.md","ref":"./chapter-c/time.md","articles":[]},{"title":"动态链接库","level":"1.2.3","depth":2,"path":"chapter-c/dynamiclib.md","ref":"./chapter-c/dynamiclib.md","articles":[]},{"title":"信号量操作","level":"1.2.4","depth":2,"path":"chapter-c/signal.md","ref":"./chapter-c/signal.md","articles":[]},{"title":"内存管理操作","level":"1.2.5","depth":2,"path":"chapter-c/memory.md","ref":"./chapter-c/memory.md","articles":[]},{"title":"格式化打印输出","level":"1.2.6","depth":2,"path":"chapter-c/print.md","ref":"./chapter-c/print.md","articles":[]},{"title":"文件&设备操作","level":"1.2.7","depth":2,"path":"chapter-c/file.md","ref":"./chapter-c/file.md","articles":[]},{"title":"进程管理操作","level":"1.2.8","depth":2,"path":"chapter-c/process.md","ref":"./chapter-c/process.md","articles":[]},{"title":"并发编程","level":"1.2.9","depth":2,"path":"chapter-c/concurrent.md","ref":"./chapter-c/concurrent.md","articles":[]},{"title":"socket通信","level":"1.2.10","depth":2,"path":"chapter-c/socket.md","ref":"./chapter-c/socket.md","articles":[]},{"title":"文件系统","level":"1.2.11","depth":2,"path":"chapter-c/filesystem.md","ref":"./chapter-c/filesystem.md","articles":[]},{"title":"系统配置","level":"1.2.12","depth":2,"path":"chapter-c/sysconfig.md","ref":"./chapter-c/sysconfig.md","articles":[]},{"title":"Namespace操作","level":"1.2.13","depth":2,"path":"chapter-c/namespace.md","ref":"./chapter-c/namespace.md","articles":[]},{"title":"硬件信息读取","level":"1.2.14","depth":2,"path":"chapter-c/hardware.md","ref":"./chapter-c/hardware.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["atoc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go语言简明手册","gitbook":"*"},"file":{"path":"chapter-c/strings.md","mtime":"2019-02-26T08:14:54.168Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-21T06:09:18.871Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
