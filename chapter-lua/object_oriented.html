@@ -1,0 +1,737 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>面向对象设计 · Go语言简明手册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="metatable.html" />
+    
+
+    <!--Google ads -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8176866190626448",
+        enable_page_level_ads: true
+      });
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105389858-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-105389858-1');
+    </script>
+    
+    <!--百度统计-->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8f59ea10145df28da8932c8743ec1d60";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    
+    <!--百度收录-->
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+    <style type="text/css">
+    .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal a {color: #4183c4;}
+    </style>
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                
+<div style="text-align:center">
+	<h2><a href="https://www.lijiaocn.com" style="color:#afa790">www.lijiaocn.com</a></h2>
+	<h4><a href="https://www.lijiaocn.com/linux" style="color:#afa790">《Linux实用手册》</a></h4>
+	<h4><a href="https://www.lijiaocn.com/go" style="color:#afa790">《Go语言简明手册》</a></h4>
+	<h4><a href="https://www.lijiaocn.com/nginx" style="color:#afa790">《Nginx、Openresty、Lua和Kong》</a></h4>
+	<h4><a href="https://www.lijiaocn.com/programming" style="color:#afa790">《实用编程速查手册》</a></h4>
+</div>
+
+
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    实用编程速查手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter-c/">
+            
+                <a href="../chapter-c/">
+            
+                    
+                    C语言速查手册
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter-c/strings.html">
+            
+                <a href="../chapter-c/strings.html">
+            
+                    
+                    字符串处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter-c/time.html">
+            
+                <a href="../chapter-c/time.html">
+            
+                    
+                    时间操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter-c/dynamiclib.html">
+            
+                <a href="../chapter-c/dynamiclib.html">
+            
+                    
+                    动态链接库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter-c/signal.html">
+            
+                <a href="../chapter-c/signal.html">
+            
+                    
+                    信号量操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chapter-c/memory.html">
+            
+                <a href="../chapter-c/memory.html">
+            
+                    
+                    内存管理操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../chapter-c/print.html">
+            
+                <a href="../chapter-c/print.html">
+            
+                    
+                    格式化打印输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../chapter-c/file.html">
+            
+                <a href="../chapter-c/file.html">
+            
+                    
+                    文件&设备操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../chapter-c/process.html">
+            
+                <a href="../chapter-c/process.html">
+            
+                    
+                    进程管理操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../chapter-c/concurrent.html">
+            
+                <a href="../chapter-c/concurrent.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../chapter-c/socket.html">
+            
+                <a href="../chapter-c/socket.html">
+            
+                    
+                    socket通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../chapter-c/filesystem.html">
+            
+                <a href="../chapter-c/filesystem.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../chapter-c/sysconfig.html">
+            
+                <a href="../chapter-c/sysconfig.html">
+            
+                    
+                    系统配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../chapter-c/namespace.html">
+            
+                <a href="../chapter-c/namespace.html">
+            
+                    
+                    Namespace操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../chapter-c/hardware.html">
+            
+                <a href="../chapter-c/hardware.html">
+            
+                    
+                    硬件信息读取
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Lua语言速查手册
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="basic_type.html">
+            
+                <a href="basic_type.html">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="keywords_operator.html">
+            
+                <a href="keywords_operator.html">
+            
+                    
+                    关键字与操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="control_flow.html">
+            
+                <a href="control_flow.html">
+            
+                    
+                    条件语句与循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                    函数定义使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="module.html">
+            
+                <a href="module.html">
+            
+                    
+                    模块定义使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="metatable.html">
+            
+                <a href="metatable.html">
+            
+                    
+                    元表定义设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.7" data-path="object_oriented.html">
+            
+                <a href="object_oriented.html">
+            
+                    
+                    面向对象设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.lijiaocn.com" target="blank" class="gitbook-link">
+           以上内容由 www.lijiaocn.com 提供
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+                
+<div style="text-align:center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Summary_Bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="2156601384"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >面向对象设计</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                
+<!-- Page_Top -->
+<!--div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="5702052586"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div-->
+
+
+                                <h1 id="lua&#x7684;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x65B9;&#x6CD5;">Lua&#x7684;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x65B9;&#x6CD5;</h1>
+<!-- toc -->
+<ul>
+<li><a href="#&#x7C7B;&#x7684;&#x5B9E;&#x73B0;">&#x7C7B;&#x7684;&#x5B9E;&#x73B0;</a></li>
+<li><a href="#&#x7EE7;&#x627F;">&#x7EE7;&#x627F;</a></li>
+<li><a href="#&#x79C1;&#x6709;&#x6210;&#x5458;">&#x79C1;&#x6709;&#x6210;&#x5458;</a></li>
+</ul>
+<!-- tocstop -->
+<p>Lua&#x7684;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x65B9;&#x6CD5;&#x5F88;&#x4E0D;&#x76F4;&#x89C2;&#xFF0C;Lua&#x4E2D;&#x7684;&#x7C7B;&#x5C31;&#x662F;&#x6A21;&#x5757;&#xFF0C;&#x501F;&#x52A9;&#x5143;&#x8868;&#x4F7F;&#x6A21;&#x5757;&#x5177;&#x6709;&#x4E86;&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x80FD;&#x591F;&#x5B9E;&#x4F8B;&#x5316;&#x3002;</p>
+<h2 id="&#x7C7B;&#x7684;&#x5B9E;&#x73B0;">&#x7C7B;&#x7684;&#x5B9E;&#x73B0;</h2>
+<p>Lua&#x4E2D;&#x7C7B;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#xFF0C;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x6587;&#x4EF6;account.lua&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-lua"><span class="hljs-keyword">local</span> _M = {}
+
+<span class="hljs-keyword">local</span> mt = { __index = _M }
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_M.deposit</span> <span class="hljs-params">(self, v)</span></span>
+    self.balance = self.balance + v
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_M.withdraw</span> <span class="hljs-params">(self, v)</span></span>
+    <span class="hljs-keyword">if</span> self.balance &gt; v <span class="hljs-keyword">then</span>
+        self.balance = self.balance - v
+    <span class="hljs-keyword">else</span>
+        <span class="hljs-built_in">error</span>(<span class="hljs-string">&quot;insufficient funds&quot;</span>)
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_M.new</span> <span class="hljs-params">(self, balance)</span></span>
+    balance = balance <span class="hljs-keyword">or</span> <span class="hljs-number">0</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">setmetatable</span>({balance = balance}, mt)
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">return</span> _M
+</code></pre>
+<p>&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x5728;<code>_M</code>&#x8868;&#x4E2D;&#xFF0C;&#x800C;_M&#x8868;&#x53C8;&#x88AB;&#x8D4B;&#x7ED9;&#x4E86;&#x5143;&#x65B9;&#x6CD5;<code>__index</code>&#xFF0C;&#x5305;&#x542B;__index&#x65B9;&#x6CD5;&#x7684;&#x5143;&#x8868;mt&#x88AB;&#x7ED1;&#x5B9A;&#x5230;&#x7C7B;&#x5B9E;&#x4F8B;&#x5316;&#x65F6;&#x521B;&#x5EFA;&#x7684;table&#x53D8;&#x91CF;&#xFF0C;&#x7ED1;&#x5B9A;&#x4E86;&#x5143;&#x8868;mt&#x7684;table&#x53D8;&#x91CF;&#x5C31;&#x662F;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x6A21;&#x5757;account.lua&#x8FD4;&#x56DE;&#x7684;&#x662F;<code>_M</code>&#xFF0C;&#x8C03;&#x7528;_M&#x4E2D;&#x7684;new&#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x5143;&#x8868;mt&#x7ED1;&#x5B9A;&#x5230;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;table&#x53D8;&#x91CF;&#xFF0C;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x4E5F;&#x88AB;&#x5199;&#x5165;&#x4E86;&#x8FD9;&#x4E2A;&#x65B0;&#x7684;table&#x53D8;&#x91CF;&#x4E2D;&#xFF08;{balance = balance}&#xFF09;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;table&#x5C31;&#x53EF;&#x4EE5;&#x8C03;&#x7528;mt&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x548C;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<pre><code class="lang-lua"><span class="hljs-keyword">local</span> account = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;account&quot;</span>)
+
+<span class="hljs-keyword">local</span> a = account:new()
+a:deposit(<span class="hljs-number">100</span>)
+
+<span class="hljs-keyword">local</span> b = account:new()
+b:deposit(<span class="hljs-number">50</span>)
+
+<span class="hljs-built_in">print</span>(a.balance)  <span class="hljs-comment">--&gt; output: 100</span>
+<span class="hljs-built_in">print</span>(b.balance)  <span class="hljs-comment">--&gt; output: 50</span>
+</code></pre>
+<p>&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#xFF0C;&#x5728;Lua&#x4E2D;&#x7C7B;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>1. &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6A21;&#x5757;
+2. &#x5728;&#x6A21;&#x5757;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5143;&#x8868;&#xFF0C;__index&#x5143;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x6A21;&#x5757;&#x672C;&#x8EAB;
+3. &#x5728;&#x6A21;&#x5757;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;new()&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED1;&#x5B9A;&#x4E86;&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x5143;&#x8868;&#x7684;table&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x3002;
+</code></pre><h2 id="&#x7EE7;&#x627F;">&#x7EE7;&#x627F;</h2>
+<p>&#x7EE7;&#x627F;&#x7684;&#x5B9E;&#x73B0;&#x5C31;&#x66F4;&#x9EBB;&#x70E6;&#x4E86;....</p>
+<p>&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x7236;&#x7C7B;&#xFF0C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x7C7B;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x65B9;&#x6CD5;<code>upper()</code>&#xFF1A;</p>
+<pre><code class="lang-lua"><span class="hljs-comment">-- &#x7236;&#x7C7B; s_base.lua</span>
+<span class="hljs-keyword">local</span> _M = {}
+
+<span class="hljs-keyword">local</span> mt = { __index = _M }
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_M.upper</span> <span class="hljs-params">(s)</span></span>
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">string</span>.upper(s)
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">return</span> _M
+</code></pre>
+<p>&#x5B50;&#x7C7B;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5B50;&#x7C7B;&#x5F15;&#x7528;&#x7236;&#x7C7B;&#x6240;&#x5728;&#x7684;&#x6A21;&#x5757;&#xFF0C;&#x5C06;&#x7236;&#x7C7B;&#x4F5C;&#x4E3A;&#x5B50;&#x7C7B;__index&#x5143;&#x65B9;&#x6CD5;&#xFF0C;&#x5B50;&#x7C7B;&#x53EA;&#x5B9E;&#x73B0;&#x4E86;&#x65B9;&#x6CD5;<code>lower()</code>&#xFF1A;</p>
+<pre><code class="lang-lua"><span class="hljs-comment">--&#x5B50;&#x7C7B; s_more.lua&#xFF0C;&#x5F15;&#x5165;&#x4E86;&#x7236;&#x7C7B;&#x5BF9;&#x5E94;&#x7684;&#x6A21;&#x5757;</span>
+<span class="hljs-keyword">local</span> s_base = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;s_base&quot;</span>)
+
+<span class="hljs-keyword">local</span> _M = {}
+_M = <span class="hljs-built_in">setmetatable</span>(_M, { __index = s_base })
+
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_M.lower</span> <span class="hljs-params">(s)</span></span>
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">string</span>.lower(s)
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">return</span> _M
+</code></pre>
+<p>&#x5B50;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#x65E2;&#x80FD;&#x4F7F;&#x7528;&#x5B50;&#x7C7B;&#x4E2D;&#x7684;<code>lower()</code>&#xFF0C;&#x4E5F;&#x80FD;&#x4F7F;&#x7528;&#x7236;&#x7C7B;&#x4E2D;&#x7684;<code>upper()</code>&#x3002;</p>
+<pre><code class="lang-lua"><span class="hljs-keyword">local</span> s_more = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;s_more&quot;</span>)
+
+<span class="hljs-built_in">print</span>(s_more.upper(<span class="hljs-string">&quot;Hello&quot;</span>))   <span class="hljs-comment">-- output: HELLO</span>
+<span class="hljs-built_in">print</span>(s_more.lower(<span class="hljs-string">&quot;Hello&quot;</span>))   <span class="hljs-comment">-- output: hello</span>
+</code></pre>
+<h2 id="&#x79C1;&#x6709;&#x6210;&#x5458;">&#x79C1;&#x6709;&#x6210;&#x5458;</h2>
+<p>&#x79C1;&#x6709;&#x6210;&#x5458;&#x7684;&#x5B9E;&#x73B0;&#x975E;&#x5E38;trick&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#x5B9E;&#x73B0;&#x4E86;&#x79C1;&#x6709;&#x6210;&#x5458;balance&#xFF1A;</p>
+<pre><code class="lang-lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newAccount</span> <span class="hljs-params">(initialBalance)</span></span>
+    <span class="hljs-keyword">local</span> self = {balance = initialBalance}
+    <span class="hljs-keyword">local</span> withdraw = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(v)</span></span>
+        self.balance = self.balance - v
+    <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">local</span> deposit = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(v)</span></span>
+        self.balance = self.balance + v
+    <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">local</span> getBalance = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span></span> <span class="hljs-keyword">return</span> self.balance <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">return</span> {
+        withdraw = withdraw,
+        deposit = deposit,
+        getBalance = getBalance
+    }
+<span class="hljs-keyword">end</span>
+
+a = newAccount(<span class="hljs-number">100</span>)
+a.deposit(<span class="hljs-number">100</span>)
+<span class="hljs-built_in">print</span>(a.getBalance()) <span class="hljs-comment">--&gt; 200</span>
+<span class="hljs-built_in">print</span>(a.balance)      <span class="hljs-comment">--&gt; nil</span>
+</code></pre>
+<p>newAccount()&#x8FD4;&#x56DE;&#x7684;table&#x4E2D;&#x53EA;&#x6709;<code>withdraw</code>&#x3001;<code>deposit</code>&#x548C;<code>getBalance</code>&#xFF0C;&#x8FD9;&#x4E09;&#x4E2A;&#x65B9;&#x6CD5;&#x90FD;&#x64CD;&#x4F5C;&#x540C;&#x4E00;&#x4E2A;&#x9690;&#x85CF;&#x7684;table&#xFF0C;&#x8FD9;&#x4E2A;&#x9690;&#x85CF;&#x7684;table&#x4E2D;&#x7684;&#x6210;&#x5458;&#x5C31;&#x662F;&#x79C1;&#x6709;&#x6210;&#x5458;&#x3002;&#x611F;&#x89C9;&#x5F88;&#x4E0D;&#x76F4;&#x89C2;&#xFF0C;&#x4F46;&#x662F;&#x4F3C;&#x4E4E;&#x63ED;&#x793A;&#x4E86;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x672C;&#x8D28;...</p>
+<script type="text/javascript">var className='atoc';</script>
+                                
+<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Page_Bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="7945072540"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="metatable.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 元表定义设置">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"面向对象设计","level":"1.3.7","depth":2,"previous":{"title":"元表定义设置","level":"1.3.6","depth":2,"path":"chapter-lua/metatable.md","ref":"./chapter-lua/metatable.md","articles":[]},"dir":"ltr"},"config":{"plugins":["atoc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go语言简明手册","gitbook":"*"},"file":{"path":"chapter-lua/object_oriented.md","mtime":"2019-03-12T12:02:36.814Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-12T12:35:26.265Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
