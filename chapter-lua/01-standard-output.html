@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Lua语言速查手册 · Go语言简明手册</title>
+        <title>标准输出打印 · Go语言简明手册</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="basic_type.html" />
+    <link rel="next" href="02-string-operation.html" />
     
     
-    <link rel="prev" href="../chapter-c/hardware.html" />
+    <link rel="prev" href="object_oriented.html" />
     
 
     <!--Google ads -->
@@ -360,7 +360,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="./">
+        <li class="chapter " data-level="1.3" data-path="./">
             
                 <a href="./">
             
@@ -465,7 +465,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.8" data-path="01-standard-output.html">
+        <li class="chapter active" data-level="1.3.8" data-path="01-standard-output.html">
             
                 <a href="01-standard-output.html">
             
@@ -665,7 +665,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Lua语言速查手册</a>
+        <a href=".." >标准输出打印</a>
     </h1>
 </div>
 
@@ -693,9 +693,138 @@
 </div-->
 
 
-                                <h1 id="lua&#x7A0B;&#x5E38;&#x7528;&#x64CD;&#x4F5C;">Lua&#x7A0B;&#x5E38;&#x7528;&#x64CD;&#x4F5C;</h1>
-<p>&#x8FD9;&#x91CC;&#x8BB0;&#x5F55;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x7684;lua&#x64CD;&#x4F5C;&#xFF0C;&#x5728;&#x957F;&#x65F6;&#x95F4;&#x4E0D;&#x7F16;&#x7A0B;&#x540E;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5FD8;&#x8BB0;&#x5F88;&#x591A;&#x57FA;&#x672C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD9;&#x4E00;&#x7AE0;&#x8282;&#x7684;&#x5185;&#x5BB9;&#x7528;&#x4E8E;&#x5E2E;&#x52A9;&#x5FEB;&#x901F;&#x56DE;&#x5FC6;&#x8D77;&#x8FD9;&#x4E9B;&#x57FA;&#x672C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4ECE;&#x624B;&#x51B7;&#x70ED;&#x8EAB;&#x5230;&#x624B;&#x70ED;&#x3002;</p>
-<p><a href="https://www.lua.org/gems/" target="_blank">Lua Programming Gems</a>&#x4E2D;&#x6536;&#x96C6;&#x4E86;&#x4E00;&#x4E9B;Lua&#x7F16;&#x7A0B;&#x6587;&#x7AE0;&#xFF0C;&#x4F8B;&#x5982;<a href="https://www.lua.org/gems/sample.pdf" target="_blank">Lua Performance Tips</a></p>
+                                <h1 id="lua&#x7684;&#x6807;&#x51C6;&#x8F93;&#x51FA;">Lua&#x7684;&#x6807;&#x51C6;&#x8F93;&#x51FA;</h1>
+<!-- toc -->
+<ul>
+<li><a href="#&#x76F4;&#x63A5;&#x8F93;&#x51FA;">&#x76F4;&#x63A5;&#x8F93;&#x51FA;</a></li>
+<li><a href="#&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;">&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;</a></li>
+<li><a href="#table&#x7684;&#x8F93;&#x51FA;">table&#x7684;&#x8F93;&#x51FA;</a></li>
+<li><a href="#&#x8F6C;&#x6362;&#x6210;json&#x5B57;&#x7B26;&#x4E32;&#x8F93;&#x51FA;">&#x8F6C;&#x6362;&#x6210;json&#x5B57;&#x7B26;&#x4E32;&#x8F93;&#x51FA;</a></li>
+</ul>
+<!-- tocstop -->
+<p>&#x5728;&#x5199;&#x4EE3;&#x7801;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x5F00;&#x59CB;&#x5B66;&#x4E60;&#x4E00;&#x95E8;&#x8BED;&#x8A00;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x7684;&#x529F;&#x80FD;&#x5C31;&#x662F;&#x201C;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x201D;&#xFF1A;&#x5C06;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x503C;&#x6216;&#x8005;&#x7C7B;&#x578B;&#x7B49;&#xFF0C;&#x6253;&#x5370;&#x5230;&#x5C4F;&#x5E55;&#x4E0A;&#x6216;&#x8005;&#x65E5;&#x5FD7;&#x4E2D;&#xFF0C;&#x770B;&#x4E00;&#x4E0B;&#x662F;&#x5426;&#x7B26;&#x5408;&#x9884;&#x671F;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x5927;&#x591A;&#x6570;&#x90FD;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E86;&#x8D85;&#x94FE;&#x63A5;&#xFF0C;&#x8FDE;&#x63A5;&#x5230; <a href="https://www.lua.org/manual/5.3/" target="_blank">Lua5.3 Reference Manual</a>&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x7684;Lua&#x7248;&#x672C;&#x662F;5.1&#xFF0C;&#x53EF;&#x4EE5;&#x5230; <a href="https://www.lua.org/manual/5.1/" target="_blank">Lua 5.1 Reference Manual</a> &#x4E2D;&#x67E5;&#x627E;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x7684;&#x8BF4;&#x660E;&#x3002;</p>
+<h2 id="&#x76F4;&#x63A5;&#x8F93;&#x51FA;">&#x76F4;&#x63A5;&#x8F93;&#x51FA;</h2>
+<p><a href="https://www.lua.org/manual/5.3/manual.html#pdf-print" target="_blank">print(&#xB7;&#xB7;&#xB7;)</a> &#x51FD;&#x6570;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x5C06;&#x6240;&#x6709;&#x51FA;&#x5165;&#x53C2;&#x6570;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF0C;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;&#x7C7B;&#x578B;&#xFF0C;print&#x51FD;&#x6570;&#x7528; <a href="https://www.lua.org/manual/5.3/manual.html#pdf-tostring" target="_blank">tostring</a> &#x51FD;&#x6570;&#x5C06;&#x8F93;&#x5165;&#x53C2;&#x6570;&#x8F6C;&#x6362;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<blockquote>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;print&#x51FD;&#x6570;&#x4E0D;&#x652F;&#x6301;&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;&#x3002;</p>
+</blockquote>
+<p>&#x4E0B;&#x9762;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x5C55;&#x793A;&#x4E86;Lua&#x4E2D;&#x7684;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x7528;print&#x8F93;&#x51FA;&#x662F;&#x7684;&#x6548;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-lua"><span class="hljs-keyword">local</span> number=<span class="hljs-number">0.2</span>
+<span class="hljs-keyword">local</span> <span class="hljs-built_in">string</span>=<span class="hljs-string">&quot;this is a string&quot;</span>
+<span class="hljs-keyword">local</span> <span class="hljs-built_in">table</span> = {first=<span class="hljs-string">&quot;value1&quot;</span>,second=<span class="hljs-string">&quot;value2&quot;</span>}
+<span class="hljs-keyword">local</span> array = {<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>}
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;parameter is nil(&quot;</span>, <span class="hljs-built_in">type</span>(<span class="hljs-keyword">nil</span>),<span class="hljs-string">&quot;)&quot;</span>,<span class="hljs-keyword">nil</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;parameter is boolen(&quot;</span>, <span class="hljs-built_in">type</span>(<span class="hljs-keyword">true</span>),<span class="hljs-string">&quot;)&quot;</span>,<span class="hljs-keyword">true</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;parameter is number(&quot;</span>, <span class="hljs-built_in">type</span>(number),<span class="hljs-string">&quot;)&quot;</span>, number)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;parameter is string(&quot;</span>, <span class="hljs-built_in">type</span>(<span class="hljs-built_in">string</span>),<span class="hljs-string">&quot;)&quot;</span>, <span class="hljs-built_in">string</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;parameter is function(&quot;</span>, <span class="hljs-built_in">type</span>(<span class="hljs-built_in">print</span>),<span class="hljs-string">&quot;)&quot;</span>,<span class="hljs-built_in">print</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;parameter is userdata(&quot;</span>, <span class="hljs-built_in">type</span>(<span class="hljs-built_in">io</span>.stdin),<span class="hljs-string">&quot;)&quot;</span>, <span class="hljs-built_in">io</span>.stdin)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;parameter is table(&quot;</span>, <span class="hljs-built_in">type</span>(<span class="hljs-built_in">table</span>),<span class="hljs-string">&quot;)&quot;</span>, <span class="hljs-built_in">table</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;parameter is array(&quot;</span>, <span class="hljs-built_in">type</span>(array),<span class="hljs-string">&quot;)&quot;</span>, array)
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-sh">parameter is nil(    nil    )    nil
+parameter is boolen(    boolean    )    <span class="hljs-literal">true</span>
+parameter is number(    number    )    0.2
+parameter is string(    string    )    this is a string
+parameter is table(    table    )    table: 0x7f828ec08860
+parameter is array(    table    )    table: 0x7f828ec08930
+parameter is <span class="hljs-keyword">function</span>(    <span class="hljs-keyword">function</span>    )    <span class="hljs-keyword">function</span>: 0x7f828ec03e70
+parameter is userdata(    userdata    )    file (0x7fffaa221110)
+</code></pre>
+<p>array&#x662F;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7684;table&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x533A;&#x522B;&#x5728;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7AE0;&#x8282;&#x8BB2;&#x89E3;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;<code>table</code>&#x3001;<code>function</code>&#x548C;<code>userdata</code>&#x7C7B;&#x578B;&#xFF0C;&#x8F93;&#x51FA;&#x7684;&#x90FD;&#x662F;&#x5730;&#x5740;&#x3002;</p>
+<h2 id="&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;">&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;</h2>
+<p><a href="https://www.lua.org/manual/5.3/manual.html#pdf-string.format" target="_blank">string.format</a>&#x51FD;&#x6570;&#xFF0C;&#x4E0E;ISO C&#x7684;sprintf&#x51FD;&#x6570;&#x7684;&#x7528;&#x6CD5;&#x57FA;&#x672C;&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x652F;&#x6301;&#x4FEE;&#x9970;&#x7B26;<code>*</code>&#x3001;<code>h</code>&#x3001; <code>L</code>&#x3001; <code>l</code>&#x3001; <code>n</code>&#x3001; <code>p</code>&#xFF0C;&#x589E;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x4FEE;&#x9970;&#x7B26;<code>q</code>&#x3002;</p>
+<p><code>q</code>&#x4FEE;&#x9970;&#x7B26;&#x8868;&#x793A;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x5B57;&#x7B26;&#x6DFB;&#x52A0;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#xFF0C;&#x8F6C;&#x6362;&#x6210;&#x53EF;&#x4EE5;&#x88AB;lua&#x5B89;&#x5168;&#x8BFB;&#x53D6;&#x7684;&#x6837;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-lua"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-- format output&quot;</span>)
+v = <span class="hljs-built_in">string</span>.format(<span class="hljs-string">&apos;%q&apos;</span>, <span class="hljs-string">&apos;a string with &quot;quotes&quot; and \n new line&apos;</span>)
+<span class="hljs-built_in">print</span>(v)
+</code></pre>
+<p>&#x6267;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>-- format output
+&quot;a string with \&quot;quotes\&quot; and \
+ new line&quot;
+</code></pre><h2 id="table&#x7684;&#x8F93;&#x51FA;">table&#x7684;&#x8F93;&#x51FA;</h2>
+<p>&#x5BF9;&#x4E8E;table&#x7C7B;&#x578B;&#xFF0C;&#x6211;&#x4EEC;&#x66F4;&#x5E0C;&#x671B;&#x770B;&#x5230;&#x7684;&#x662F;&#x5B83;&#x91CC;&#x9762;&#x5B58;&#x653E;&#x7684;&#x503C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5B83;&#x672C;&#x8EAB;&#x7684;&#x5730;&#x5740;&#x3002;&#x5728;Lua&#x4E2D;&#x8F93;&#x51FA;table&#x7684;&#x5185;&#x5BB9;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#xFF0C;&#x9700;&#x8981;&#x7528; <a href="https://www.lua.org/manual/5.3/manual.html#pdf-pairs" target="_blank">pairs</a> &#x51FD;&#x6570;&#x904D;&#x5386;&#x3002;</p>
+<p><code>pairs(t)</code>&#x51FD;&#x6570;&#x8C03;&#x7528;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x7684;&#x540D;&#x4E3A;<code>__pairs</code>&#x7684;&#x5143;&#x65B9;&#x6CD5;&#x904D;&#x5386;table&#x4E2D;&#x7684;&#x6210;&#x5458;&#xFF0C;pairs&#x53EF;&#x4EE5;&#x904D;&#x5386;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;table&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x904D;&#x5386;&#x51FD;&#x6570; <a href="https://www.lua.org/manual/5.3/manual.html#pdf-ipairs" target="_blank">ipairs</a> &#x53EA;&#x80FD;&#x904D;&#x5386;&#x6570;&#x7EC4;&#x7C7B;&#x578B;&#x7684;table&#x3002;</p>
+<p>&#x7528;pairs&#x548C;ipairs&#x904D;&#x5386;table&#xFF1A;</p>
+<pre><code class="lang-lua"><span class="hljs-keyword">local</span> <span class="hljs-built_in">table</span> = {first=<span class="hljs-string">&quot;value1&quot;</span>,second=<span class="hljs-string">&quot;value2&quot;</span>}
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;--- iterate table by pairs  &quot;</span>)
+<span class="hljs-keyword">for</span> i, v <span class="hljs-keyword">in</span> <span class="hljs-built_in">pairs</span>(<span class="hljs-built_in">table</span>) <span class="hljs-keyword">do</span>
+    <span class="hljs-built_in">print</span>(i ,v)
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;--- iterate table by ipairs  &quot;</span>)
+<span class="hljs-keyword">for</span> i, v <span class="hljs-keyword">in</span> <span class="hljs-built_in">ipairs</span>(<span class="hljs-built_in">table</span>) <span class="hljs-keyword">do</span>
+    <span class="hljs-built_in">print</span>(i ,v)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF0C;ipairs&#x6CA1;&#x6709;&#x904D;&#x5386;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre><code>--- iterate table by pairs
+second    value2
+first    value1
+--- iterate table by ipairs
+</code></pre><p>&#x7528;pairs&#x548C;ipairs&#x904D;&#x5386;array&#x7C7B;&#x578B;&#x7684;table&#xFF1A;</p>
+<pre><code class="lang-lua">    <span class="hljs-keyword">local</span> array = {<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>}
+
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;--- iterate array by pairs &quot;</span>)
+    <span class="hljs-keyword">for</span> i, v <span class="hljs-keyword">in</span> <span class="hljs-built_in">pairs</span>(array) <span class="hljs-keyword">do</span>
+        <span class="hljs-built_in">print</span>(i ,v)
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;--- iterate array by ipairs &quot;</span>)
+    <span class="hljs-keyword">for</span> i, v <span class="hljs-keyword">in</span> <span class="hljs-built_in">ipairs</span>(array) <span class="hljs-keyword">do</span>
+        <span class="hljs-built_in">print</span>(i ,v)
+    <span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF0C;&#x8F93;&#x51FA;&#x76F8;&#x540C;&#xFF1A;</p>
+<pre><code>--- iterate array by pairs 
+1    a
+2    b
+3    c
+--- iterate array by ipairs 
+1    a
+2    b
+3    c
+</code></pre><p>ipairs&#x4E8B;&#x5B9E;&#x662F;&#x5728;&#x7528;&#x4ECE;1&#x5F00;&#x59CB;&#x7684;&#x4E0B;&#x6807;&#xFF0C;&#x53D6;&#x51FA;array&#x7C7B;&#x578B;table&#x4E2D;&#x7684;&#x6210;&#x5458;&#x3002;</p>
+<h2 id="&#x8F6C;&#x6362;&#x6210;json&#x5B57;&#x7B26;&#x4E32;&#x8F93;&#x51FA;">&#x8F6C;&#x6362;&#x6210;json&#x5B57;&#x7B26;&#x4E32;&#x8F93;&#x51FA;</h2>
+<p>lua&#x6709;&#x5F88;&#x591A;&#x4E2A;<a href="http://lua-users.org/wiki/JsonModules" target="_blank">json&#x6A21;&#x5757;</a>&#xFF0C;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x5C06;table&#x7B49;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x8F6C;&#x6362;&#x6210;json&#x5B57;&#x7B26;&#x4E32;&#x540E;&#x8F93;&#x51FA;&#x3002;</p>
+<p><a href="http://lua-users.org/wiki/JsonModules" target="_blank">json&#x6A21;&#x5757;</a>&#x4E2D;&#x7684;&#x591A;&#x4E2A;json&#x6A21;&#x5757;&#xFF0C;&#x4EE5;&#x53CA;&#x7528;luarocks&#x547D;&#x4EE4;&#x627E;&#x5230;&#x7684;&#x591A;&#x4E2A;json&#x6A21;&#x5757;&#xFF0C;&#x5B70;&#x4F18;&#x5B70;&#x7565;&#xFF0C;&#x6211;&#x4E0D;&#x80FD;&#x5224;&#x5B9A;&#xFF0C;</p>
+<pre><code class="lang-bash">$ luarocks search json
+json - Search results <span class="hljs-keyword">for</span> Lua 5.1:
+==================================
+
+Rockspecs and <span class="hljs-built_in">source</span> rocks:
+---------------------------
+
+dkjson
+   2.5-2 (rockspec) - https://luarocks.org
+
+...(&#x7701;&#x7565;)...
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x53EA;&#x6F14;&#x793A;&quot;luajson&quot;&#x7684;&#x7528;&#xFF0C;&#x5B89;&#x88C5;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-bash">$ luarocks install luajson
+Installing https://luarocks.org/luajson-1.3.4-1.src.rock
+...(&#x7701;&#x7565;)...
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-lua"><span class="hljs-keyword">local</span> json = <span class="hljs-built_in">require</span> <span class="hljs-string">&quot;json&quot;</span>
+
+<span class="hljs-keyword">local</span> <span class="hljs-built_in">table</span>={first=<span class="hljs-string">&quot;value1&quot;</span>, second=<span class="hljs-string">&quot;value2&quot;</span>}
+v = json.encode(<span class="hljs-built_in">table</span>)
+<span class="hljs-built_in">print</span>(v)
+
+<span class="hljs-keyword">local</span> array={<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>}
+v = json.encode(array)
+<span class="hljs-built_in">print</span>(v)
+</code></pre>
+<p>&#x6267;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json">{<span class="hljs-string">&quot;second&quot;</span>:<span class="hljs-string">&quot;value2&quot;</span>,<span class="hljs-string">&quot;first&quot;</span>:<span class="hljs-string">&quot;value1&quot;</span>}
+[<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]
+</code></pre>
 <script type="text/javascript">var className='atoc';</script>
                                 
 <div>
@@ -723,12 +852,12 @@
 
             
                 
-                <a href="../chapter-c/hardware.html" class="navigation navigation-prev " aria-label="Previous page: 硬件信息读取">
+                <a href="object_oriented.html" class="navigation navigation-prev " aria-label="Previous page: 面向对象设计">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="basic_type.html" class="navigation navigation-next " aria-label="Next page: 基本数据类型">
+                <a href="02-string-operation.html" class="navigation navigation-next " aria-label="Next page: 字符串操作">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -739,7 +868,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Lua语言速查手册","level":"1.3","depth":1,"next":{"title":"基本数据类型","level":"1.3.1","depth":2,"path":"chapter-lua/basic_type.md","ref":"./chapter-lua/basic_type.md","articles":[]},"previous":{"title":"硬件信息读取","level":"1.2.14","depth":2,"path":"chapter-c/hardware.md","ref":"./chapter-c/hardware.md","articles":[]},"dir":"ltr"},"config":{"plugins":["atoc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go语言简明手册","gitbook":"*"},"file":{"path":"chapter-lua/README.md","mtime":"2019-03-12T12:42:12.227Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-12T12:36:59.855Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"标准输出打印","level":"1.3.8","depth":2,"next":{"title":"字符串操作","level":"1.3.9","depth":2,"path":"chapter-lua/02-string-operation.md","ref":"chapter-lua/02-string-operation.md","articles":[]},"previous":{"title":"面向对象设计","level":"1.3.7","depth":2,"path":"chapter-lua/object_oriented.md","ref":"./chapter-lua/object_oriented.md","articles":[]},"dir":"ltr"},"config":{"plugins":["atoc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Go语言简明手册","gitbook":"*"},"file":{"path":"chapter-lua/01-standard-output.md","mtime":"2019-03-12T12:47:42.839Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-12T12:36:59.855Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
