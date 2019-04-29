@@ -8,12 +8,20 @@
 			"name": "theme-lijiaocn",
 			"version": "git+https://github.com/lijiaocn/theme-lijiaocn.git"
 		},
-		"atoc"
+		"atoc",
+		"rss"
 	],
 	"pluginsConfig": {
 		"atoc": {
 			"addClass": true,
 			"className": "atoc"
+		},
+		"rss": {
+			"title": "编程实用速查手册",
+			"description": "编程实用速查手册，设计Go语言、C语言以及Lua等工作中遇到的编程语言",
+			"author": "李佶澳",
+			"site_url": "https://www.lijiaocn.com/programming/",
+			"feed_url": "https://www.lijiaocn.com/programming/feed.xml"
 		}
 	}
 }
