@@ -3,6 +3,10 @@
 
 这里记录用于Go项目的依赖管理工具。
 
+## Go Modules
+
+Go 1.11和Go 1.12引入了Go Modules，在Go 1.13中，Go Module将是默认的依赖管理方法：[Go 1.11和1.12引入的新的依赖代码管理方法：Go Modules](https://www.lijiaocn.com/%E7%BC%96%E7%A8%8B/2019/05/05/go-modules.html)。
+
 ## Dep
 
 [dep][3]是一个比较新的依赖管理工具，它计划成为Go的标准工具(截止2017-12-26 20:50:43)。
