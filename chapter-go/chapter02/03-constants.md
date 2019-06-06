@@ -29,7 +29,7 @@ description:
 	复数，complex
 	字符串，string
 
-其中符号(rune)、整数(intrger)、浮点数(floating-point)和复数(complex)型常量，又被称为数值常量(numeric constants)。
+其中符号(rune)、整数(integer)、浮点数(floating-point)和复数(complex)型常量，又被称为数值常量(numeric constants)。
 
 ## 常量表示
 
