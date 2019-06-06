@@ -22,7 +22,7 @@ go内置了一些函数，这些函数可以直接使用。
 
 	close
 
-## 长度和容量(Length and capacit)
+## 长度和容量(Length and capacity)
 
 	Call      Argument type    Result
 	
