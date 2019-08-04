@@ -60,5 +60,5 @@
     * [尽量少创建变量](chapter-lua/03-lua-performance-less-var.md)
     * [缓存运算结果](chapter-lua/03-lua-performance-cache-result.md)
     * [主动控制垃圾回收](chapter-lua/03-lua-performance-garbage-collect.md)
-* [Python速查手册]( ./chapter-python/README.md)
+* [Python3速查手册]( ./chapter-python/README.md)
     * [python2代码转换成python3]( ./chapter-python/2to3.md)
