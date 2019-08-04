@@ -21,8 +21,8 @@
 			"title": "编程实用速查手册",
 			"description": "编程实用速查手册，设计Go语言、C语言以及Lua等工作中遇到的编程语言",
 			"author": "李佶澳",
-			"site_url": "https://www.lijiaocn.com/program/",
-			"feed_url": "https://www.lijiaocn.com/program/feed.xml"
+			"site_url": "https://www.lijiaocn.com/prog/",
+			"feed_url": "https://www.lijiaocn.com/prog/feed.xml"
 		}
 	}
 }
