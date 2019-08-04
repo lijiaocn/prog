@@ -4,7 +4,7 @@
         <description><![CDATA[编程实用速查手册，设计Go语言、C语言以及Lua等工作中遇到的编程语言]]></description>
         <link>https://www.lijiaocn.com/programming/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 06 May 2019 03:18:40 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 04 Aug 2019 15:24:19 GMT</lastBuildDate>
         <atom:link href="https://www.lijiaocn.com/programming/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[李佶澳]]></author>
         <item>
@@ -427,6 +427,20 @@ PackageName    = identifier .]]></description>
             <description><![CDATA[可以通过collectgarbage干预垃圾回收过程，通过collectgarbage可以停止和重新启动垃圾回收。]]></description>
             <link>https://www.lijiaocn.com/programming/chapter-lua/03-lua-performance-garbage-collect.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/programming/chapter-lua/03-lua-performance-garbage-collect.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Python编程速查手册]]></title>
+            <description><![CDATA[How To Convert Data Types in Python 3]]></description>
+            <link>https://www.lijiaocn.com/programming/chapter-python/README.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/programming/chapter-python/README.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Python2代码转换成Python3代码]]></title>
+            <description><![CDATA[Python提供了一个名为2to3的命令，将pyton2代码转换成python3代码。]]></description>
+            <link>https://www.lijiaocn.com/programming/chapter-python/2to3.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/programming/chapter-python/2to3.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
