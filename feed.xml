@@ -4,7 +4,7 @@
         <description><![CDATA[编程实用速查手册，设计Go语言、C语言以及Lua等工作中遇到的编程语言]]></description>
         <link>https://www.lijiaocn.com/prog/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 04 Aug 2019 16:40:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 04 Aug 2019 17:04:58 GMT</lastBuildDate>
         <atom:link href="https://www.lijiaocn.com/prog/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[李佶澳]]></author>
         <item>
@@ -441,6 +441,222 @@ PackageName    = identifier .]]></description>
             <description><![CDATA[Python提供了一个名为2to3的命令，将pyton2代码转换成python3代码。]]></description>
             <link>https://www.lijiaocn.com/prog/chapter-py3/2to3.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/chapter-py3/2to3.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Django开发手册]]></title>
+            <description><![CDATA[Python编程入门]]></description>
+            <link>https://www.lijiaocn.com/prog/django/README.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/README.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Django环境安装]]></title>
+            <description><![CDATA[确保有python命令和pip命令，python分为python2和python3，建议直接上手python3，python2.7是python2的最后一个版本。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/install.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/install.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[第一个Django项目]]></title>
+            <description><![CDATA[Writing your first Django app, part 1]]></description>
+            <link>https://www.lijiaocn.com/prog/django/first-project.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/first-project.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[第一个Django应用]]></title>
+            <description><![CDATA[前面创建了一个Django项目，接下来在项目中创建Django应用。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/first-app.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/first-app.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Django对接数据库]]></title>
+            <description><![CDATA[settings.py是项目的配置文件，其中包含数据库相关的配置。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/database.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/database.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Django数据库初始化]]></title>
+            <description><![CDATA[Django支持直接在代码中定义数据库的表结构，然后用django命令完成数据库的初始化，不需要在sql语句。在Django中一个数据库表对应一个Model。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/database-init.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/database-init.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[在命令行操作数据库]]></title>
+            <description><![CDATA[Django提供了一个shell命令，可以直接和数据库交互：]]></description>
+            <link>https://www.lijiaocn.com/prog/django/database-shell.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/database-shell.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Django创建站点管理后台]]></title>
+            <description><![CDATA[Django提供了后台管理模版，可以直接创建网站后台，减少开发工作.]]></description>
+            <link>https://www.lijiaocn.com/prog/django/admin.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/admin.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Django中view的创建]]></title>
+            <description><![CDATA[view就是一个一个页面，前面在创建应用的时候创建了一个简单的index view。这里演示更多view的用法。每个view有一个独立无二的url，对应一个python函数，这个python函数负责渲染页面并返回给请求端。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/views.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/views.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Django Generic View的使用]]></title>
+            <description><![CDATA[使用Django Generic Views可以减少大量代码。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/generic_views.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/generic_views.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Django应用的测试代码编写]]></title>
+            <description><![CDATA[测试代码在Django应用的tests.py文件中编写，Django提供一个名为TestCase的类。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/test.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/test.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[在Django页面模版中引入静态资源]]></title>
+            <description><![CDATA[Django默认到应用的static子目录中查找静态资源。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/static.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/static.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Django传入参数的获取]]></title>
+            <description><![CDATA[在views的开发一节中讲过，url路径参数可以django直接解析，并作为参数传入views的处理函数。但只有路径参数是不够的，http发起的GET请求是有参数的，以及POST请求提交的body数据都需要解析。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/input.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/input.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Django的日志管理]]></title>
+            <description><![CDATA[Django的日志在项目的settings.py中配置[LOGGING][1]。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/log.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/log.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[使用Django项目的settings.py中的全局变量]]></title>
+            <link>https://www.lijiaocn.com/prog/django/global_setting.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/global_setting.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Django使用过程遇到的问题]]></title>
+            <description><![CDATA[一个空的Django项目运行时直接报错：LookupError: No installed app with label 'admin'.。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/problems.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/problems.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[IDEA远程调试python]]></title>
+            <description><![CDATA[Tools->Deployment->Configuration，在弹出的窗口中添加远程Server，根据需要选择FTP或者SFTP协议，这里使用SFTP。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/idea_usage.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/idea_usage.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[在Django项目自定义Package]]></title>
+            <description><![CDATA[一些常用的代码可以做成Package，从而可以在多个地方复用，在Django项目代码中可以直接应用自定义的Package。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/package.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/package.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[用WSGI方式部署Django服务]]></title>
+            <description><![CDATA[Django的主要部署平台是WSGI，WSGI是python的web服务和应用标准，文档How to deploy with WSGI中介绍了四种方式：使用mod_swgi模块的Apache，Gunicorn、uWSGI。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/deploy.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/deploy.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[在Apache中部署Django应用]]></title>
+            <description><![CDATA[在apache中部署的时候，需要启用apache的mod_wsgi模块，这个模块用来兼容python的wsgi应用，包括Django。How to use Django with Apache and mod_wsgi中有详细介绍。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/deploy_apache.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/deploy_apache.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Django中使用Redis缓存]]></title>
+            <description><![CDATA[django-redis documentation是python库，将redis与Django无缝结合了起来。]]></description>
+            <link>https://www.lijiaocn.com/prog/django/redis_cache.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/redis_cache.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[独立文件导入 Django 环境]]></title>
+            <description><![CDATA[创建文件 bin/movie-spider.py，导入 django 环境：]]></description>
+            <link>https://www.lijiaocn.com/prog/django/import-django.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/import-django.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[微信公众平台（公众号）API]]></title>
+            <description><![CDATA[公众号接口权限]]></description>
+            <link>https://www.lijiaocn.com/prog/wechat/README.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/wechat/README.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[微信公众号API回调设置]]></title>
+            <description><![CDATA[入门指引中介绍的比较详细。]]></description>
+            <link>https://www.lijiaocn.com/prog/wechat/shezhi.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/wechat/shezhi.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[微信公众平台回传的消息格式]]></title>
+            <description><![CDATA[普通消息分为：文本、图片、语音、视频、小视频、地理位置、链接，7种类型。]]></description>
+            <link>https://www.lijiaocn.com/prog/wechat/message.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/wechat/message.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[微信公众平台接口调试]]></title>
+            <description><![CDATA[微信公众平台提供了一个接口调试工具工具，选择不同的接口类型，可以向微信公众平台发送消息，或者让微信公众平台给开发者的应用发送消息。]]></description>
+            <link>https://www.lijiaocn.com/prog/wechat/debug.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/wechat/debug.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[淘宝客API的使用]]></title>
+            <description><![CDATA[史上最详细淘宝联盟API使用教程]]></description>
+            <link>https://www.lijiaocn.com/prog/taobaoke/README.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/taobaoke/README.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[淘宝客API开通方法]]></title>
+            <description><![CDATA[淘宝客的开通要到淘宝联盟中申请，开通方法与史上最详细淘宝联盟API使用教程中的介绍一致。]]></description>
+            <link>https://www.lijiaocn.com/prog/taobaoke/kaitong.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/taobaoke/kaitong.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[淘宝客API的SDK下载]]></title>
+            <description><![CDATA[在淘宝开放平台中，进入应用以后，在左侧边栏中有一个“SDK下载”的菜单，进入后，可以选择下载各种编程语言的SDK，目前支持：Java、PHP、Python、.NET、Metadata、C、NodeJS。]]></description>
+            <link>https://www.lijiaocn.com/prog/taobaoke/sdk.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/taobaoke/sdk.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[淘宝客基础API梳理]]></title>
+            <description><![CDATA[详情见淘宝客基础API，这里整理几个主要API的用途。]]></description>
+            <link>https://www.lijiaocn.com/prog/taobaoke/api.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/taobaoke/api.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[淘宝客基础API调用方法]]></title>
+            <description><![CDATA[下面以Python API为例。]]></description>
+            <link>https://www.lijiaocn.com/prog/taobaoke/api_call.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/taobaoke/api_call.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
