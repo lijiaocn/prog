@@ -7,4 +7,4 @@
 #
 
 port=`cat port`
-nohup gitbook serve --port $port --lrport "3$port" 2>&1 >/tmp/handbook-programming.log &
+nohup gitbook serve --port $port --lrport "3$port" 2>&1 >/tmp/gitbook.log &
