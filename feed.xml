@@ -4,11 +4,11 @@
         <description><![CDATA[编程实用速查手册，设计Go语言、C语言以及Lua等工作中遇到的编程语言]]></description>
         <link>https://www.lijiaocn.com/prog/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 05 Aug 2019 03:39:26 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 05 Aug 2019 03:54:13 GMT</lastBuildDate>
         <atom:link href="https://www.lijiaocn.com/prog/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[李佶澳]]></author>
         <item>
-            <title><![CDATA[编程速查手册]]></title>
+            <title><![CDATA[编程开发速查手册]]></title>
             <description><![CDATA[这里记录编程过程中经常用到的函数，以及操作某些资源的方法和编程技巧等。]]></description>
             <link>https://www.lijiaocn.com/prog/</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/</guid>
