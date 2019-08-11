@@ -1,5 +1,29 @@
 # Python3爬虫开发 -- 请求库
 
+请求库用来发送 http 请求，获取目标页面。
+
+[urllib](https://docs.python.org/3/library/urllib.html) 是 Python3 内置的 HTTP 请求库。
+
+```python
+import urllib.request as request
+
+if __name__ == "__main__":
+    try:
+        resp = request.urlopen(url="http://www.baidu.com")
+    except Exception as e:
+        print(str(e))
+    else:
+        print(type(resp))
+        print(resp.info())
+        if resp.readable:
+            data = resp.read()
+            print(type(data))
+            print("%s" % data.decode("utf-8"))
+        resp.close()
+    finally:
+        None
+```
+
 [Requests](https://github.com/requests/requests) 是一个发送 http 请求的 python 库，[英文文档](https://2.python-requests.org/en/master/)，[中文文档](http://2.python-requests.org/zh_CN/latest/)：
 
 	pip3 install requests

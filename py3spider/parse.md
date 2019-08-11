@@ -8,6 +8,30 @@
 
 	pip3 install beautifulsoup4
 
+```python
+import urllib.request as request
+from bs4 import BeautifulSoup
+
+if __name__ == "__main__":
+    try:
+        resp = request.urlopen(url="http://www.btbtdy.me/hot/month/")
+        resp = request.urlopen(url="http://www.baidu.com")
+    except Exception as e:
+        print(str(e))
+    else:
+        if not resp.readable:
+            resp.close()
+            exit(0)
+
+        data = resp.read()
+        soup = BeautifulSoup(data,features="html.parser")
+        print("%s" % soup.title)
+
+    finally:
+        None
+```
+
+
 [pyquery](https://github.com/gawel/pyquery) 使用类似 jQuery 的语法解析 HTML。
 
 	pip3 install pyquery
