@@ -72,6 +72,8 @@ class DerivedClassName(Base1, Base2, Base3):
 
 ```python
 class C(B):
+    def __init__(self,url):
+        super().__init__(url)
     def method(self, arg):
         super().method(arg)    # This does the same thing as:
                                # super(C, self).method(arg)
