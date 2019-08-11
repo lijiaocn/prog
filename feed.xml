@@ -4,7 +4,7 @@
         <description><![CDATA[编程实用速查手册，设计Go语言、C语言以及Lua等工作中遇到的编程语言]]></description>
         <link>https://www.lijiaocn.com/prog/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 11 Aug 2019 01:22:05 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 11 Aug 2019 16:34:54 GMT</lastBuildDate>
         <atom:link href="https://www.lijiaocn.com/prog/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[李佶澳]]></author>
         <item>
@@ -75,6 +75,13 @@
             <description><![CDATA[Dictionary，就是 map，key-value 对。]]></description>
             <link>https://www.lijiaocn.com/prog/python3/dictionary.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/python3/dictionary.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Python3 字符串处理方法]]></title>
+            <description><![CDATA[List 拼接成字符串：]]></description>
+            <link>https://www.lijiaocn.com/prog/python3/string.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/python3/string.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
@@ -187,6 +194,13 @@
             <description><![CDATA[Django支持直接在代码中定义数据库的表结构，然后用django命令完成数据库的初始化，不需要在sql语句。在Django中一个数据库表对应一个Model。]]></description>
             <link>https://www.lijiaocn.com/prog/django/database-init.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/database-init.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Django：数据库查询写入]]></title>
+            <description><![CDATA[写入新的记录：]]></description>
+            <link>https://www.lijiaocn.com/prog/django/database-usage.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/database-usage.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
@@ -787,7 +801,7 @@ PackageName    = identifier .]]></description>
         </item>
         <item>
             <title><![CDATA[Python3爬虫开发 -- 请求库]]></title>
-            <description><![CDATA[Requests 是一个发送 http 请求的 python 库，英文文档，中文文档：]]></description>
+            <description><![CDATA[请求库用来发送 http 请求，获取目标页面。]]></description>
             <link>https://www.lijiaocn.com/prog/py3spider/request.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/py3spider/request.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
