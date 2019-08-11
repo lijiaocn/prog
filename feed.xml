@@ -4,11 +4,11 @@
         <description><![CDATA[编程实用速查手册，设计Go语言、C语言以及Lua等工作中遇到的编程语言]]></description>
         <link>https://www.lijiaocn.com/prog/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 10 Aug 2019 10:17:03 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 11 Aug 2019 01:22:05 GMT</lastBuildDate>
         <atom:link href="https://www.lijiaocn.com/prog/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[李佶澳]]></author>
         <item>
-            <title><![CDATA[编程开发速查手册]]></title>
+            <title><![CDATA[使用编程速查手册]]></title>
             <description><![CDATA[这里记录编程过程中经常用到的函数，以及操作某些资源的方法和编程技巧等。]]></description>
             <link>https://www.lijiaocn.com/prog/</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/</guid>
@@ -26,6 +26,13 @@
             <description><![CDATA[Python提供了一个名为2to3的命令，将pyton2代码转换成python3代码。]]></description>
             <link>https://www.lijiaocn.com/prog/python3/2to3.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/python3/2to3.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Pyhont3 的运行环境与依赖管理]]></title>
+            <description><![CDATA[用 virtualenv 创建独立的 python 运行环境是一个非常好的做法，不干扰本地的 python 环境也不受本地 python 环境影响。]]></description>
+            <link>https://www.lijiaocn.com/prog/python3/project.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/python3/project.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
@@ -769,6 +776,41 @@ PackageName    = identifier .]]></description>
             <description><![CDATA[下面以Python API为例。]]></description>
             <link>https://www.lijiaocn.com/prog/taobaoke/api_call.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/taobaoke/api_call.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Python3 爬虫开发]]></title>
+            <description><![CDATA[Python2 马上就要不维护了，现在要尽量使用 Python3，正好崔庆才写了一本《Python 3网络爬虫开发实战》，介绍了 Requests、Selenium、PhantomJS、Beautiful Soup 等 python 库的用法。]]></description>
+            <link>https://www.lijiaocn.com/prog/py3spider/README.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/py3spider/README.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Python3爬虫开发 -- 请求库]]></title>
+            <description><![CDATA[Requests 是一个发送 http 请求的 python 库，英文文档，中文文档：]]></description>
+            <link>https://www.lijiaocn.com/prog/py3spider/request.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/py3spider/request.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Python3爬虫开发 -- 解析库]]></title>
+            <description><![CDATA[lxml 支持 HTML、XML 解析，支持 XPath 解析方式。]]></description>
+            <link>https://www.lijiaocn.com/prog/py3spider/parse.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/py3spider/parse.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Python3爬虫开发 -- 移动端工具]]></title>
+            <description><![CDATA[用于对接 Mysql、Redis 等存储系统的 Python 库就不提了，重点介绍几个抓包和移动端工具，通过这些抓包工具可以抓取 APP 的通信数据，从而分析出协议规则。]]></description>
+            <link>https://www.lijiaocn.com/prog/py3spider/mobile.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/py3spider/mobile.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Python3爬虫开发 -- 爬虫框架]]></title>
+            <description><![CDATA[爬虫框架集成了必须的爬取、解析、提取、存放工具，按照框架规则填写代码即可。]]></description>
+            <link>https://www.lijiaocn.com/prog/py3spider/framework.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/py3spider/framework.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
