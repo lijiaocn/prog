@@ -4,7 +4,7 @@
         <description><![CDATA[编程实用速查手册，设计Go语言、C语言以及Lua等工作中遇到的编程语言]]></description>
         <link>https://www.lijiaocn.com/prog/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 11 Aug 2019 16:34:54 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 16 Aug 2019 12:09:26 GMT</lastBuildDate>
         <atom:link href="https://www.lijiaocn.com/prog/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[李佶澳]]></author>
         <item>
@@ -582,6 +582,13 @@ PackageName    = identifier .]]></description>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[Go 语言的类型转换]]></title>
+            <description><![CDATA[标准库 strconv 提供了多个 string 与数值的转换方法：]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter03/convert.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter03/convert.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[项目管理]]></title>
             <description><![CDATA[Go语言项目的管理方法与管理工具。]]></description>
             <link>https://www.lijiaocn.com/prog/go/chapter04/00-about.html</link>
@@ -593,6 +600,13 @@ PackageName    = identifier .]]></description>
             <description><![CDATA[这里记录用于Go项目的依赖管理工具。]]></description>
             <link>https://www.lijiaocn.com/prog/go/chapter04/01-dependency.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter04/01-dependency.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Go Template 语法]]></title>
+            <description><![CDATA[Go 语言提供了一个名为 text/template 库，这个库定义实现了 go template 语言，可以用来写 html 模板。很多用 go 语言实现的软件，譬如 docker、kubernetes 支持用 go template 定义输出的内容格式。]]></description>
+            <link>https://www.lijiaocn.com/prog/go-template/README.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go-template/README.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
