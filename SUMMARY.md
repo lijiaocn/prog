@@ -1,5 +1,5 @@
 # 目录
-* [小鸟笔记之编程速查手册说明](./README.md)
+* [小鸟笔记——编程速查手册说明](./README.md)
 * [Python3速查手册](./python3/index.md)
     * [python2代码转换成python3](./python3/2to3.md)
     * [运行环境与依赖管理](./python3/project.md)
