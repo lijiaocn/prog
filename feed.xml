@@ -4,12 +4,12 @@
         <description><![CDATA[编程实用速查手册，Go语言、C语言、Python3、Django以及Lua等在工作中遇到的编程语言的手册]]></description>
         <link>https://www.lijiaocn.com/prog/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 30 Aug 2019 03:11:11 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 30 Aug 2019 22:31:49 GMT</lastBuildDate>
         <atom:link href="https://www.lijiaocn.com/prog/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[李佶澳]]></author>
         <item>
-            <title><![CDATA[小鸟笔记之编程速查手册]]></title>
-            <description><![CDATA[这里记录编程过程中经常用到的函数，以及操作某些资源的方法和编程技巧等，不局限一种语言。]]></description>
+            <title><![CDATA[使用编程速查手册]]></title>
+            <description><![CDATA[这里记录编程过程中经常用到的函数，以及操作某些资源的方法和编程技巧等。]]></description>
             <link>https://www.lijiaocn.com/prog/</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
@@ -17,8 +17,8 @@
         <item>
             <title><![CDATA[Python3 编程速查手册]]></title>
             <description><![CDATA[Python2 马上不被支持了，现在（2019-08-06 22:28:10）最好坚持用 python3。]]></description>
-            <link>https://www.lijiaocn.com/prog/python3/README.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/python3/README.html</guid>
+            <link>https://www.lijiaocn.com/prog/python3/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/python3/index.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
@@ -157,8 +157,8 @@
         <item>
             <title><![CDATA[Django开发手册]]></title>
             <description><![CDATA[Python编程入门]]></description>
-            <link>https://www.lijiaocn.com/prog/django/README.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/README.html</guid>
+            <link>https://www.lijiaocn.com/prog/django/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/index.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
@@ -317,8 +317,8 @@
         <item>
             <title><![CDATA[C语言速查手册]]></title>
             <description><![CDATA[C语言编程（这里特指linux c）中，最常用的资料是man手册和头文件。]]></description>
-            <link>https://www.lijiaocn.com/prog/c/README.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/c/README.html</guid>
+            <link>https://www.lijiaocn.com/prog/c/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/c/index.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
@@ -422,8 +422,8 @@
         <item>
             <title><![CDATA[Go语言简明手册]]></title>
             <description><![CDATA[这是一本试图体现上面两个观点的手册，目的是让从未接触过go的人，一开始走上一条正确的道路，接触过go的人，在脱离一段时间后，可以快速的回想起重要的细节。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/README.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/README.html</guid>
+            <link>https://www.lijiaocn.com/prog/go/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/index.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
@@ -605,15 +605,15 @@ PackageName    = identifier .]]></description>
         <item>
             <title><![CDATA[Go Template 语法]]></title>
             <description><![CDATA[Go 语言提供了一个名为 text/template 库，这个库定义实现了 go template 语言，可以用来写 html 模板。很多用 go 语言实现的软件，譬如 docker、kubernetes 支持用 go template 定义输出的内容格式。]]></description>
-            <link>https://www.lijiaocn.com/prog/go-template/README.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go-template/README.html</guid>
+            <link>https://www.lijiaocn.com/prog/go-template/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go-template/index.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[Lua编程速查手册（常用操作)]]></title>
             <description><![CDATA[这里记录一些常用的lua操作，在长时间不编程后，可能会忘记很多基本的操作，这一章节的内容用于帮助快速回忆起这些基本的操作，从手冷快速热身到手热。]]></description>
-            <link>https://www.lijiaocn.com/prog/lua/README.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/lua/README.html</guid>
+            <link>https://www.lijiaocn.com/prog/lua/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/lua/index.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
@@ -746,8 +746,8 @@ PackageName    = identifier .]]></description>
         <item>
             <title><![CDATA[微信公众平台（公众号）API]]></title>
             <description><![CDATA[公众号接口权限]]></description>
-            <link>https://www.lijiaocn.com/prog/wechat/README.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/wechat/README.html</guid>
+            <link>https://www.lijiaocn.com/prog/wechat/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/wechat/index.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
@@ -774,8 +774,8 @@ PackageName    = identifier .]]></description>
         <item>
             <title><![CDATA[淘宝客API的使用]]></title>
             <description><![CDATA[史上最详细淘宝联盟API使用教程]]></description>
-            <link>https://www.lijiaocn.com/prog/taobaoke/README.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/taobaoke/README.html</guid>
+            <link>https://www.lijiaocn.com/prog/taobaoke/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/taobaoke/index.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
@@ -809,8 +809,8 @@ PackageName    = identifier .]]></description>
         <item>
             <title><![CDATA[Python3 爬虫开发]]></title>
             <description><![CDATA[Python2 马上就要不维护了，现在要尽量使用 Python3，正好崔庆才写了一本《Python 3网络爬虫开发实战》，介绍了 Requests、Selenium、PhantomJS、Beautiful Soup 等 python 库的用法。]]></description>
-            <link>https://www.lijiaocn.com/prog/py3spider/README.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/py3spider/README.html</guid>
+            <link>https://www.lijiaocn.com/prog/py3spider/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/py3spider/index.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
