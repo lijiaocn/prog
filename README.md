@@ -11,7 +11,7 @@
 [小鸟笔记][1] 是在日常工作学习中整理出来的使用手册，主打便捷、系统、深度、有用，内容正在逐步扩充，点击左侧边栏的“[小鸟笔记][1]”可以查看现有的手册列表。
 
 
-**联系方式：微信扫一扫学习加微信   mail: lijiaocn@foxmail.com**
+**联系方式：微信扫一扫   mail: lijiaocn@foxmail.com**
 
 <div style="display:flex;flex-direction:row">
 <img height="250px" alt="关注微信公众号" src="https://www.lijiaocn.com/img/class.jpg"/>
@@ -21,3 +21,4 @@
 ## 参考
 
 [1]:  https://www.lijiaocn.com/note/ "小鸟笔记"
+
