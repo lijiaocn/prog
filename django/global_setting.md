@@ -1,3 +1,4 @@
+<!-- toc -->
 # 使用Django项目的settings.py中的全局变量
 
 ```python

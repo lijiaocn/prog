@@ -26,6 +26,22 @@ class Choice(models.Model):
 
 Models 可以说是 Django 中最重要的部分，Django 文档中有 [Models 的专题介绍](https://docs.djangoproject.com/en/2.2/topics/db/models/)，内容比较多，放在后面单独阐述。
 
+## 类型成员类型与数据库字段类型
+
+```python
+# 定长字符串
+stock = models.CharField(max_length=20)
+
+# 不定长字符串
+main_content = models.TextField()
+
+# 整数
+votes = models.IntegerField(default=0)
+
+# 时间
+update_date = models.TimeField(null=False)
+```
+
 ## 在 Meta 中设置联合主键等属性
 
 在 Model 的子类中，也就是上面 Question 等类中，添加一个 Meta 类，覆盖父类中的对应设置。Meta 类的属性在 [Model Meta options](https://docs.djangoproject.com/en/2.2/ref/models/options/) 中可以找到，其中 [unique-together](https://docs.djangoproject.com/en/2.2/ref/models/options/#unique-together) 是用来设置联合主键的，如下：

@@ -1,3 +1,4 @@
+<!-- toc -->
 # Django使用过程遇到的问题
 
 ## LookupError: No installed app with label 'admin'.

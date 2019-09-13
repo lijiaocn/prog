@@ -1,3 +1,4 @@
+<!-- toc -->
 # IDEA远程调试python
 
 Tools->Deployment->Configuration，在弹出的窗口中添加远程Server，根据需要选择FTP或者SFTP协议，这里使用SFTP。

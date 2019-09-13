@@ -1,3 +1,4 @@
+<!-- toc -->
 # Django中使用Redis缓存
 
 [django-redis documentation][1]是python库，将redis与Django无缝结合了起来。
