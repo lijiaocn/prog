@@ -4,7 +4,7 @@
         <description><![CDATA[编程实用速查手册，Go语言、C语言、Python3、Django以及Lua等在工作中遇到的编程语言的手册]]></description>
         <link>https://www.lijiaocn.com/prog/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 10 Sep 2019 15:40:35 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 13 Sep 2019 01:06:48 GMT</lastBuildDate>
         <atom:link href="https://www.lijiaocn.com/prog/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[李佶澳]]></author>
         <item>
@@ -191,7 +191,7 @@
         </item>
         <item>
             <title><![CDATA[Django数据库初始化]]></title>
-            <description><![CDATA[Django支持直接在代码中定义数据库的表结构，然后用django命令完成数据库的初始化，不需要在sql语句。在Django中一个数据库表对应一个Model。]]></description>
+            <description><![CDATA[Django 支持直接在代码中定义数据库的表结构，然后用 django 命令完成数据库的初始化，不需要写 sql 语句。在 Django 中一个数据库表对应一个 Model。]]></description>
             <link>https://www.lijiaocn.com/prog/django/database-init.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/django/database-init.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
