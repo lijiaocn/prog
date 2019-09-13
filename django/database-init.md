@@ -59,8 +59,9 @@ class Movie(models.Model):
         unique_together = ['name', 'site']
 ```
 
-
 ## 激活 Model
+
+>这里以 Django 应用 poll 为例，它在 [第一个Django应用](./first-app.md) 中创建。
 
 如果使用的是 mysql 数据库，需要安装 mysqlclient（安装时如果报错 ld: library not found for -lssl...command 'clang' failed with exit status 1，是因为没有找到 ssl 连接库）：
 
@@ -84,21 +85,21 @@ INSTALLED_APPS = [
 ]
 ```
 
-然后运行下面的命令，将应用的 polls 中定义的 Model 刷到数据库中，即创建对应的数据库表：
+然后运行下面的命令，将应用 polls 中定义的 Model 刷到数据库中，即创建对应的数据库表：
 
 ```sh
 python manage.py makemigrations polls
 python manage.py migrate
 ```
 
-如果没有在 settings.py 中引入应用，会遇到下面的错误：
+如果没有在 settings.py 中引入应用 polls，会遇到下面的错误：
 
 ```sh
 (env) lijiaos-mbp:mysite lijiao$ python manage.py makemigrations polls
 No installed app with label 'polls'.
 ```
 
-激活时使用的第一个命令`makemigrations polls`是生成对应的数据库初始化文件 polls/migrations/0001_initial.py：
+激活时使用的第一个命令是 `makemigrations polls`，生成对应的数据库初始化文件 polls/migrations/0001_initial.py：
 
 ```sh
 (env) 192:mysite lijiao$ python manage.py makemigrations polls
@@ -141,9 +142,9 @@ Running migrations:
 python manage.py sqlmigrate polls 0001
 ```
 
-## 更新Model
+## 更新 Model
 
-在 models.py 中修改了 Model 的定义之后，只需要重新执行下面的命令，就会将最新的定义刷新到数据库中：
+在 models.py 中修改了 Model 的定义之后，重新执行下面的命令，就会将最新的定义刷新到数据库中：
 
 ```sh
 python manage.py makemigrations polls
