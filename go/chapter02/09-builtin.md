@@ -1,19 +1,4 @@
----
-layout: default
-title: 09-builtin-funcs
-author: lijiaocn
-createdate: 2017/12/22 00:11:56
-changedate: 2017/12/22 00:24:00
-categories:
-tags:
-keywords:
-description: 
-
----
-
-
 <!-- toc -->
-
 # go的内置函数 
 
 go内置了一些函数，这些函数可以直接使用。

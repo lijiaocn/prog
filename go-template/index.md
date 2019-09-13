@@ -1,3 +1,4 @@
+<!-- toc -->
 # Go Template 语法
 
 Go 语言提供了一个名为 [text/template][1] 库，这个库定义实现了 go template 语言，可以用来写 html 模板。很多用 go 语言实现的软件，譬如 docker、kubernetes 支持用 go template 定义输出的内容格式。

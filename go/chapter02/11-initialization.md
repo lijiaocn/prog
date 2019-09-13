@@ -1,19 +1,4 @@
----
-layout: default
-title: 11-initialization
-author: lijiaocn
-createdate: 2017/12/22 00:28:06
-changedate: 2017/12/22 00:32:39
-categories:
-tags:
-keywords:
-description: 
-
----
-
-
 <!-- toc -->
-
 # go程序的初始化
 
 ## 变量初始化为对应类型的零值

@@ -1,3 +1,4 @@
+<!-- toc -->
 # Python3 爬虫开发
 
 Python2 马上就要不维护了，现在要尽量使用 Python3，正好`崔庆才`写了一本[《Python 3网络爬虫开发实战》][4]，介绍了 Requests、Selenium、PhantomJS、Beautiful Soup 等 python 库的用法。

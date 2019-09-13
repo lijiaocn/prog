@@ -1,3 +1,4 @@
+<!-- toc -->
 # Python3 的内置函数
 
 Python3 的内置函数见 [Python3: Built-in Functions][1]。

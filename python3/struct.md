@@ -1,3 +1,4 @@
+<!-- toc -->
 # Python3 的基本数据结构
 
 [Python3: Built-in Types][2] 介绍了 Python3 支持的所有数据类型，以及适用的操作符：

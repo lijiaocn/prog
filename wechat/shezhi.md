@@ -1,3 +1,4 @@
+<!-- toc -->
 # 微信公众号API回调设置
 
 [入门指引](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1472017492_58YV5)中介绍的比较详细。

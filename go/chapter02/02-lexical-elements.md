@@ -1,19 +1,4 @@
----
-layout: default
-title: 02-lexical-elements
-author: lijiaocn
-createdate: 2017/12/16 17:58:54
-changedate: 2017/12/16 23:22:48
-categories:
-tags:
-keywords:
-description: 
-
----
-
-
 <!-- toc -->
-
 # go语言的词法规则
 
 英语有单词，汉语有词语，编程语言也有自己的词汇。

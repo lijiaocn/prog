@@ -1,3 +1,4 @@
+<!-- toc -->
 # Python 数据结构：dictionary
 
 Dictionary，就是 map，key-value 对。

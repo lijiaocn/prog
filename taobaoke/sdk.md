@@ -1,3 +1,4 @@
+<!-- toc -->
 # 淘宝客API的SDK下载
 
 在淘宝开放平台中，进入应用以后，在左侧边栏中有一个“SDK下载”的菜单，进入后，可以选择下载各种编程语言的SDK，目前支持：Java、PHP、Python、.NET、Metadata、C、NodeJS。

@@ -1,17 +1,3 @@
----
-layout: default
-title: 01-purpose
-author: lijiaocn
-createdate: 2017/12/16 17:27:21
-changedate: 2017/12/16 23:36:24
-categories:
-tags:
-keywords:
-description: 
-
----
-
-
 <!-- toc -->
 
 # 设计目标

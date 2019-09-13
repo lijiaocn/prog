@@ -1,19 +1,4 @@
----
-layout: default
-title: 12-errors
-author: lijiaocn
-createdate: 2017/12/22 00:33:14
-changedate: 2017/12/22 00:38:17
-categories:
-tags:
-keywords:
-description: 
-
----
-
-
 <!-- toc -->
-
 # go的错误处理
 
 ## 返回的错误值
