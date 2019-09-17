@@ -1,3 +1,4 @@
+<!-- toc -->
 #  用WSGI方式部署Django服务
 
 Django的主要部署平台是WSGI，WSGI是python的web服务和应用标准，文档[How to deploy with WSGI][1]中介绍了四种方式：使用mod_swgi模块的Apache，Gunicorn、uWSGI。

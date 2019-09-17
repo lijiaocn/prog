@@ -1,19 +1,4 @@
----
-layout: default
-title: 06-blocks
-author: lijiaocn
-createdate: 2017/12/20 11:12:59
-changedate: 2017/12/20 16:37:07
-categories:
-tags:
-keywords:
-description: 
-
----
-
-
 <!-- toc -->
-
 # 代码区块、声明、声明作用域名
 
 声明的影响是有范围的，它的影响范围叫做作用域，作用域对应的是代码区块。

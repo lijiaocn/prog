@@ -12,7 +12,11 @@
 
 点击左侧边栏中的[【小鸟笔记】][1]查看现有的手册列表。
 
+<<<<<<< HEAD
 **微信联系   mail: lijiaocn@foxmail.com**
+=======
+**联系方式：微信扫一扫   mail: lijiaocn@foxmail.com**
+>>>>>>> 0d976638b7bb61002fffc0567b3216fd2570e2f4
 
 <div style="display:flex;flex-direction:row">
 <img height="250px" alt="关注微信公众号" src="https://www.lijiaocn.com/img/class.jpg"/>
@@ -22,3 +26,4 @@
 ## 参考
 
 [1]:  https://www.lijiaocn.com/note/ "小鸟笔记"
+

@@ -1,3 +1,4 @@
+<!-- toc -->
 # Python3爬虫开发 -- 解析库
 
 [lxml](https://github.com/lxml/lxml) 支持 HTML、XML 解析，支持 XPath 解析方式。

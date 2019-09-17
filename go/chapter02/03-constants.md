@@ -1,19 +1,4 @@
----
-layout: default
-title: 03-constants
-author: lijiaocn
-createdate: 2017/12/16 23:42:57
-changedate: 2017/12/17 01:06:15
-categories:
-tags:
-keywords:
-description: 
-
----
-
-
 <!-- toc -->
-
 # go的常量
 
 常量意如起名，是不会变化的量，量就是值。常量是程序运行时，系统中某个位置里的数值。

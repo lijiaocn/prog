@@ -1,19 +1,4 @@
----
-layout: default
-title: 05-types
-author: lijiaocn
-createdate: 2017/12/18 10:55:10
-changedate: 2017/12/20 11:11:51
-categories:
-tags:
-keywords:
-description: 
-
----
-
-
 <!-- toc -->
-
 # go的类型 
 
 类型是用来诠释如何解读指定位置中存放的数据，以及约定操作符的含义的。

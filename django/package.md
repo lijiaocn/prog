@@ -1,3 +1,4 @@
+<!-- toc -->
 # 在Django项目自定义Package
 
 一些常用的代码可以做成Package，从而可以在多个地方复用，在Django项目代码中可以直接应用自定义的Package。

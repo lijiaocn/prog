@@ -1,3 +1,4 @@
+<!-- toc -->
 # 在命令行操作数据库
 
 Django提供了一个[shell命令](https://docs.djangoproject.com/en/2.2/intro/tutorial02/#playing-with-the-api)，可以直接和数据库交互：

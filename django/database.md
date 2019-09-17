@@ -1,3 +1,4 @@
+<!-- toc -->
 # Django对接数据库
 
 [settings.py](https://docs.djangoproject.com/en/2.2/ref/settings/)是项目的配置文件，其中包含数据库相关的配置。
@@ -41,3 +42,4 @@ DATABASES = {
 ```
 
 数据库需要提前部署创建，根据自己的实际情况选择合适的数据库。只需要创建数据库不需要创建表，数据库表在下一节中用Django代码定义，并自动完成创建。
+

@@ -1,3 +1,4 @@
+<!-- toc -->
 # Django Generic View的使用
 
 使用Django Generic Views可以减少大量代码。

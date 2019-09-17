@@ -1,3 +1,4 @@
+<!-- toc -->
 # Lua编程时性能方面的注意事项
 
 [Lua Performance Tips](https://www.lua.org/gems/sample.pdf)给出了很重要的性能优化建议，这些建议都是用Lua编程时需要注意的事项。

@@ -1,3 +1,4 @@
+<!-- toc -->
 # Django中view的创建
 
 view就是一个一个页面，前面在创建应用的时候创建了一个简单的index view。这里演示更多view的用法。每个view有一个独立无二的url，对应一个python函数，这个python函数负责渲染页面并返回给请求端。

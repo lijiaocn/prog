@@ -1,19 +1,4 @@
----
-layout: default
-title: 04-variables
-author: lijiaocn
-createdate: 2017/12/18 10:43:19
-changedate: 2017/12/18 10:55:02
-categories:
-tags:
-keywords:
-description: 
-
----
-
-
 <!-- toc -->
-
 # go的变量 
 
 变量记录的是一个位置，这个位置中存放的值是可以变化的。

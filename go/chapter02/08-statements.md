@@ -1,19 +1,4 @@
----
-layout: default
-title: 08-statements
-author: lijiaocn
-createdate: 2017/12/21 23:11:24
-changedate: 2017/12/22 00:11:36
-categories:
-tags:
-keywords:
-description: 
-
----
-
-
 <!-- toc -->
-
 # go的状态语句 
 
 	Statement =

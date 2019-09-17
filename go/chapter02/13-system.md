@@ -1,19 +1,4 @@
----
-layout: default
-title: 13-system
-author: lijiaocn
-createdate: 2017/12/22 00:38:28
-changedate: 2017/12/22 00:53:30
-categories:
-tags:
-keywords:
-description: 
-
----
-
-
 <!-- toc -->
-
 # 操作系统相关
 
 ## unsafe 

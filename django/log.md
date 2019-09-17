@@ -1,3 +1,4 @@
+<!-- toc -->
 # Django的日志管理
 
 Django的日志在项目的settings.py中配置[LOGGING][1]。

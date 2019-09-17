@@ -1,3 +1,4 @@
+<!-- toc -->
 # Django应用的测试代码编写
 
 测试代码在Django应用的tests.py文件中编写，Django提供一个名为TestCase的类。
