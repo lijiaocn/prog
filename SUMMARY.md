@@ -118,3 +118,5 @@
    * [Python3解析库](./py3spider/parse.md)
    * [移动APP工具](./py3spider/mobile.md)
    * [Python3爬虫框架](./py3spider/framework.md)
+* [Shell 脚本语法](./shell/index.md)
+   * [数组](./shell/array.md)
