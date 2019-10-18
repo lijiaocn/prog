@@ -4,7 +4,7 @@
         <description><![CDATA[编程实用速查手册，Go语言、C语言、Python3、Django以及Lua等在工作中遇到的编程语言的手册]]></description>
         <link>https://www.lijiaocn.com/prog/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 19 Sep 2019 02:38:49 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 18 Oct 2019 06:26:03 GMT</lastBuildDate>
         <atom:link href="https://www.lijiaocn.com/prog/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[李佶澳]]></author>
         <item>
@@ -839,6 +839,19 @@ PackageName    = identifier .]]></description>
             <description><![CDATA[爬虫框架集成了必须的爬取、解析、提取、存放工具，按照框架规则填写代码即可。]]></description>
             <link>https://www.lijiaocn.com/prog/py3spider/framework.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/py3spider/framework.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 脚本语法]]></title>
+            <description><![CDATA[这里记录 Shell 脚本的用法，主要是 bash。]]></description>
+            <link>https://www.lijiaocn.com/prog/shell/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/shell/index.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 的基本数据结构 —— 数组]]></title>
+            <link>https://www.lijiaocn.com/prog/shell/array.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/shell/array.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
