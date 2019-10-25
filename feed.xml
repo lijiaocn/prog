@@ -4,7 +4,7 @@
         <description><![CDATA[编程实用速查手册，Go语言、C语言、Python3、Django以及Lua等在工作中遇到的编程语言的手册]]></description>
         <link>https://www.lijiaocn.com/prog/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 24 Oct 2019 11:58:11 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 25 Oct 2019 10:23:17 GMT</lastBuildDate>
         <atom:link href="https://www.lijiaocn.com/prog/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[李佶澳]]></author>
         <item>
@@ -12,6 +12,20 @@
             <description><![CDATA[这里记录编程过程中经常用到的函数，以及操作某些资源的方法和编程技巧等，不局限一种语言。]]></description>
             <link>https://www.lijiaocn.com/prog/</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[测试框架]]></title>
+            <description><![CDATA[这里收录一些测试框架，没有目标和计划，工作中遇到哪个学习哪个。]]></description>
+            <link>https://www.lijiaocn.com/prog/testframe/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/testframe/index.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Go 语言测试框架 GinkGo 的使用方法]]></title>
+            <description><![CDATA[学习 ingress-nginx 时，想修改它的代码并将代码提交到社区，了解 e2e 测试时，遇到了 GinkGo。]]></description>
+            <link>https://www.lijiaocn.com/prog/testframe/ginkgo.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/testframe/ginkgo.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
@@ -420,17 +434,30 @@
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[Go语言简明手册]]></title>
-            <description><![CDATA[这是一本试图体现上面两个观点的手册，目的是让从未接触过go的人，一开始走上一条正确的道路，接触过go的人，在脱离一段时间后，可以快速的回想起重要的细节。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/index.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/index.html</guid>
+            <title><![CDATA[Go 语言编程手册]]></title>
+            <description><![CDATA[记录一些 Go 语言的常识，主要目的是在长时间不写代码后，能够通过这份笔记快速回想起来。]]></description>
+            <link>https://www.lijiaocn.com/prog/golang/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/golang/index.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[第一章 学会看一手资料]]></title>
-            <description><![CDATA[要把一套浑然一体的知识传授给完全零基础的人，是一件挺难的事情。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter01/00-about.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter01/00-about.html</guid>
+            <title><![CDATA[Go Modules 管理依赖代码]]></title>
+            <description><![CDATA[见：Go Modules：Go 1.11和1.12引入的依赖包管理方法。]]></description>
+            <link>https://www.lijiaocn.com/prog/golang/gomod.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/golang/gomod.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Go Template 语法]]></title>
+            <description><![CDATA[Go 语言提供了一个名为 text/template 库，这个库定义实现了 go template 语言，可以用来写 html 模板。很多用 go 语言实现的软件，譬如 docker、kubernetes 支持用 go template 定义输出的内容格式。]]></description>
+            <link>https://www.lijiaocn.com/prog/go-template/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go-template/index.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Go语言编程手册]]></title>
+            <link>https://www.lijiaocn.com/prog/go/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/index.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
@@ -561,13 +588,6 @@ PackageName    = identifier .]]></description>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[Go语言常用操作]]></title>
-            <description><![CDATA[这里记录一些Go语言的常用操作。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter03/00-about.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter03/00-about.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
             <title><![CDATA[实现命令行参数]]></title>
             <description><![CDATA[flag是Go语言的一个标准包，用来处理命令行参数。]]></description>
             <link>https://www.lijiaocn.com/prog/go/chapter03/01-cmdline.html</link>
@@ -589,24 +609,10 @@ PackageName    = identifier .]]></description>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[项目管理]]></title>
-            <description><![CDATA[Go语言项目的管理方法与管理工具。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter04/00-about.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter04/00-about.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
             <title><![CDATA[依赖代码管理]]></title>
             <description><![CDATA[这里记录用于Go项目的依赖管理工具。]]></description>
             <link>https://www.lijiaocn.com/prog/go/chapter04/01-dependency.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter04/01-dependency.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[Go Template 语法]]></title>
-            <description><![CDATA[Go 语言提供了一个名为 text/template 库，这个库定义实现了 go template 语言，可以用来写 html 模板。很多用 go 语言实现的软件，譬如 docker、kubernetes 支持用 go template 定义输出的内容格式。]]></description>
-            <link>https://www.lijiaocn.com/prog/go-template/index.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go-template/index.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
