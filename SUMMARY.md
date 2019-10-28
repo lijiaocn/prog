@@ -1,7 +1,7 @@
 # 目录
 * [小鸟笔记—编程速查手册说明](./README.md)
-* [多个测试框架](./testframe/index.md)
-    * [GinkGo](./testframe/ginkgo.md)
+* [多个测试框架的用法](./testframe/index.md)
+    * [Go 测试框架 GinkGo](./testframe/ginkgo.md)
 * [Python3 编程手册](./python3/index.md)
     * [python2 代码转换成 python3](./python3/2to3.md)
     * [运行环境与依赖管理](./python3/project.md)
