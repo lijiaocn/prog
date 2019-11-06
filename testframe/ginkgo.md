@@ -186,10 +186,46 @@ Describe、Context、It 和 Measure 支持 P 和 X 前缀，带有 P 或 X 前�
 
 Describe、Context 和 It 支持 F 前缀，如果有带有 F 前缀的这些 block，测试时只会运行这些 block 中的测试用例。
 
+## 结果判断
+
+GinkGo 提供了多个用来进行数值判断的函数。
+
+Expect(actual interface{}) 为传入参数创建一个断言 Assertion，Assertion 支持的以下的判断方法：
+
+```go
+type Assertion interface {
+    Should(matcher types.GomegaMatcher, optionalDescription ...interface{}) bool
+    ShouldNot(matcher types.GomegaMatcher, optionalDescription ...interface{}) bool
+
+    To(matcher types.GomegaMatcher, optionalDescription ...interface{}) bool
+    ToNot(matcher types.GomegaMatcher, optionalDescription ...interface{}) bool
+    NotTo(matcher types.GomegaMatcher, optionalDescription ...interface{}) bool
+}
+```
+
+断言的第一个参数是 matcher，在 github.com/onsi/gomega/matcher.go 中定义，例如：
+
+```go
+func BeNil() types.GomegaMatcher {
+    return &matchers.BeNilMatcher{}
+}
+
+//BeTrue succeeds if actual is true
+func BeTrue() types.GomegaMatcher {
+    return &matchers.BeTrueMatcher{}
+}
+```
+
+使用举例，分配检测 err 和 svc 的值：
+
+```go
+Expect(err).To(BeNil(), "unexpected error obtaining ingress-nginx service")
+Expect(svc).NotTo(BeNil(), "expected a service but none returned")
+```
+
 ## 测试示例
 
 target_funcs_suite_test.go 内容如下：
-
 
 ```go
 package target_funcs_test
