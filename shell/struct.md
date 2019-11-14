@@ -19,6 +19,8 @@ read a b c <<< "1 2 3";echo "$a|$b|$c"
 
 #### 内置命令 getopts
 
+最新代码 [getopts.sh](https://github.com/lijiaocn/workspace/blob/master/studys/study-shell/cmdline/getopts.sh)。
+
 用 getopts 解析命令行参数，getopts 不支持长格式，只能用 `-h` 这样的短格式：
 
 ```sh
@@ -44,6 +46,63 @@ listener port: 80
 proxy_set_header h1 v1;
 proxy_set_header h2 v2;
 ```
+
+### 用遍历参数的方式实现
+
+最新代码 [loop.sh](https://github.com/lijiaocn/workspace/blob/master/studys/study-shell/cmdline/loop.sh)。 
+ 
+```sh
+#! /bin/sh
+#
+# loop.sh
+# Copyright (C) 2019 lijiaocn <lijiaocn@foxmail.com wechat:lijiaocn>
+#
+# Distributed under terms of the GPL license.
+#
+
+function help(){
+	echo "usage: $0 [-f file] [-n name] [arguments...]"
+}
+
+while :; do
+	case $1 in
+		-h|-\?|--help)
+			help
+			exit
+			;;
+		-f|--file)
+			if [[ $2 == "" || ${2:0:1} == "-" ]];then
+				echo 'ERROR: "--file" requires a non-empty option argument.' 2>&1
+				exit 1
+			fi
+			file=$2
+			shift
+			;;
+		-n|--name)
+			if [[ $2 == "" || ${2:0:1} == "-" ]];then
+				echo 'ERROR: "--name" requires a non-empty option argument.' 2>&1
+				exit 1
+			fi
+			name=$2
+			shift
+			;;
+		-|--)
+			shift
+			break
+			;;
+		*)
+			break
+			;;
+	esac
+	shift
+done
+
+echo "file is: $file"
+echo "name is: $name"
+echo "arguments: $*"
+```
+
+一个复杂一些的示例：[docker-nginx-tranproxy/entrypoint.sh](https://github.com/lijiaocn/containers/blob/master/docker-nginx-tranproxy/entrypoint.sh#L81)
 
 ## 变量值读取
 
@@ -248,4 +307,3 @@ echo "array size: ${#array[@]}"
 
 [1]: https://www.lijiaocn.com "李佶澳的博客"
 [2]: http://man7.org/linux/man-pages/man1/bash.1.html  "bash - GNU Bourne-Again SHell"
-
