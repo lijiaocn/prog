@@ -1947,6 +1947,7 @@ var _hmt = _hmt || [];
 <li><a href="#&#x5185;&#x7F6E;&#x547D;&#x4EE4;-getopts">&#x5185;&#x7F6E;&#x547D;&#x4EE4; getopts</a></li>
 </ul>
 </li>
+<li><a href="#&#x7528;&#x904D;&#x5386;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;">&#x7528;&#x904D;&#x5386;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;</a></li>
 </ul>
 </li>
 <li><a href="#&#x53D8;&#x91CF;&#x503C;&#x8BFB;&#x53D6;">&#x53D8;&#x91CF;&#x503C;&#x8BFB;&#x53D6;</a><ul>
@@ -1972,6 +1973,7 @@ var _hmt = _hmt || [];
 <p>&#x53C2;&#x8003;&#xFF1A;<a href="https://codeday.me/bug/20170709/39537.html" target="_blank">Linux bash&#xFF1A;&#x591A;&#x4E2A;&#x53D8;&#x91CF;&#x8D4B;&#x503C;</a></p>
 <h3 id="&#x8BFB;&#x53D6;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;">&#x8BFB;&#x53D6;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;</h3>
 <h4 id="&#x5185;&#x7F6E;&#x547D;&#x4EE4;-getopts">&#x5185;&#x7F6E;&#x547D;&#x4EE4; getopts</h4>
+<p>&#x6700;&#x65B0;&#x4EE3;&#x7801; <a href="https://github.com/lijiaocn/workspace/blob/master/studys/study-shell/cmdline/getopts.sh" target="_blank">getopts.sh</a>&#x3002;</p>
 <p>&#x7528; getopts &#x89E3;&#x6790;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#xFF0C;getopts &#x4E0D;&#x652F;&#x6301;&#x957F;&#x683C;&#x5F0F;&#xFF0C;&#x53EA;&#x80FD;&#x7528; <code>-h</code> &#x8FD9;&#x6837;&#x7684;&#x77ED;&#x683C;&#x5F0F;&#xFF1A;</p>
 <pre><code class="lang-sh"><span class="hljs-keyword">while</span> <span class="hljs-built_in">getopts</span> <span class="hljs-string">&quot;p:h:&quot;</span> option ;<span class="hljs-keyword">do</span>
     <span class="hljs-keyword">if</span> [[ <span class="hljs-variable">$option</span> == <span class="hljs-string">&quot;p&quot;</span> ]];<span class="hljs-keyword">then</span>
@@ -1992,6 +1994,58 @@ listener port: 80
 proxy_<span class="hljs-built_in">set</span>_header h1 v1;
 proxy_<span class="hljs-built_in">set</span>_header h2 v2;
 </code></pre>
+<h3 id="&#x7528;&#x904D;&#x5386;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;">&#x7528;&#x904D;&#x5386;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;</h3>
+<p>&#x6700;&#x65B0;&#x4EE3;&#x7801; <a href="https://github.com/lijiaocn/workspace/blob/master/studys/study-shell/cmdline/loop.sh" target="_blank">loop.sh</a>&#x3002; </p>
+<pre><code class="lang-sh"><span class="hljs-meta">#! /bin/sh</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># loop.sh</span>
+<span class="hljs-comment"># Copyright (C) 2019 lijiaocn &lt;lijiaocn@foxmail.com wechat:lijiaocn&gt;</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Distributed under terms of the GPL license.</span>
+<span class="hljs-comment">#</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">help</span></span>(){
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;usage: <span class="hljs-variable">$0</span> [-f file] [-n name] [arguments...]&quot;</span>
+}
+
+<span class="hljs-keyword">while</span> :; <span class="hljs-keyword">do</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-variable">$1</span> <span class="hljs-keyword">in</span>
+        -h|-\?|--help)
+            <span class="hljs-built_in">help</span>
+            <span class="hljs-built_in">exit</span>
+            ;;
+        <span class="hljs-_">-f</span>|--file)
+            <span class="hljs-keyword">if</span> [[ <span class="hljs-variable">$2</span> == <span class="hljs-string">&quot;&quot;</span> || <span class="hljs-variable">${2:0:1}</span> == <span class="hljs-string">&quot;-&quot;</span> ]];<span class="hljs-keyword">then</span>
+                <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;ERROR: &quot;--file&quot; requires a non-empty option argument.&apos;</span> 2&gt;&amp;1
+                <span class="hljs-built_in">exit</span> 1
+            <span class="hljs-keyword">fi</span>
+            file=<span class="hljs-variable">$2</span>
+            <span class="hljs-built_in">shift</span>
+            ;;
+        -n|--name)
+            <span class="hljs-keyword">if</span> [[ <span class="hljs-variable">$2</span> == <span class="hljs-string">&quot;&quot;</span> || <span class="hljs-variable">${2:0:1}</span> == <span class="hljs-string">&quot;-&quot;</span> ]];<span class="hljs-keyword">then</span>
+                <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;ERROR: &quot;--name&quot; requires a non-empty option argument.&apos;</span> 2&gt;&amp;1
+                <span class="hljs-built_in">exit</span> 1
+            <span class="hljs-keyword">fi</span>
+            name=<span class="hljs-variable">$2</span>
+            <span class="hljs-built_in">shift</span>
+            ;;
+        -|--)
+            <span class="hljs-built_in">shift</span>
+            <span class="hljs-built_in">break</span>
+            ;;
+        *)
+            <span class="hljs-built_in">break</span>
+            ;;
+    <span class="hljs-keyword">esac</span>
+    <span class="hljs-built_in">shift</span>
+<span class="hljs-keyword">done</span>
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;file is: <span class="hljs-variable">$file</span>&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;name is: <span class="hljs-variable">$name</span>&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;arguments: $*&quot;</span>
+</code></pre>
+<p>&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x4E00;&#x4E9B;&#x7684;&#x793A;&#x4F8B;&#xFF1A;<a href="https://github.com/lijiaocn/containers/blob/master/docker-nginx-tranproxy/entrypoint.sh#L81" target="_blank">docker-nginx-tranproxy/entrypoint.sh</a></p>
 <h2 id="&#x53D8;&#x91CF;&#x503C;&#x8BFB;&#x53D6;">&#x53D8;&#x91CF;&#x503C;&#x8BFB;&#x53D6;</h2>
 <p>Bash &#x7684;&#x53D8;&#x91CF;&#x503C;&#x8BFB;&#x53D6;&#x652F;&#x6301;&#x5F88;&#x591A;&#x6269;&#x5C55;&#x65B9;&#x5F0F;&#xFF08;Parameter Expansion&#xFF09;&#x3002;</p>
 <h3 id="&#x672A;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;">&#x672A;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;</h3>
@@ -2211,7 +2265,7 @@ array[<span class="hljs-string">&quot;5&quot;</span>]=<span class="hljs-string">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"变量与数据结构","level":"1.3.1","depth":2,"next":{"title":"内置命令用法","level":"1.3.2","depth":2,"path":"shell/cmd.md","ref":"./shell/cmd.md","articles":[]},"previous":{"title":"Shell 脚本编写手册","level":"1.3","depth":1,"path":"shell/index.md","ref":"./shell/index.md","articles":[{"title":"变量与数据结构","level":"1.3.1","depth":2,"path":"shell/struct.md","ref":"./shell/struct.md","articles":[]},{"title":"内置命令用法","level":"1.3.2","depth":2,"path":"shell/cmd.md","ref":"./shell/cmd.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[{"name":"theme-lijiaocn","version":"git+https://github.com/lijiaocn/theme-lijiaocn.git"},"atoc","toggle-chapters","rss"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":[],"title":"编程实用速查手册","description":"编程实用速查手册，Go语言、C语言、Python3、Django以及Lua等在工作中遇到的编程语言的手册","author":"李佶澳","site_url":"https://www.lijiaocn.com/prog/","feed_url":"https://www.lijiaocn.com/prog/feed.xml"},"highlight":{},"theme-lijiaocn":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"lijiaocn@foxmail.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"language":"zh-hans","gitbook":">=3.0.0"},"file":{"path":"shell/struct.md","mtime":"2019-11-14T08:37:51.613Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-14T11:47:25.696Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"变量与数据结构","level":"1.3.1","depth":2,"next":{"title":"内置命令用法","level":"1.3.2","depth":2,"path":"shell/cmd.md","ref":"./shell/cmd.md","articles":[]},"previous":{"title":"Shell 脚本编写手册","level":"1.3","depth":1,"path":"shell/index.md","ref":"./shell/index.md","articles":[{"title":"变量与数据结构","level":"1.3.1","depth":2,"path":"shell/struct.md","ref":"./shell/struct.md","articles":[]},{"title":"内置命令用法","level":"1.3.2","depth":2,"path":"shell/cmd.md","ref":"./shell/cmd.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[{"name":"theme-lijiaocn","version":"git+https://github.com/lijiaocn/theme-lijiaocn.git"},"atoc","toggle-chapters","rss"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":[],"title":"编程实用速查手册","description":"编程实用速查手册，Go语言、C语言、Python3、Django以及Lua等在工作中遇到的编程语言的手册","author":"李佶澳","site_url":"https://www.lijiaocn.com/prog/","feed_url":"https://www.lijiaocn.com/prog/feed.xml"},"highlight":{},"theme-lijiaocn":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"lijiaocn@foxmail.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"language":"zh-hans","gitbook":">=3.0.0"},"file":{"path":"shell/struct.md","mtime":"2019-11-14T12:03:21.884Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-14T12:03:41.228Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
