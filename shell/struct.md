@@ -3,6 +3,48 @@
 
 主要学习资料： [bash - GNU Bourne-Again SHell][2]。
 
+## 编程常用操作
+
+### 用 read 实现多变量赋值
+
+用下面的命令可以同时定义多个变量，并赋值：
+
+```sh
+read a b c <<< "1 2 3";echo "$a|$b|$c"
+```
+
+参考：[Linux bash：多个变量赋值](https://codeday.me/bug/20170709/39537.html)
+
+### 读取命令行参数
+
+#### 内置命令 getopts
+
+用 getopts 解析命令行参数，getopts 不支持长格式，只能用 `-h` 这样的短格式：
+
+```sh
+while getopts "p:h:" option ;do
+    if [[ $option == "p" ]];then
+        echo "listener port: $OPTARG"
+    fi
+    if [[ $option == "h" ]];then
+        read name value <<< "${OPTARG//:/ }";
+        headers="$headers\nproxy_set_header $name $value;"
+    fi
+done
+
+echo $headers
+```
+
+执行效果如下：
+
+```sh
+$ ./getopts.sh -p 80 -h h1:v1 -h h2:v2
+listener port: 80
+
+proxy_set_header h1 v1;
+proxy_set_header h2 v2;
+```
+
 ## 变量值读取
 
 Bash 的变量值读取支持很多扩展方式（Parameter Expansion）。
