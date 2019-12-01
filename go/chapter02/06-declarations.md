@@ -302,3 +302,10 @@ Receiver可以设置标记符，标记符在方法的区块中有效，且不能
 方法的类型是函数，例如上面声明的方法Scale，它的类型是：
 
 	func(p *Point, factor float64)
+
+
+## 参考
+
+1. [go Lexical elements][1]
+
+[1]: https://golang.org/ref/spec#Lexical_elements "go Lexical elements"

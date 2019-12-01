@@ -104,8 +104,10 @@ I1225 15:28:03.517342   85366 main.go:14] This is a v1 log
 
 ### 参考
 
-1. [glog golang][1]
-2. [glog c++][2]
+1. [李佶澳的博客][3]
+2. [glog golang][1]
+3. [glog c++][2]
 
 [1]: https://github.com/golang/glog  "glog golang" 
 [2]: https://github.com/google/glog "glog c++"
+[3]: https://www.lijiaocn.com "李佶澳的博客"

@@ -741,3 +741,10 @@ map的长度不受创建时指定的length的限制，可以无限增加成员�
 通道是并发安全的，使用内置函数len读取通道中缓存的数据个数，或者用cap读取通道容量，不需要考虑并发的影响。
 
 另外通道中的数据遵循先入先出的规则。
+
+
+## 参考
+
+1. [go Lexical elements][1]
+
+[1]: https://golang.org/ref/spec#Lexical_elements "go Lexical elements"

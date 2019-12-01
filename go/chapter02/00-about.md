@@ -3,9 +3,7 @@
 
 >学习是一个循序渐进过程。
 
-没有编程经验初学者，不应当一开始就试图掌握所有语法细节，而应当多写程序、多尝试，找到正确的做事方法。
-
-编程多年的程序员，要脱离教材，要能够看懂、使用更全面精确的一手资料。
+没有编程经验初学者，不应当一开始就试图掌握所有语法细节，而应当多写程序、多尝试，找到正确的做事方法。编程多年的程序员，要脱离教材，要能够看懂、使用更全面精确的一手资料。
 
 [The Go Programming Language Specification][1]是go语法的一手资料，是这一章内容的主要来源。
 
@@ -15,4 +13,4 @@
 
 1. [The Go Programming Language Specification][1]
 
-[1]: http://127.0.0.1:6060/ref/spec  "The Go Programming Language Specification" 
+[1]: https://golang.org/ref/spec "The Go Programming Language Specification" 
