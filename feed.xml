@@ -4,7 +4,7 @@
         <description><![CDATA[编程实用速查手册，Go语言、C语言、Python3、Django以及Lua等在工作中遇到的编程语言的手册]]></description>
         <link>https://www.lijiaocn.com/prog/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 25 Nov 2019 11:18:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 01 Dec 2019 07:22:08 GMT</lastBuildDate>
         <atom:link href="https://www.lijiaocn.com/prog/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[李佶澳]]></author>
         <item>
@@ -12,6 +12,154 @@
             <description><![CDATA[这里记录编程过程中经常用到的函数，以及操作某些资源的方法和编程技巧等，不局限一种语言。]]></description>
             <link>https://www.lijiaocn.com/prog/</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Go 语言编程手册]]></title>
+            <description><![CDATA[记录一些 Go 语言的常识，主要目的是在长时间不写代码后，能够通过这份笔记快速回想起来。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/index.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Go 语言的安装和文档]]></title>
+            <description><![CDATA[下面是在linux系统上安装go的步骤，在mac上安装也是类似的过程。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter01/01-install.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter01/01-install.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[第二章 语法概览]]></title>
+            <description><![CDATA[没有编程经验初学者，不应当一开始就试图掌握所有语法细节，而应当多写程序、多尝试，找到正确的做事方法。编程多年的程序员，要脱离教材，要能够看懂、使用更全面精确的一手资料。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter02/00-about.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/00-about.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[go语言的词法规则]]></title>
+            <description><![CDATA[英语有单词，汉语有词语，编程语言也有自己的词汇。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter02/02-lexical-elements.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/02-lexical-elements.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[go的常量]]></title>
+            <description><![CDATA[常量意如起名，是不会变化的量，量就是值。常量是程序运行时，系统中某个位置里的数值。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter02/03-constants.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/03-constants.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[go的变量]]></title>
+            <description><![CDATA[变量记录的是一个位置，这个位置中存放的值是可以变化的。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter02/04-variables.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/04-variables.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[go的类型]]></title>
+            <description><![CDATA[类型是用来诠释如何解读指定位置中存放的数据，以及约定操作符的含义的。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter02/05-types.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/05-types.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[代码区块、声明、声明作用域名]]></title>
+            <description><![CDATA[声明的影响是有范围的，它的影响范围叫做作用域，作用域对应的是代码区块。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter02/06-declarations.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/06-declarations.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[表达式(Expressions) 与运算符(Operator)]]></title>
+            <description><![CDATA[表达式是用运算符和函数的描述的一个计算过程。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter02/07-expressions.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/07-expressions.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[go的状态语句]]></title>
+            <description><![CDATA[终止语句是指下的情况：]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter02/08-statements.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/08-statements.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[go的包管理语句]]></title>
+            <description><![CDATA[PckageClause  = "package" PackageName .
+PackageName    = identifier .]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter02/10-package.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/10-package.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[go的内置函数]]></title>
+            <description><![CDATA[go内置了一些函数，这些函数可以直接使用。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter02/09-builtin.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/09-builtin.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[go程序的初始化]]></title>
+            <description><![CDATA[例如：]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter02/11-initialization.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/11-initialization.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[go的错误处理]]></title>
+            <description><![CDATA[package runtime]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter02/12-errors.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/12-errors.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[操作系统相关]]></title>
+            <description><![CDATA[type                                 size in bytes]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter02/13-system.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/13-system.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[实现命令行参数]]></title>
+            <description><![CDATA[flag是Go语言的一个标准包，用来处理命令行参数。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter03/01-cmdline.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter03/01-cmdline.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[打印日志]]></title>
+            <description><![CDATA[glog原本是google使用C++实现的一个日志模块(glog c++)，go语言出来以后，又实现了一个Go版本的glog。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter03/02-log.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter03/02-log.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Go 语言的类型转换]]></title>
+            <description><![CDATA[标准库 strconv 提供了多个 string 与数值的转换方法：]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter03/convert.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter03/convert.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[依赖代码管理]]></title>
+            <description><![CDATA[这里记录用于Go项目的依赖管理工具。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter04/01-dependency.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter04/01-dependency.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Go Template 语法]]></title>
+            <description><![CDATA[Go 语言提供了一个名为 text/template 库，这个库定义实现了 go template 语言，可以用来写 html 模板。很多用 go 语言实现的软件，譬如 docker、kubernetes 支持用 go template 定义输出的内容格式。]]></description>
+            <link>https://www.lijiaocn.com/prog/go-template/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go-template/index.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[codes:]]></description>
+            <link>https://www.lijiaocn.com/prog/go/chapter02/99-examples.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/99-examples.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
@@ -307,188 +455,6 @@
             <description><![CDATA[使用 yield 语句构造的 Generator 可以被迭代：]]></description>
             <link>https://www.lijiaocn.com/prog/python3/generator.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/python3/generator.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[Go 语言编程手册]]></title>
-            <description><![CDATA[记录一些 Go 语言的常识，主要目的是在长时间不写代码后，能够通过这份笔记快速回想起来。]]></description>
-            <link>https://www.lijiaocn.com/prog/golang/index.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/golang/index.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[Go Modules 管理依赖代码]]></title>
-            <description><![CDATA[见：Go Modules：Go 1.11和1.12引入的依赖包管理方法。]]></description>
-            <link>https://www.lijiaocn.com/prog/golang/gomod.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/golang/gomod.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[Go Template 语法]]></title>
-            <description><![CDATA[Go 语言提供了一个名为 text/template 库，这个库定义实现了 go template 语言，可以用来写 html 模板。很多用 go 语言实现的软件，譬如 docker、kubernetes 支持用 go template 定义输出的内容格式。]]></description>
-            <link>https://www.lijiaocn.com/prog/go-template/index.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go-template/index.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[Go语言编程手册]]></title>
-            <link>https://www.lijiaocn.com/prog/go/index.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/index.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[安装Go]]></title>
-            <description><![CDATA[下面是在linux系统上安装go的步骤，在mac上安装也是类似的过程。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter01/01-install.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter01/01-install.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[使用godoc]]></title>
-            <description><![CDATA[godoc是go的一个命令，提供了可以在本地浏览的go文档。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter01/02-godoc.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter01/02-godoc.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go的IDE]]></title>
-            <description><![CDATA[可以用来写go的IDE很多，选择哪个IDE，是萝卜青菜各有所爱的事情。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter01/03-ide.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter01/03-ide.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[第二章 语法概览]]></title>
-            <description><![CDATA[没有编程经验初学者，不应当一开始就试图掌握所有语法细节，而应当多写程序、多尝试，找到正确的做事方法。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter02/00-about.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/00-about.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[设计目标]]></title>
-            <description><![CDATA[go语言的设计目标是通用的系统编程语言。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter02/01-purpose.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/01-purpose.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go语言的词法规则]]></title>
-            <description><![CDATA[英语有单词，汉语有词语，编程语言也有自己的词汇。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter02/02-lexical-elements.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/02-lexical-elements.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go的常量]]></title>
-            <description><![CDATA[常量意如起名，是不会变化的量，量就是值。常量是程序运行时，系统中某个位置里的数值。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter02/03-constants.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/03-constants.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go的变量]]></title>
-            <description><![CDATA[变量记录的是一个位置，这个位置中存放的值是可以变化的。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter02/04-variables.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/04-variables.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go的类型]]></title>
-            <description><![CDATA[类型是用来诠释如何解读指定位置中存放的数据，以及约定操作符的含义的。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter02/05-types.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/05-types.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[代码区块、声明、声明作用域名]]></title>
-            <description><![CDATA[声明的影响是有范围的，它的影响范围叫做作用域，作用域对应的是代码区块。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter02/06-declarations.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/06-declarations.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[表达式(Expressions) 与运算符(Operator)]]></title>
-            <description><![CDATA[表达式是用运算符和函数的描述的一个计算过程。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter02/07-expressions.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/07-expressions.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go的状态语句]]></title>
-            <description><![CDATA[终止语句是指下的情况：]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter02/08-statements.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/08-statements.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go的内置函数]]></title>
-            <description><![CDATA[go内置了一些函数，这些函数可以直接使用。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter02/09-builtin.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/09-builtin.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go的包管理语句]]></title>
-            <description><![CDATA[PckageClause  = "package" PackageName .
-PackageName    = identifier .]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter02/10-package.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/10-package.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go程序的初始化]]></title>
-            <description><![CDATA[例如：]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter02/11-initialization.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/11-initialization.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go的错误处理]]></title>
-            <description><![CDATA[package runtime]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter02/12-errors.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/12-errors.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[操作系统相关]]></title>
-            <description><![CDATA[package unsafe]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter02/13-system.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/13-system.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[No title]]></title>
-            <description><![CDATA[codes:]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter02/99-examples.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/99-examples.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[实现命令行参数]]></title>
-            <description><![CDATA[flag是Go语言的一个标准包，用来处理命令行参数。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter03/01-cmdline.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter03/01-cmdline.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[打印日志]]></title>
-            <description><![CDATA[glog原本是google使用C++实现的一个日志模块(glog c++)，go语言出来以后，又实现了一个Go版本的glog。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter03/02-log.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter03/02-log.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[Go 语言的类型转换]]></title>
-            <description><![CDATA[标准库 strconv 提供了多个 string 与数值的转换方法：]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter03/convert.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter03/convert.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[依赖代码管理]]></title>
-            <description><![CDATA[这里记录用于Go项目的依赖管理工具。]]></description>
-            <link>https://www.lijiaocn.com/prog/go/chapter04/01-dependency.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter04/01-dependency.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
