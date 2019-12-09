@@ -8,7 +8,7 @@
 
 ## 小鸟笔记
 
-返回 [【小鸟笔记】][1] 手册列表。
+返回<a href="../note/" target="">【小鸟笔记】</a>手册列表。
 
 微信联系   mail: lijiaocn@foxmail.com**
 
