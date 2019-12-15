@@ -10,6 +10,8 @@
       * [set](./python3/set.md)
       * [dictionary](./python3/dictionary.md)
     * [字符串处理](./python3/string.md)
+    * [时间处理](./python3/time.md)
+    * [数值处理](./python3/num.md)
     * [内置函数](./python3/builtin.md)
     * [变量作用域](./python3/scope.md)
     * [参数读取](./python3/params.md)

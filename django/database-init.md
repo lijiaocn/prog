@@ -5,7 +5,7 @@ Django 支持直接在代码中定义数据库的表结构，然后用 django �
 
 ## 创建 Model
 
-Model 的定义文件 models.py 位于 Django 应用目录中，models.py 文件中创建的每个类对应一张数据库表，例如：
+Model 的定义文件 models.py 位于 Django 应用目录中，在 models.py 中为每张数据库表创建一个对应的类：
 
 ```python
 from django.db import models
@@ -20,11 +20,11 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
 ```
 
-上面的代码创建了两个类 Question 和 Choice，它们将分别对应同名的数据库表，每个类成员对应表中的一个字段。
+上面的创建的两个类 Question 和 Choice，分别对应同名的数据库表，类成员对应表中的字段。
 
 需要特别关注的是每个字段的类型，`models.IntegerField`、`models.CharField`分别对应不同的数据库表字段类型，并且通过传入参数控制字段的特性。
 
-Models 可以说是 Django 中最重要的部分，Django 文档中有 [Models 的专题介绍](https://docs.djangoproject.com/en/2.2/topics/db/models/)，内容比较多，放在后面单独阐述。
+Models 可以说是 Django 中最重要的部分，Django 文档中有 [Models 的专题介绍](https://docs.djangoproject.com/en/2.2/topics/db/models/)，内容比较多。
 
 ## 类型成员类型与数据库字段类型
 
@@ -40,6 +40,17 @@ votes = models.IntegerField(default=0)
 
 # 时间
 update_date = models.TimeField(null=False)
+```
+
+## Field Options
+
+Field Options 是在声明类成员时传入的参数（例如 max_length=20），[Django Model Field options][1] 列出了 Django 支持的所有 Field Options。
+
+例如：
+
+```python
+# 声明为主键
+index_id = models.CharField(max_length=40,null=False, primary_key=True)
 ```
 
 ## 在 Meta 中设置联合主键等属性
@@ -150,3 +161,7 @@ python manage.py sqlmigrate polls 0001
 python manage.py makemigrations polls
 python manage.py migrate
 ```
+
+## 参考
+
+[1]: https://docs.djangoproject.com/en/2.2/topics/db/models/#field-options "Django Model Field options"
