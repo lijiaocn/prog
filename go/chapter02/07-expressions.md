@@ -408,3 +408,9 @@ low和high超出范围时，引发panic。
 ### 类型转换(Conversions)
 
 	Conversion = Type "(" Expression [ "," ] ")" .
+
+## 参考
+
+1. [go Lexical elements][1]
+
+[1]: https://golang.org/ref/spec#Lexical_elements "go Lexical elements"

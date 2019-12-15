@@ -348,3 +348,9 @@ defer表示跟随的语句需要在函数执行结束的时候执行。
 		}()
 		return 0
 	}
+
+## 参考
+
+1. [go Lexical elements][1]
+
+[1]: https://golang.org/ref/spec#Lexical_elements "go Lexical elements"

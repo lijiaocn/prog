@@ -36,4 +36,11 @@ s := strconv.Itoa(-42)
 s = fmt.Sprintf("%d", 32)
 ```
 
+
+
+## 参考
+
+1. [李佶澳的博客][2]
+
 [1]: https://golang.org/pkg/strconv/#pkg-index "Package strconv"
+[2]: https://www.lijiaocn.com "李佶澳的博客"

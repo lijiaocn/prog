@@ -21,11 +21,9 @@
 	uint32, int32, float32                4
 	uint64, int64, float64, complex64     8
 
-# 参考
 
-. [文献1][1]
-. [文献2][2]
+## 参考
 
-1]: 1.com  "文献1" 
-2]: 2.com  "文献1" 
-	complex128                           16
+1. [李佶澳的博客][1]
+
+[1]: https://www.lijiaocn.com "李佶澳的博客"

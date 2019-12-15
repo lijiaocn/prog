@@ -1,33 +1,30 @@
 <!-- toc -->
-# Go语言简明手册
+# Go 语言编程手册
 
-## 目的
+记录一些 Go 语言的常识，主要目的是在长时间不写代码后，能够通过这份笔记快速回想起来。
 
->“授人以鱼，不如授之以渔”
+go语言的设计目标是`通用`的`系统`编程语言。
 
-1. 有一个正确的学习方法，养成查阅第一手资料习惯，可以为以后节省大量的时间。
+>Go is a general-purpose language designed with systems programming in mind. It is strongly typed and garbage-collected and has explicit support for concurrent programming. Programs are constructed from packages, whose properties allow efficient management of dependencies. The existing implementations use a traditional compile/link model to generate executable binaries. 
 
-2. 形成知识体系，在以后遇到问题的时候，可以更有效地思考。
+通用，意味着可以用go语言做很多事情，不受领域的限制。可以用它来写后台程序、应用程序，也可以用来做数据处理、分析决策。与通用相对的是`专用`，例如matlab也是一门编程语言，但它只能用来做数据处理。相比之下go语言可以做的事情丰富多了，但go可以做不等于它做的更好，譬如要做数据统计处理，还是用matlab、R等语言合适。
 
-这是一本试图体现上面两个观点的手册，目的是让从未接触过go的人，一开始走上一条正确的道路，接触过go的人，在脱离一段时间后，可以快速的回想起重要的细节。
-
-## 约定
-
-在这本书里会记录很多操作命令，这些命令都是在CentOS7.2上执行的。
-
-如果命令前面带有`$ `，表示这个命令是以普通用户的身份执行，例如：
-
-	$ ls /opt/go/1.9.2/
-
-如果命令前面带有`# `，表示这个命令是以ROOT用户的身份执行，例如：
-
-	# mkdir -p /opt/go/1.9.2
-
-命令执行的结果前面既没有`$ `，也没有`# `。
+系统，是指go语言是面向操作系统的，使用go开发的程序直接在操作系统上运行，可以直接调用操作系统的接口。C、C++都是系统语言，Java不是。用Java开发的程序是运行在JVM上的，运行在操作系统上的JVM代为调用操作系统的接口。同理，HTML、Javascript、Excel中的宏语言等也不是系统编程语言。( [System programming language][5])
 
 
-## 阅读
 
-手册中的一些链接指向了本地运行的godoc，如果要打开这些连接，需要在本地运行godoc：
+学习资料：
 
-	godoc -http=:6060
+* [golang.org][2]
+* [golang documentation][2]
+* [The Go Programming Language Specification][3]
+
+## 参考
+
+1. [李佶澳的博客][1]
+
+[1]: https://www.lijiaocn.com "李佶澳的博客"
+[2]: https://golang.org/ "golang.org"
+[3]: https://golang.org/doc/ "golang documentation"
+[4]: https://golang.org/ref/spec "The Go Programming Language Specification"
+[5]: https://en.wikipedia.org/wiki/System_programming_language "System programming language" 

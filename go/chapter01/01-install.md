@@ -1,5 +1,5 @@
 <!-- toc -->
-# 安装Go
+# Go 语言的安装和文档
 
 下面是在linux系统上安装go的步骤，在mac上安装也是类似的过程。
 
@@ -76,10 +76,52 @@ go命令位于`/opt/go/1.9.2/bin/`目录中：
 	$ go version
 	go version go1.4.2 linux/amd64
 
+## Godoc 文档
+
+godoc 是 go 的一个命令，提供了可以在本地浏览的 go 文档。godoc 默认位于 go 的安装包中，与 go 命令位于同一个目录中，安装了 go 以后就可以直接使用。
+
+	$ godoc -h
+	usage: godoc package [name ...]
+	        godoc -http=:6060
+	...
+
+运行下面的命令，即可启动一个可以在本地访问的godoc网站：
+
+	$ godoc -http=:6060
+
+用浏览器打开 http://127.0.0.1:6060/，就可以看到运行在本地的 godoc 站点。内容与 [golang.org][2] 相同，由五部分组成；
+
+	Documents
+	Packages
+	The Project
+	Help
+	Blog
+
+[Documents][3]中包含的信息最全，需要仔细阅读。例如[Command Documentation][4]、[The Go Programming Language Specification][5]。
+
+特别是[The Go Programming Language Specification][5]，它对go语言语法的说明是最细致精确、最权威的。
+
+go 项目介绍：[Project][7]
+
+go Package文档：[Packages][6]
+
+go 帮助手册：[Help][8]
+
+go 最新动态：[Blog][9]
+
 ## 参考
 
-1. [golang.org download][1]
-2. [golangtc.com download][2]
+1. [李佶澳的博客][10]
+2. [golang.org download][1]
+3. [golangtc.com download][2]
 
 [1]: https://golang.org/dl/ "golang.org download"
 [2]: https://www.golangtc.com/download "golangtc.com download"
+[3]: https://golang.org/doc/ "go Documents"
+[4]: https://golang.org/doc/cmd "go Command Documentation"
+[5]: https://golang.org/ref/spec "The Go Programming Language Specification"
+[6]: https://golang.org/pkg/  "go Packages"
+[7]: https://golang.org/project/ "go Project"
+[8]: https://golang.org/help/ "go Help"
+[9]: https://golang.org/blog/  "go Blog"
+[10]: https://www.lijiaocn.com "李佶澳的博客"
