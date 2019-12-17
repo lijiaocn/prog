@@ -4,7 +4,7 @@
         <description><![CDATA[编程实用速查手册，Go语言、C语言、Python3、Django以及Lua等在工作中遇到的编程语言的手册]]></description>
         <link>https://www.lijiaocn.com/prog/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 09 Dec 2019 06:45:46 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 17 Dec 2019 09:32:48 GMT</lastBuildDate>
         <atom:link href="https://www.lijiaocn.com/prog/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[李佶澳]]></author>
         <item>
@@ -385,6 +385,18 @@ PackageName    = identifier .]]></description>
             <description><![CDATA[List 拼接成字符串：]]></description>
             <link>https://www.lijiaocn.com/prog/python3/string.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/python3/string.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Python 的时间处理]]></title>
+            <link>https://www.lijiaocn.com/prog/python3/time.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/python3/time.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Python3 的数值处理]]></title>
+            <link>https://www.lijiaocn.com/prog/python3/num.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/python3/num.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>

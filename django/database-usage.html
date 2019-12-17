@@ -917,7 +917,33 @@ var _hmt = _hmt || [];
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="../python3/builtin.html">
+        <li class="chapter " data-level="1.5.6" data-path="../python3/time.html">
+            
+                <a href="../python3/time.html">
+            
+                    
+                    时间处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../python3/num.html">
+            
+                <a href="../python3/num.html">
+            
+                    
+                    数值处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../python3/builtin.html">
             
                 <a href="../python3/builtin.html">
             
@@ -930,7 +956,7 @@ var _hmt = _hmt || [];
             
         </li>
     
-        <li class="chapter " data-level="1.5.7" data-path="../python3/scope.html">
+        <li class="chapter " data-level="1.5.9" data-path="../python3/scope.html">
             
                 <a href="../python3/scope.html">
             
@@ -943,7 +969,7 @@ var _hmt = _hmt || [];
             
         </li>
     
-        <li class="chapter " data-level="1.5.8" data-path="../python3/params.html">
+        <li class="chapter " data-level="1.5.10" data-path="../python3/params.html">
             
                 <a href="../python3/params.html">
             
@@ -956,7 +982,7 @@ var _hmt = _hmt || [];
             
         </li>
     
-        <li class="chapter " data-level="1.5.9" data-path="../python3/module.html">
+        <li class="chapter " data-level="1.5.11" data-path="../python3/module.html">
             
                 <a href="../python3/module.html">
             
@@ -969,7 +995,7 @@ var _hmt = _hmt || [];
             
         </li>
     
-        <li class="chapter " data-level="1.5.10" data-path="../python3/package.html">
+        <li class="chapter " data-level="1.5.12" data-path="../python3/package.html">
             
                 <a href="../python3/package.html">
             
@@ -982,7 +1008,7 @@ var _hmt = _hmt || [];
             
         </li>
     
-        <li class="chapter " data-level="1.5.11" data-path="../python3/format.html">
+        <li class="chapter " data-level="1.5.13" data-path="../python3/format.html">
             
                 <a href="../python3/format.html">
             
@@ -995,7 +1021,7 @@ var _hmt = _hmt || [];
             
         </li>
     
-        <li class="chapter " data-level="1.5.12" data-path="../python3/file.html">
+        <li class="chapter " data-level="1.5.14" data-path="../python3/file.html">
             
                 <a href="../python3/file.html">
             
@@ -1008,7 +1034,7 @@ var _hmt = _hmt || [];
             
         </li>
     
-        <li class="chapter " data-level="1.5.13" data-path="../python3/error.html">
+        <li class="chapter " data-level="1.5.15" data-path="../python3/error.html">
             
                 <a href="../python3/error.html">
             
@@ -1021,7 +1047,7 @@ var _hmt = _hmt || [];
             
         </li>
     
-        <li class="chapter " data-level="1.5.14" data-path="../python3/class.html">
+        <li class="chapter " data-level="1.5.16" data-path="../python3/class.html">
             
                 <a href="../python3/class.html">
             
@@ -1034,7 +1060,7 @@ var _hmt = _hmt || [];
             
         </li>
     
-        <li class="chapter " data-level="1.5.15" data-path="../python3/generator.html">
+        <li class="chapter " data-level="1.5.17" data-path="../python3/generator.html">
             
                 <a href="../python3/generator.html">
             
@@ -1895,7 +1921,10 @@ var _hmt = _hmt || [];
 
                                 <!-- toc -->
 <ul>
-<li><a href="#django&#xFF1A;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;&#x5199;&#x5165;">Django&#xFF1A;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;&#x5199;&#x5165;</a></li>
+<li><a href="#django&#xFF1A;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;&#x5199;&#x5165;">Django&#xFF1A;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;&#x5199;&#x5165;</a><ul>
+<li><a href="#&#x53C2;&#x8003;">&#x53C2;&#x8003;</a></li>
+</ul>
+</li>
 </ul>
 <!-- tocstop -->
 <h1 id="django&#xFF1A;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;&#x5199;&#x5165;">Django&#xFF1A;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;&#x5199;&#x5165;</h1>
@@ -1914,6 +1943,12 @@ m = Movie.objects.get(name=i.name,site=i.site)
 <pre><code class="lang-python">items = Movie.objects.filter()
 items = Movie.objects.filter().order_by(<span class="hljs-string">&apos;name&apos;</span>)
 </code></pre>
+<p>&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x6392;&#x5E8F;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> django.db.models.functions <span class="hljs-keyword">import</span> Coalesce
+
+items = Question.objects.filter(market=<span class="hljs-string">&quot;sz&quot;</span>).order_by(Coalesce(<span class="hljs-string">&apos;stock_code&apos;</span>, <span class="hljs-string">&apos;answer_date&apos;</span>).desc())
+</code></pre>
+<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
 <script type="text/javascript">var className='atoc';</script>
                                 
 <div>
@@ -1985,7 +2020,7 @@ items = Movie.objects.filter().order_by(<span class="hljs-string">&apos;name&apo
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数据库查询写入","level":"1.8.6","depth":2,"next":{"title":"命令行操作数据库","level":"1.8.7","depth":2,"path":"django/database-shell.md","ref":"./django/database-shell.md","articles":[]},"previous":{"title":"数据库初始化","level":"1.8.5","depth":2,"path":"django/database-init.md","ref":"./django/database-init.md","articles":[]},"dir":"ltr"},"config":{"plugins":[{"name":"theme-lijiaocn","version":"git+https://github.com/lijiaocn/theme-lijiaocn.git"},"atoc","toggle-chapters","rss"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":[],"title":"编程实用速查手册","description":"编程实用速查手册，Go语言、C语言、Python3、Django以及Lua等在工作中遇到的编程语言的手册","author":"李佶澳","site_url":"https://www.lijiaocn.com/prog/","feed_url":"https://www.lijiaocn.com/prog/feed.xml"},"highlight":{},"theme-lijiaocn":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"lijiaocn@foxmail.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"language":"zh-hans","gitbook":">=3.0.0"},"file":{"path":"django/database-usage.md","mtime":"2019-12-09T06:41:36.154Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-09T06:45:20.126Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数据库查询写入","level":"1.8.6","depth":2,"next":{"title":"命令行操作数据库","level":"1.8.7","depth":2,"path":"django/database-shell.md","ref":"./django/database-shell.md","articles":[]},"previous":{"title":"数据库初始化","level":"1.8.5","depth":2,"path":"django/database-init.md","ref":"./django/database-init.md","articles":[]},"dir":"ltr"},"config":{"plugins":[{"name":"theme-lijiaocn","version":"git+https://github.com/lijiaocn/theme-lijiaocn.git"},"atoc","toggle-chapters","rss"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":[],"title":"编程实用速查手册","description":"编程实用速查手册，Go语言、C语言、Python3、Django以及Lua等在工作中遇到的编程语言的手册","author":"李佶澳","site_url":"https://www.lijiaocn.com/prog/","feed_url":"https://www.lijiaocn.com/prog/feed.xml"},"highlight":{},"theme-lijiaocn":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"lijiaocn@foxmail.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"language":"zh-hans","gitbook":">=3.0.0"},"file":{"path":"django/database-usage.md","mtime":"2019-09-13T11:10:59.222Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-17T09:32:17.755Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
