@@ -4,11 +4,11 @@
         <description><![CDATA[编程实用速查手册，Go语言、C语言、Python3、Django以及Lua等在工作中遇到的编程语言的手册]]></description>
         <link>https://www.lijiaocn.com/prog/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 01 Jan 2020 15:53:28 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 23 Feb 2020 05:31:19 GMT</lastBuildDate>
         <atom:link href="https://www.lijiaocn.com/prog/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[李佶澳]]></author>
         <item>
-            <title><![CDATA[小鸟笔记—编程速查手册]]></title>
+            <title><![CDATA[编程语言初级]]></title>
             <description><![CDATA[该手册的目的是在长时间不接触某一门语言后，能够通过该手册快速回想起基本的语法和用法。]]></description>
             <link>https://www.lijiaocn.com/prog/</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/</guid>
@@ -844,6 +844,20 @@ PackageName    = identifier .]]></description>
             <description><![CDATA[下面以Python API为例。]]></description>
             <link>https://www.lijiaocn.com/prog/taobaoke/api_call.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/taobaoke/api_call.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[简单了解一下 android 应用的开发过程]]></title>
+            <description><![CDATA[用 Intelli Idea 或者 Android Studio 创建一个 andorid 项目。]]></description>
+            <link>https://www.lijiaocn.com/prog/android/start.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/android/start.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[vue 学习资料]]></title>
+            <description><![CDATA[官网教程： https://cn.vuejs.org/v2/guide/]]></description>
+            <link>https://www.lijiaocn.com/prog/vue/start.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/vue/start.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
