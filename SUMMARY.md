@@ -1,6 +1,6 @@
 # 目录
-* [小鸟笔记—编程篇](./README.md)
-* [Go 语言深度入门](https://www.lijiaocn.com/go-detail/)
+* [编程语言初级篇](./README.md)
+* [Go 语言实用编程](https://www.lijiaocn.com/go-detail/)
 * [Go 语言编程手册](./go/index.md )
   * [安装和文档](./go/chapter01/01-install.md )
   * [基础语法](./go/chapter02/00-about.md)
