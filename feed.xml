@@ -4,7 +4,7 @@
         <description><![CDATA[编程实用速查手册，Go语言、C语言、Python3、Django以及Lua等在工作中遇到的编程语言的手册]]></description>
         <link>https://www.lijiaocn.com/prog/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 23 Feb 2020 06:07:07 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 21 Mar 2020 12:57:40 GMT</lastBuildDate>
         <atom:link href="https://www.lijiaocn.com/prog/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[李佶澳]]></author>
         <item>
@@ -192,7 +192,7 @@ PackageName    = identifier .]]></description>
         </item>
         <item>
             <title><![CDATA[Lua的函数定义，传参注意事项和返回值]]></title>
-            <description><![CDATA[函数用关键字function定义，默认为全局的。]]></description>
+            <description><![CDATA[table.insert： 将 value 插入 list[pos]，同时将后面的数值向后移动一位，如果没有指定 pos 添加到 list 尾部，post 默认为 #list+1。]]></description>
             <link>https://www.lijiaocn.com/prog/lua/function.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/lua/function.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
