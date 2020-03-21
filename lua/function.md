@@ -1,6 +1,28 @@
 <!-- toc -->
 # Lua的函数定义，传参注意事项和返回值
 
+## 常用内置函数
+
+[table.insert](https://www.lua.org/manual/5.3/manual.html#pdf-table.insert)： 将 value 插入 list[pos]，同时将后面的数值向后移动一位，如果没有指定 pos 添加到 list 尾部，post 默认为 #list+1。
+
+```lua
+table.insert (list, [pos,] value)
+```
+
+[ipairs (t)](https://www.lua.org/manual/5.3/manual.html#pdf-ipairs)：迭代器，遍历数组：
+
+```lua
+for i,v in ipairs(t) do body end  -- ipaires(t) 返回  (1,t[1]), (2,t[2]), ...,
+```
+
+[next](https://www.lua.org/manual/5.3/manual.html#pdf-next)：返回 table 中指定位置的元素。
+
+```sh
+next (table [, index])
+```
+
+
+
 ## 声明定义
 
 函数用关键字`function`定义，默认为全局的。
