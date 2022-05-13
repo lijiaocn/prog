@@ -4,11 +4,11 @@
         <description><![CDATA[编程实用速查手册，Go语言、C语言、Python3、Django以及Lua等在工作中遇到的编程语言的手册]]></description>
         <link>https://www.lijiaocn.com/prog/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 21 Mar 2020 12:57:40 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 13 May 2022 09:41:13 GMT</lastBuildDate>
         <atom:link href="https://www.lijiaocn.com/prog/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[李佶澳]]></author>
         <item>
-            <title><![CDATA[编程语言初级]]></title>
+            <title><![CDATA[编程语言手册]]></title>
             <description><![CDATA[该手册的目的是在长时间不接触某一门语言后，能够通过该手册快速回想起基本的语法和用法。]]></description>
             <link>https://www.lijiaocn.com/prog/</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/</guid>
@@ -29,7 +29,7 @@
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[第二章 语法概览]]></title>
+            <title><![CDATA[基础语法]]></title>
             <description><![CDATA[没有编程经验初学者，不应当一开始就试图掌握所有语法细节，而应当多写程序、多尝试，找到正确的做事方法。编程多年的程序员，要脱离教材，要能够看懂、使用更全面精确的一手资料。]]></description>
             <link>https://www.lijiaocn.com/prog/go/chapter02/00-about.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/00-about.html</guid>
@@ -151,8 +151,8 @@ PackageName    = identifier .]]></description>
         <item>
             <title><![CDATA[Go Template 语法]]></title>
             <description><![CDATA[Go 语言提供了一个名为 text/template 库，这个库定义实现了 go template 语言，可以用来写 html 模板。很多用 go 语言实现的软件，譬如 docker、kubernetes 支持用 go template 定义输出的内容格式。]]></description>
-            <link>https://www.lijiaocn.com/prog/go-template/index.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go-template/index.html</guid>
+            <link>https://www.lijiaocn.com/prog/go/template/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/template/index.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
@@ -160,6 +160,69 @@ PackageName    = identifier .]]></description>
             <description><![CDATA[codes:]]></description>
             <link>https://www.lijiaocn.com/prog/go/chapter02/99-examples.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/chapter02/99-examples.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Go 语言深入理解]]></title>
+            <description><![CDATA[参考：Go 语言官方 10 年博文阅读指引]]></description>
+            <link>https://www.lijiaocn.com/prog/go/article/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/article/index.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Go 语言项目的代码管理]]></title>
+            <description><![CDATA[为什么把这一节放在最前面？因为这就是最首要的事情。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/article/pkg.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/article/pkg.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[go module 多版本依赖功能验证]]></title>
+            <description><![CDATA[我们这里要创建的 module，它的引用方法比较特殊又比较常见——通过别名引用。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/article/create_mod.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/article/create_mod.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[测试用例的覆盖率]]></title>
+            <description><![CDATA[Go 语言在设计的时候就考虑到工程实践，融入了注释文档、单元测试和基准测试等软件工程中的技术，上一节提到的代码组织方法也是软件工程思想的体现。在语言层面统一工具和方法，极大地提高了协作效率。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/article/testcase.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/article/testcase.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Go 语言按值传递的开销很大]]></title>
+            <description><![CDATA[Go 语言所有的参数都是按值传递，Go 语言中所有的变量都是值，特别是数组也是值。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/article/varcopy.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/article/varcopy.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Go 并发与按值传递引发的血案]]></title>
+            <description><![CDATA[前段时间出去面试的时候，被一道题难住了，问下面这段代码的运行输出是什么：]]></description>
+            <link>https://www.lijiaocn.com/prog/go/article/waitgroup.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/article/waitgroup.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Go 语言程序运行时跟踪调试]]></title>
+            <description><![CDATA[delve 是现阶段最好用的跟踪调试工具，支持 Linux 和 macOS，是 GoLand 使用的调试工具。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/article/debug.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/article/debug.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Go 语言程序运行时状态查看]]></title>
+            <description><![CDATA[上一节用 dlv 调试运行中的 Go 语言程序，dlv 会打断进程的运行，在开发测试时可以用。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/article/pprof.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/article/pprof.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[有大量反序列化时，目标 Struct 的成员用指针]]></title>
+            <description><![CDATA[JSON and Go 中介绍反序列化时说，介绍了目标 struct 中有 Reference Type 类型成员时的处理：]]></description>
+            <link>https://www.lijiaocn.com/prog/go/article/unmarshal.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/article/unmarshal.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
@@ -589,6 +652,41 @@ PackageName    = identifier .]]></description>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[Gin 框架的学习资料]]></title>
+            <description><![CDATA[Go 内置了 http.Server 的实现，如下：]]></description>
+            <link>https://www.lijiaocn.com/prog/go/gin/index.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/gin/index.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Gin 快速开始]]></title>
+            <description><![CDATA[建议直接使用 Go 1.13 以及以上版本，用 go mod 进行依赖管理（代码要如何组织?)。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/gin/quickstart.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/gin/quickstart.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Gin 的 router 管理]]></title>
+            <description><![CDATA[这里所说的路由就是就是 http 请求的 method、path 与处理函数的对应关系。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/gin/router.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/gin/router.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Gin 的请求参数获取]]></title>
+            <description><![CDATA[http 的请求参数通常通过以下集中方式传入。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/gin/param.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/gin/param.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Gin 如何返回响应数据]]></title>
+            <description><![CDATA[Http 访问就是“请求-响应”，Gin 提供了丰富的返回响应数据的方法。]]></description>
+            <link>https://www.lijiaocn.com/prog/go/gin/response.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/go/gin/response.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[Django开发手册]]></title>
             <description><![CDATA[Python编程入门]]></description>
             <link>https://www.lijiaocn.com/prog/django/index.html</link>
@@ -749,6 +847,20 @@ PackageName    = identifier .]]></description>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[简单了解一下 android 应用的开发过程]]></title>
+            <description><![CDATA[用 Intelli Idea 或者 Android Studio 创建一个 andorid 项目。]]></description>
+            <link>https://www.lijiaocn.com/prog/android/start.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/android/start.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[vue 学习资料]]></title>
+            <description><![CDATA[官网教程： https://cn.vuejs.org/v2/guide/]]></description>
+            <link>https://www.lijiaocn.com/prog/vue/start.html</link>
+            <guid isPermaLink="true">https://www.lijiaocn.com/prog/vue/start.html</guid>
+            <dc:creator><![CDATA[李佶澳]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[Python3 爬虫开发]]></title>
             <description><![CDATA[Python2 马上就要不维护了，现在要尽量使用 Python3，正好崔庆才写了一本《Python 3网络爬虫开发实战》，介绍了 Requests、Selenium、PhantomJS、Beautiful Soup 等 python 库的用法。]]></description>
             <link>https://www.lijiaocn.com/prog/py3spider/index.html</link>
@@ -844,20 +956,6 @@ PackageName    = identifier .]]></description>
             <description><![CDATA[下面以Python API为例。]]></description>
             <link>https://www.lijiaocn.com/prog/taobaoke/api_call.html</link>
             <guid isPermaLink="true">https://www.lijiaocn.com/prog/taobaoke/api_call.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[简单了解一下 android 应用的开发过程]]></title>
-            <description><![CDATA[用 Intelli Idea 或者 Android Studio 创建一个 andorid 项目。]]></description>
-            <link>https://www.lijiaocn.com/prog/android/start.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/android/start.html</guid>
-            <dc:creator><![CDATA[李佶澳]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[vue 学习资料]]></title>
-            <description><![CDATA[官网教程： https://cn.vuejs.org/v2/guide/]]></description>
-            <link>https://www.lijiaocn.com/prog/vue/start.html</link>
-            <guid isPermaLink="true">https://www.lijiaocn.com/prog/vue/start.html</guid>
             <dc:creator><![CDATA[李佶澳]]></dc:creator>
         </item>
         <item>

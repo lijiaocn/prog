@@ -1,0 +1,2432 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>程序运行时状态查看 · 小鸟笔记·李佶澳</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="lijiaocn@foxmail.com">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="unmarshal.html" />
+    
+    
+    <link rel="prev" href="debug.html" />
+    
+
+    <link href="https://www.lijiaocn.com/prog/feed.xml" title="编程实用速查手册" rel="alternate" type="application/rss+xml" />
+
+        
+<!--Google ads -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8176866190626448",
+    enable_page_level_ads: true
+  });
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105389858-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-105389858-1');
+</script>
+
+<!--百度统计-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8f59ea10145df28da8932c8743ec1d60";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!--百度收录-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                
+<div style="text-align:center">
+    <h2><a href="https://www.lijiaocn.com/note/" style="color:#afa790">小鸟笔记</a></h2>
+    <p style="font-weight:bold"><a style="color:lightgray;" href="https://www.lijiaocn.com">www.lijiaocn.com</a></p>
+</div>
+
+<div style="text-align:center">
+    <a href="/prog/" style="color:#afa790;font-weight:bold">编程</a>&nbsp;
+    <a href="/soft/" style="color:#afa790;font-weight:bold">软件</a>&nbsp;
+    <a href="/blog/" style="color:#afa790;font-weight:bold">博客</a>&nbsp;
+    <a href="/" style="color:#afa790;font-weight:bold">主页</a>
+</div>
+<div>
+<br>
+<ul class="summary"><li>
+<a style="color:red" target="_blank" href="/shop">每日红包</a>
+</li></ul>
+</div>
+
+<!--div style="text-align:center">
+< 250x250 >
+<ins class="adsbygoogle"
+     style="display:inline-block;width:250px;height:250px"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="9490087185"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div-->
+
+
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    笔记说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">编程语言</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Go 语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../chapter01/01-install.html">
+            
+                <a href="../chapter01/01-install.html">
+            
+                    
+                    安装和文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../chapter02/00-about.html">
+            
+                <a href="../chapter02/00-about.html">
+            
+                    
+                    基础语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.1" data-path="../chapter02/02-lexical-elements.html">
+            
+                <a href="../chapter02/02-lexical-elements.html">
+            
+                    
+                    词法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.2" data-path="../chapter02/03-constants.html">
+            
+                <a href="../chapter02/03-constants.html">
+            
+                    
+                    常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.3" data-path="../chapter02/04-variables.html">
+            
+                <a href="../chapter02/04-variables.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4" data-path="../chapter02/05-types.html">
+            
+                <a href="../chapter02/05-types.html">
+            
+                    
+                    类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.5" data-path="../chapter02/06-declarations.html">
+            
+                <a href="../chapter02/06-declarations.html">
+            
+                    
+                    声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.6" data-path="../chapter02/07-expressions.html">
+            
+                <a href="../chapter02/07-expressions.html">
+            
+                    
+                    表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.7" data-path="../chapter02/08-statements.html">
+            
+                <a href="../chapter02/08-statements.html">
+            
+                    
+                    语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.8" data-path="../chapter02/10-package.html">
+            
+                <a href="../chapter02/10-package.html">
+            
+                    
+                    包声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../chapter02/09-builtin.html">
+            
+                <a href="../chapter02/09-builtin.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../chapter02/11-initialization.html">
+            
+                <a href="../chapter02/11-initialization.html">
+            
+                    
+                    初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../chapter02/12-errors.html">
+            
+                <a href="../chapter02/12-errors.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../chapter02/13-system.html">
+            
+                <a href="../chapter02/13-system.html">
+            
+                    
+                    系统相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../chapter03/01-cmdline.html">
+            
+                <a href="../chapter03/01-cmdline.html">
+            
+                    
+                    命令行参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../chapter03/02-log.html">
+            
+                <a href="../chapter03/02-log.html">
+            
+                    
+                    日志打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../chapter03/convert.html">
+            
+                <a href="../chapter03/convert.html">
+            
+                    
+                    类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../chapter04/01-dependency.html">
+            
+                <a href="../chapter04/01-dependency.html">
+            
+                    
+                    代码管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../template/">
+            
+                <a href="../template/">
+            
+                    
+                    Go Tempalte
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="../chapter02/99-examples.html">
+            
+                <a href="../chapter02/99-examples.html">
+            
+                    
+                    遗留代码片段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Go 语言深入了解
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.13.1" data-path="pkg.html">
+            
+                <a href="pkg.html">
+            
+                    
+                    代码要如何组织?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13.2" data-path="create_mod.html">
+            
+                <a href="create_mod.html">
+            
+                    
+                    多版本依赖功能验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13.3" data-path="testcase.html">
+            
+                <a href="testcase.html">
+            
+                    
+                    测试用例的覆盖率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13.4" data-path="varcopy.html">
+            
+                <a href="varcopy.html">
+            
+                    
+                    按值传递的开销很大
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13.5" data-path="waitgroup.html">
+            
+                <a href="waitgroup.html">
+            
+                    
+                    并发与按值传递血案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13.6" data-path="debug.html">
+            
+                <a href="debug.html">
+            
+                    
+                    程序运行时跟踪调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.13.7" data-path="pprof.html">
+            
+                <a href="pprof.html">
+            
+                    
+                    程序运行时状态查看
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13.8" data-path="unmarshal.html">
+            
+                <a href="unmarshal.html">
+            
+                    
+                    大量反序列化用指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../lua/">
+            
+                <a href="../../lua/">
+            
+                    
+                    Lua 语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../lua/basic_type.html">
+            
+                <a href="../../lua/basic_type.html">
+            
+                    
+                    基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../lua/keywords_operator.html">
+            
+                <a href="../../lua/keywords_operator.html">
+            
+                    
+                    关键字与操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../../lua/control_flow.html">
+            
+                <a href="../../lua/control_flow.html">
+            
+                    
+                    条件语句与循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../../lua/function.html">
+            
+                <a href="../../lua/function.html">
+            
+                    
+                    函数定义使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../../lua/module.html">
+            
+                <a href="../../lua/module.html">
+            
+                    
+                    模块定义使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../../lua/metatable.html">
+            
+                <a href="../../lua/metatable.html">
+            
+                    
+                    元表定义设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="../../lua/object_oriented.html">
+            
+                <a href="../../lua/object_oriented.html">
+            
+                    
+                    面向对象设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="../../lua/01-standard-output.html">
+            
+                <a href="../../lua/01-standard-output.html">
+            
+                    
+                    标准输出打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="../../lua/02-string-operation.html">
+            
+                <a href="../../lua/02-string-operation.html">
+            
+                    
+                    字符串操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10" data-path="../../lua/03-lua-performance.html">
+            
+                <a href="../../lua/03-lua-performance.html">
+            
+                    
+                    性能相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.10.1" data-path="../../lua/03-lua-performance-local-var.html">
+            
+                <a href="../../lua/03-lua-performance-local-var.html">
+            
+                    
+                    局部变量比全局变量快30%
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10.2" data-path="../../lua/03-lua-performance-load-dynamic.html">
+            
+                <a href="../../lua/03-lua-performance-load-dynamic.html">
+            
+                    
+                    动态加载代码非常慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10.3" data-path="../../lua/03-lua-performance-table-space.html">
+            
+                <a href="../../lua/03-lua-performance-table-space.html">
+            
+                    
+                    table自动扩容代价很高
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10.4" data-path="../../lua/03-lua-performance-table-space-1.html">
+            
+                <a href="../../lua/03-lua-performance-table-space-1.html">
+            
+                    
+                    清理table成员不会触发rehash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10.5" data-path="../../lua/03-lua-performance-string.html">
+            
+                <a href="../../lua/03-lua-performance-string.html">
+            
+                    
+                    慎用字符串拼接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10.6" data-path="../../lua/03-lua-performance-less-var.html">
+            
+                <a href="../../lua/03-lua-performance-less-var.html">
+            
+                    
+                    尽量少创建变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10.7" data-path="../../lua/03-lua-performance-cache-result.html">
+            
+                <a href="../../lua/03-lua-performance-cache-result.html">
+            
+                    
+                    缓存运算结果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10.8" data-path="../../lua/03-lua-performance-garbage-collect.html">
+            
+                <a href="../../lua/03-lua-performance-garbage-collect.html">
+            
+                    
+                    主动控制垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../shell/">
+            
+                <a href="../../shell/">
+            
+                    
+                    Shell 脚本
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../shell/struct.html">
+            
+                <a href="../../shell/struct.html">
+            
+                    
+                    变量与数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../../shell/cmd.html">
+            
+                <a href="../../shell/cmd.html">
+            
+                    
+                    内置命令用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../python3/">
+            
+                <a href="../../python3/">
+            
+                    
+                    Python3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../python3/2to3.html">
+            
+                <a href="../../python3/2to3.html">
+            
+                    
+                    python2 代码转换成 python3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../python3/project.html">
+            
+                <a href="../../python3/project.html">
+            
+                    
+                    运行环境与依赖管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../../python3/syntax.html">
+            
+                <a href="../../python3/syntax.html">
+            
+                    
+                    代码文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../../python3/struct.html">
+            
+                <a href="../../python3/struct.html">
+            
+                    
+                    基本类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.4.1" data-path="../../python3/list.html">
+            
+                <a href="../../python3/list.html">
+            
+                    
+                    list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4.2" data-path="../../python3/tuple.html">
+            
+                <a href="../../python3/tuple.html">
+            
+                    
+                    tuple
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4.3" data-path="../../python3/set.html">
+            
+                <a href="../../python3/set.html">
+            
+                    
+                    set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4.4" data-path="../../python3/dictionary.html">
+            
+                <a href="../../python3/dictionary.html">
+            
+                    
+                    dictionary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="../../python3/string.html">
+            
+                <a href="../../python3/string.html">
+            
+                    
+                    字符串处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="../../python3/time.html">
+            
+                <a href="../../python3/time.html">
+            
+                    
+                    时间处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.7" data-path="../../python3/num.html">
+            
+                <a href="../../python3/num.html">
+            
+                    
+                    数值处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.8" data-path="../../python3/builtin.html">
+            
+                <a href="../../python3/builtin.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.9" data-path="../../python3/scope.html">
+            
+                <a href="../../python3/scope.html">
+            
+                    
+                    变量作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.10" data-path="../../python3/params.html">
+            
+                <a href="../../python3/params.html">
+            
+                    
+                    参数读取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.11" data-path="../../python3/module.html">
+            
+                <a href="../../python3/module.html">
+            
+                    
+                    模块用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.12" data-path="../../python3/package.html">
+            
+                <a href="../../python3/package.html">
+            
+                    
+                    包用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.13" data-path="../../python3/format.html">
+            
+                <a href="../../python3/format.html">
+            
+                    
+                    格式化输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.14" data-path="../../python3/file.html">
+            
+                <a href="../../python3/file.html">
+            
+                    
+                    文件读写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.15" data-path="../../python3/error.html">
+            
+                <a href="../../python3/error.html">
+            
+                    
+                    错误和异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.16" data-path="../../python3/class.html">
+            
+                <a href="../../python3/class.html">
+            
+                    
+                    类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.17" data-path="../../python3/generator.html">
+            
+                <a href="../../python3/generator.html">
+            
+                    
+                    生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../c/">
+            
+                <a href="../../c/">
+            
+                    
+                    C 语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../../c/strings.html">
+            
+                <a href="../../c/strings.html">
+            
+                    
+                    字符串处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="../../c/time.html">
+            
+                <a href="../../c/time.html">
+            
+                    
+                    时间操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="../../c/dynamiclib.html">
+            
+                <a href="../../c/dynamiclib.html">
+            
+                    
+                    动态链接库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="../../c/signal.html">
+            
+                <a href="../../c/signal.html">
+            
+                    
+                    信号量操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="../../c/memory.html">
+            
+                <a href="../../c/memory.html">
+            
+                    
+                    内存管理操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.6" data-path="../../c/print.html">
+            
+                <a href="../../c/print.html">
+            
+                    
+                    格式化打印输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.7" data-path="../../c/file.html">
+            
+                <a href="../../c/file.html">
+            
+                    
+                    文件&设备操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.8" data-path="../../c/process.html">
+            
+                <a href="../../c/process.html">
+            
+                    
+                    进程管理操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.9" data-path="../../c/concurrent.html">
+            
+                <a href="../../c/concurrent.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.10" data-path="../../c/socket.html">
+            
+                <a href="../../c/socket.html">
+            
+                    
+                    socket通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.11" data-path="../../c/filesystem.html">
+            
+                <a href="../../c/filesystem.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.12" data-path="../../c/sysconfig.html">
+            
+                <a href="../../c/sysconfig.html">
+            
+                    
+                    系统配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.13" data-path="../../c/namespace.html">
+            
+                <a href="../../c/namespace.html">
+            
+                    
+                    Namespace操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.14" data-path="../../c/hardware.html">
+            
+                <a href="../../c/hardware.html">
+            
+                    
+                    硬件信息读取
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">框架&组件</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../testframe/">
+            
+                <a href="../../testframe/">
+            
+                    
+                    测试框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../testframe/ginkgo.html">
+            
+                <a href="../../testframe/ginkgo.html">
+            
+                    
+                    Go 测试框架 GinkGo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../gin/">
+            
+                <a href="../gin/">
+            
+                    
+                    Gin 的原理与学习资料
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../gin/quickstart.html">
+            
+                <a href="../gin/quickstart.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../gin/router.html">
+            
+                <a href="../gin/router.html">
+            
+                    
+                    路由管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../gin/param.html">
+            
+                <a href="../gin/param.html">
+            
+                    
+                    参数读取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../gin/response.html">
+            
+                <a href="../gin/response.html">
+            
+                    
+                    响应数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" >
+            
+                <span>
+            
+                    
+                    日志管理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" >
+            
+                <span>
+            
+                    
+                    配置读取
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" >
+            
+                <span>
+            
+                    
+                    静态文件
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../django/">
+            
+                <a href="../../django/">
+            
+                    
+                    Django 开发手册
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../django/install.html">
+            
+                <a href="../../django/install.html">
+            
+                    
+                    环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../django/first-project.html">
+            
+                <a href="../../django/first-project.html">
+            
+                    
+                    项目的创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../../django/first-app.html">
+            
+                <a href="../../django/first-app.html">
+            
+                    
+                    应用的创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../../django/database.html">
+            
+                <a href="../../django/database.html">
+            
+                    
+                    对接数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../../django/database-init.html">
+            
+                <a href="../../django/database-init.html">
+            
+                    
+                    数据库初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="../../django/database-usage.html">
+            
+                <a href="../../django/database-usage.html">
+            
+                    
+                    数据库查询写入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.7" data-path="../../django/database-shell.html">
+            
+                <a href="../../django/database-shell.html">
+            
+                    
+                    命令行操作数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.8" data-path="../../django/admin.html">
+            
+                <a href="../../django/admin.html">
+            
+                    
+                    使用后台管理页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.9" data-path="../../django/views.html">
+            
+                <a href="../../django/views.html">
+            
+                    
+                    views 的开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.10" data-path="../../django/generic_views.html">
+            
+                <a href="../../django/generic_views.html">
+            
+                    
+                    使用 Generic Views
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.11" data-path="../../django/test.html">
+            
+                <a href="../../django/test.html">
+            
+                    
+                    编写测试代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.12" data-path="../../django/static.html">
+            
+                <a href="../../django/static.html">
+            
+                    
+                    页面模版中引入静态资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.13" data-path="../../django/input.html">
+            
+                <a href="../../django/input.html">
+            
+                    
+                    传入参数的获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.14" data-path="../../django/log.html">
+            
+                <a href="../../django/log.html">
+            
+                    
+                    日志管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.15" data-path="../../django/global_setting.html">
+            
+                <a href="../../django/global_setting.html">
+            
+                    
+                    项目的全局设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.16" data-path="../../django/problems.html">
+            
+                <a href="../../django/problems.html">
+            
+                    
+                    问题记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.17" data-path="../../django/idea_usage.html">
+            
+                <a href="../../django/idea_usage.html">
+            
+                    
+                    IDEA 远程调试 python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.18" data-path="../../django/package.html">
+            
+                <a href="../../django/package.html">
+            
+                    
+                    使用自定义的 Package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.19" data-path="../../django/deploy.html">
+            
+                <a href="../../django/deploy.html">
+            
+                    
+                    用WSGI方式部署Django服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.19.1" data-path="../../django/deploy_apache.html">
+            
+                <a href="../../django/deploy_apache.html">
+            
+                    
+                    在Apache中部署Django应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.20" data-path="../../django/redis_cache.html">
+            
+                <a href="../../django/redis_cache.html">
+            
+                    
+                    引入redis缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.21" data-path="../../django/import-django.html">
+            
+                <a href="../../django/import-django.html">
+            
+                    
+                    导入django环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../android/start.html">
+            
+                <a href="../../android/start.html">
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../vue/start.html">
+            
+                <a href="../../vue/start.html">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">应用开发</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../py3spider/">
+            
+                <a href="../../py3spider/">
+            
+                    
+                    Python3 爬虫开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../py3spider/request.html">
+            
+                <a href="../../py3spider/request.html">
+            
+                    
+                    Python3 请求库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../py3spider/parse.html">
+            
+                <a href="../../py3spider/parse.html">
+            
+                    
+                    Python3 解析库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../py3spider/mobile.html">
+            
+                <a href="../../py3spider/mobile.html">
+            
+                    
+                    移动 APP 工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../py3spider/framework.html">
+            
+                <a href="../../py3spider/framework.html">
+            
+                    
+                    Python3 爬虫框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../wechat/">
+            
+                <a href="../../wechat/">
+            
+                    
+                    微信公众号 API 使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../wechat/shezhi.html">
+            
+                <a href="../../wechat/shezhi.html">
+            
+                    
+                    设置方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../wechat/message.html">
+            
+                <a href="../../wechat/message.html">
+            
+                    
+                    消息格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../../wechat/debug.html">
+            
+                <a href="../../wechat/debug.html">
+            
+                    
+                    接口调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../taobaoke/">
+            
+                <a href="../../taobaoke/">
+            
+                    
+                    淘宝客 API 使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../taobaoke/kaitong.html">
+            
+                <a href="../../taobaoke/kaitong.html">
+            
+                    
+                    开通方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../../taobaoke/sdk.html">
+            
+                <a href="../../taobaoke/sdk.html">
+            
+                    
+                    SDK下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.3" data-path="../../taobaoke/api.html">
+            
+                <a href="../../taobaoke/api.html">
+            
+                    
+                    接口梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.4" data-path="../../taobaoke/api_call.html">
+            
+                <a href="../../taobaoke/api_call.html">
+            
+                    
+                    接口调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.lijiaocn.com" target="blank" class="gitbook-link">
+            www.lijiaocn.com 提供
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+                
+<br>
+<!--div style="text-align:center"-->
+<!-- Summary_Bottom -->
+<!--ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="2156601384"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div-->
+
+
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >程序运行时状态查看</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                
+<!-- Page_Top -->
+<!--div>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="5702052586"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br>
+</div-->
+
+<div style="text-align:center">
+<!-- 小鸟笔记-375*90 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:375px;height:90px"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="4394865767"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!-- 小鸟笔记-375*90-2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:375px;height:90px"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="7071988236"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+                                <!-- toc -->
+<ul>
+<li><a href="#go-&#x8BED;&#x8A00;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x72B6;&#x6001;&#x67E5;&#x770B;">Go &#x8BED;&#x8A00;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x72B6;&#x6001;&#x67E5;&#x770B;</a><ul>
+<li><a href="#&#x542F;&#x7528;&#x5B9E;&#x65F6;&#x7684;-pprof">&#x542F;&#x7528;&#x5B9E;&#x65F6;&#x7684; pprof</a></li>
+<li><a href="#&#x5982;&#x4F55;&#x4F7F;&#x7528;-pprof">&#x5982;&#x4F55;&#x4F7F;&#x7528; pprof</a></li>
+<li><a href="#trace-&#x67E5;&#x770B;">trace &#x67E5;&#x770B;</a></li>
+<li><a href="#&#x53C2;&#x8003;">&#x53C2;&#x8003;</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<h1 id="go-&#x8BED;&#x8A00;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x72B6;&#x6001;&#x67E5;&#x770B;">Go &#x8BED;&#x8A00;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x72B6;&#x6001;&#x67E5;&#x770B;</h1>
+<p>&#x4E0A;&#x4E00;&#x8282;&#x7528; dlv &#x8C03;&#x8BD5;&#x8FD0;&#x884C;&#x4E2D;&#x7684; Go &#x8BED;&#x8A00;&#x7A0B;&#x5E8F;&#xFF0C;dlv &#x4F1A;&#x6253;&#x65AD;&#x8FDB;&#x7A0B;&#x7684;&#x8FD0;&#x884C;&#xFF0C;&#x5728;&#x5F00;&#x53D1;&#x6D4B;&#x8BD5;&#x65F6;&#x53EF;&#x4EE5;&#x7528;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; Go &#x5185;&#x7F6E;&#x7684;&#x6027;&#x80FD;&#x5206;&#x6790;&#x5DE5;&#x5177; pprof &#x7AA5;&#x6D4B;&#x8FDB;&#x7A0B;&#x7684;&#x5F53;&#x524D;&#x72B6;&#x51B5;&#x3002;</p>
+<p><a href="https://blog.golang.org/profiling-go-programs" title="Profiling Go Programs" target="_blank">Profiling Go Programs</a> &#x5F88;&#x597D;&#x5730;&#x6F14;&#x793A;&#x4E86;&#x7528; pprof &#x627E;&#x5230;&#x6027;&#x80FD;&#x74F6;&#x9888;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x8FD9;&#x91CC;&#x53EA;&#x6F14;&#x793A;&#x7B80;&#x5355;&#x7528;&#x6CD5;&#x3002;</p>
+<h2 id="&#x542F;&#x7528;&#x5B9E;&#x65F6;&#x7684;-pprof">&#x542F;&#x7528;&#x5B9E;&#x65F6;&#x7684; pprof</h2>
+<p>&#x542F;&#x7528;&#x5B9E;&#x65F6;&#x7684; pprof &#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5F15;&#x5165; &quot;net/http/pprof&quot;&#xFF0C;&#x7136;&#x540E;&#x542F;&#x52A8; http server &#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;log&quot;</span>
+    <span class="hljs-string">&quot;net/http&quot;</span>
+    _ <span class="hljs-string">&quot;net/http/pprof&quot;</span>
+    <span class="hljs-string">&quot;time&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> Write(num <span class="hljs-keyword">int</span>, c <span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>) {
+    <span class="hljs-keyword">for</span> {
+        c &lt;- num
+    }
+}
+
+<span class="hljs-keyword">func</span> main() {
+    <span class="hljs-keyword">go</span> <span class="hljs-keyword">func</span>() {
+        log.Println(http.ListenAndServe(<span class="hljs-string">&quot;localhost:6060&quot;</span>, <span class="hljs-literal">nil</span>))
+    }()
+
+    c := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>)
+    <span class="hljs-keyword">go</span> Write(<span class="hljs-number">10</span>, c)
+    <span class="hljs-keyword">go</span> Write(<span class="hljs-number">20</span>, c)
+
+    <span class="hljs-keyword">for</span> {
+        <span class="hljs-keyword">select</span> {
+        <span class="hljs-keyword">case</span> v := &lt;-c:
+            fmt.Printf(<span class="hljs-string">&quot;receive %d\n&quot;</span>, v)
+            time.Sleep(<span class="hljs-number">2</span> * time.Second)
+        }
+    }
+}
+</code></pre>
+<p>&#x76F4;&#x63A5;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00; <a href="http://127.0.0.1:6060/debug/pprof/" target="_blank">http://127.0.0.1:6060/debug/pprof/</a> &#x67E5;&#x770B;&#xFF1A;</p>
+<p><img src="../img/pprof.png" alt="&#x6D4F;&#x89C8;&#x5668;&#x67E5;&#x770B; pprof"></p>
+<p>&#x5176;&#x4E2D; debug/pprof/profile &#x662F; cpu &#x91C7;&#x6837;&#x6587;&#x4EF6;&#xFF0C;&#x8BBF;&#x95EE;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x7528; seonds &#x53C2;&#x6570;&#x63A7;&#x5236;&#x91C7;&#x96C6;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#x9ED8;&#x8BA4;&#x662F; 30 &#x79D2;</span>
+http://localhost:6060/debug/pprof/profile?seconds=30
+</code></pre>
+<p>360 &#x7684; Zhou Yang &#x5728;&#x5206;&#x4EAB; <a href="https://blog.golang.org/qihoo" title="Qihoo 360 and Go" target="_blank">Qihoo 360 and Go</a> &#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x4ED6;&#x4EEC;&#x57FA;&#x4E8E; pprof &#x505A;&#x4E86;&#x4E00;&#x5957; web &#x5C55;&#x793A;&#xFF1A;</p>
+<p><img src="../img/pprof2.png" alt="360 pprof&#x5C55;&#x793A;"></p>
+<p>&#x5BF9;&#x4E8E;&#x975E;&#x5E38;&#x9A7B;&#x8FD0;&#x884C;&#x7684; Go &#x8BED;&#x8A00;&#x7A0B;&#x5E8F;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x7A0B;&#x5E8F;&#x6DFB;&#x52A0;&#x4EE3;&#x7801;&#xFF0C;&#x7ECF; pprof &#x4FE1;&#x606F;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> cpuprofile = flag.String(<span class="hljs-string">&quot;cpuprofile&quot;</span>, <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;write cpu profile to file&quot;</span>)
+
+<span class="hljs-keyword">func</span> main() {
+    flag.Parse()
+    <span class="hljs-keyword">if</span> *cpuprofile != <span class="hljs-string">&quot;&quot;</span> {
+        f, err := os.Create(*cpuprofile)
+        <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+            log.Fatal(err)
+        }
+        pprof.StartCPUProfile(f)
+        <span class="hljs-keyword">defer</span> pprof.StopCPUProfile()
+    }
+    ...
+</code></pre>
+<h2 id="&#x5982;&#x4F55;&#x4F7F;&#x7528;-pprof">&#x5982;&#x4F55;&#x4F7F;&#x7528; pprof</h2>
+<p>&#x5982;&#x4F55;&#x4F7F;&#x7528; pprof &#x624D;&#x662F;&#x91CD;&#x70B9;&#xFF0C;&#x9664;&#x4E86; profile &#x548C; trace &#xFF0C;&#x5176;&#x5B83; url &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x67E5;&#x770B;&#xFF0C;profile &#x548C; trace &#x662F;&#x4E24;&#x4E2A;&#x91C7;&#x6837;&#x6587;&#x4EF6;&#x8981;&#x5206;&#x522B;&#x7528; pprof &#x548C; trace &#x5DE5;&#x5177;&#x67E5;&#x770B;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x79BB;&#x7EBF;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-sh">$ go tool pprof havlak1 havlak1.prof
+Welcome to pprof!  For <span class="hljs-built_in">help</span>, <span class="hljs-built_in">type</span> <span class="hljs-string">&apos;help&apos;</span>.
+(pprof)
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x5728;&#x7EBF;&#x5730;&#x5740;&#xFF0C;&#x4EE5; cpu &#x91C7;&#x6837;&#x4E3A;&#x4F8B;&#xFF08;&#x4E3A;&#x4E86;&#x91C7;&#x96C6;&#x5230;&#x6570;&#x636E;&#x628A;&#x4E0A;&#x9762;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684; sleep &#x65F6;&#x95F4;&#x8C03;&#x6574;&#x4E3A; 0&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-sh">$ go tool pprof http://localhost:6060/debug/pprof/profile   <span class="hljs-comment"># 30-second CPU profile</span>
+</code></pre>
+<p><img src="../img/cpuprofile.png" alt="pprof &#x67E5;&#x770B; cpu &#x91C7;&#x6837;"></p>
+<p>web &#x547D;&#x4EE4;&#x7ED8;&#x5236;&#x91C7;&#x6837;&#x56FE;&#x5E76;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00; &#xFF0C;&#x5982;&#x679C;&#x9047;&#x5230;&#x4E0B;&#x9762;&#x9519;&#x8BEF;&#xFF0C;&#x5B89;&#x88C5; graphviz&#xFF1A;</p>
+<pre><code class="lang-sh">(pprof) web
+failed to execute dot. Is Graphviz installed? Error: <span class="hljs-built_in">exec</span>: <span class="hljs-string">&quot;dot&quot;</span>: executable file not found <span class="hljs-keyword">in</span> <span class="hljs-variable">$PATH</span>
+</code></pre>
+<p>macOS &#x4E0A;&#x5B89;&#x88C5;&#xFF1A; </p>
+<pre><code class="lang-sh">$ brew install graphviz
+</code></pre>
+<p>&#x7ED8;&#x5236;&#x7684;&#x91C7;&#x6837;&#x56FE;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="../img/pprofx.png" alt="pprof &#x91C7;&#x6837;&#x56FE;"></p>
+<p>&#x53F3;&#x952E;&#x5728;&#x5355;&#x72EC;&#x7A97;&#x53E3;&#x6253;&#x5F00;&#x539F;&#x59CB;&#x56FE;&#x7247;&#xFF0C;svg &#x683C;&#x5F0F;&#xFF0C;&#x53EF;&#x7F29;&#x5C0F;&#x653E;&#x5927;&#xFF1A;<a href="../img/pprof001.svg">&#x539F;&#x59CB;&#x56FE;&#x7247;</a></p>
+<h2 id="trace-&#x67E5;&#x770B;">trace &#x67E5;&#x770B;</h2>
+<p>trace &#x8981;&#x5C06;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x4EE5;&#x540E;&#xFF0C;&#x7528; go tool trace &#x67E5;&#x770B;&#xFF1A;</p>
+<pre><code class="lang-sh">$ wget http://localhost:6060/debug/pprof/trace
+$ go tool trace trace
+</code></pre>
+<p>&#x6253;&#x5F00;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="../img/trace.png" alt="go tool trace"></p>
+<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
+<ol>
+<li><a href="https://www.lijiaocn.com" title="&#x674E;&#x4F76;&#x6FB3;&#x7684;&#x535A;&#x5BA2;" target="_blank">&#x674E;&#x4F76;&#x6FB3;&#x7684;&#x535A;&#x5BA2;</a></li>
+</ol>
+<script type="text/javascript">var className='atoc';</script>
+                                
+
+<div>
+<!-- 匹配内容 -->
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="6443696990"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<!-- Page_Bottom -->
+<!--div>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="7945072540"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div-->
+
+<div style="display:flex;flex-direction:row;justify-content:center">
+<br>
+<a href="https://study.163.com/provider/400000000376006/course.htm?share=2&shareId=400000000376006"><img height="250px" alt="微信公众号:我的网课" src="https://www.lijiaocn.com/img/class.jpg"/></a>
+<a href="https://weibo.com/zuiniur/profile"><img height="250px" alt="微信公众号:我的资产" src="https://www.lijiaocn.com/money/img/self.jpg"/></a>
+</div>
+
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="debug.html" class="navigation navigation-prev " aria-label="Previous page: 程序运行时跟踪调试">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="unmarshal.html" class="navigation navigation-next " aria-label="Next page: 大量反序列化用指针">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"程序运行时状态查看","level":"2.1.13.7","depth":3,"next":{"title":"大量反序列化用指针","level":"2.1.13.8","depth":3,"path":"go/article/unmarshal.md","ref":"./go/article/unmarshal.md","articles":[]},"previous":{"title":"程序运行时跟踪调试","level":"2.1.13.6","depth":3,"path":"go/article/debug.md","ref":"./go/article/debug.md","articles":[]},"dir":"ltr"},"config":{"plugins":[{"name":"theme-lijiaocn","version":"git+https://github.com/lijiaocn/theme-lijiaocn.git"},"atoc","toggle-chapters","rss"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":[],"title":"编程实用速查手册","description":"编程实用速查手册，Go语言、C语言、Python3、Django以及Lua等在工作中遇到的编程语言的手册","author":"李佶澳","site_url":"https://www.lijiaocn.com/prog/","feed_url":"https://www.lijiaocn.com/prog/feed.xml"},"highlight":{},"theme-lijiaocn":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"lijiaocn@foxmail.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"language":"zh-hans","gitbook":">=3.0.0"},"file":{"path":"go/article/pprof.md","mtime":"2022-05-13T08:42:15.887Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-13T09:40:41.968Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
