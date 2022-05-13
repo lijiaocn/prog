@@ -1,7 +1,10 @@
-# 目录
-* [测试框架](./testframe/index.md)
-  * [Go 测试框架 GinkGo](./testframe/ginkgo.md)
-* [Go 语言编程手册](./go/index.md )
+# Summary
+
+* [笔记说明](./README.md)
+
+## 编程语言
+
+* [Go 语言](./go/index.md )
   * [安装和文档](./go/chapter01/01-install.md )
   * [基础语法](./go/chapter02/00-about.md)
     * [词法](./go/chapter02/02-lexical-elements.md )
@@ -31,15 +34,7 @@
     * [程序运行时跟踪调试](./go/article/debug.md)
     * [程序运行时状态查看](./go/article/pprof.md)
     * [大量反序列化用指针](./go/article/unmarshal.md)
-  * [Gin 的原理与学习资料](./go/gin/index.md)
-    * [快速开始](./go/gin/quickstart.md)
-    * [路由管理](./go/gin/router.md)
-    * [参数读取](./go/gin/param.md)
-    * [响应数据](./go/gin/response.md)
-    * 日志管理
-    * 配置读取
-    * 静态文件
-* [Lua 语言编程手册](./lua/index.md)
+* [Lua 语言](./lua/index.md)
   * [基本数据类型](./lua/basic_type.md)
   * [关键字与操作符](./lua/keywords_operator.md)
   * [条件语句与循环](./lua/control_flow.md)
@@ -58,10 +53,10 @@
     * [尽量少创建变量](lua/03-lua-performance-less-var.md)
     * [缓存运算结果](lua/03-lua-performance-cache-result.md)
     * [主动控制垃圾回收](lua/03-lua-performance-garbage-collect.md)
-* [Shell 脚本编写手册](./shell/index.md)
+* [Shell 脚本](./shell/index.md)
    * [变量与数据结构](./shell/struct.md)
    * [内置命令用法](./shell/cmd.md)
-* [Python3 编程手册](./python3/index.md)
+* [Python3](./python3/index.md)
     * [python2 代码转换成 python3](./python3/2to3.md)
     * [运行环境与依赖管理](./python3/project.md)
     * [代码文件](./python3/syntax.md)
@@ -83,7 +78,7 @@
     * [错误和异常](./python3/error.md)
     * [类](./python3/class.md)
     * [生成器](./python3/generator.md)
-* [C 语言编程手册](./c/index.md)
+* [C 语言](./c/index.md)
   * [字符串处理](./c/strings.md)
   * [时间操作](./c/time.md)
   * [动态链接库](./c/dynamiclib.md)
@@ -98,6 +93,19 @@
   * [系统配置](./c/sysconfig.md)
   * [Namespace操作](./c/namespace.md)
   * [硬件信息读取](./c/hardware.md)
+
+## 框架&组件
+
+* [测试框架](./testframe/index.md)
+  * [Go 测试框架 GinkGo](./testframe/ginkgo.md)
+* [Gin 的原理与学习资料](./go/gin/index.md)
+  * [快速开始](./go/gin/quickstart.md)
+  * [路由管理](./go/gin/router.md)
+  * [参数读取](./go/gin/param.md)
+  * [响应数据](./go/gin/response.md)
+  * 日志管理
+  * 配置读取
+  * 静态文件
 * [Django 开发手册](./django/index.md )
    * [环境安装](./django/install.md )
    * [项目的创建](./django/first-project.md )
@@ -121,13 +129,16 @@
      * [在Apache中部署Django应用](./django/deploy_apache.md)
    * [引入redis缓存](./django/redis_cache.md )
    * [导入django环境](./django/import-django.md )
+* [Android](./android/start.md)
+* [Vue](./vue/start.md)
+
+## 应用开发
+
 * [Python3 爬虫开发](./py3spider/index.md)
    * [Python3 请求库](./py3spider/request.md)
    * [Python3 解析库](./py3spider/parse.md)
    * [移动 APP 工具](./py3spider/mobile.md)
    * [Python3 爬虫框架](./py3spider/framework.md)
-* [Android](./android/start.md)
-* [Vue](./vue/start.md)
 * [微信公众号 API 使用](./wechat/index.md)
    * [设置方法](./wechat/shezhi.md)
    * [消息格式](./wechat/message.md)
