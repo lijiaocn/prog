@@ -719,7 +719,7 @@ map的长度不受创建时指定的length的限制，可以无限增加成员�
 	chan<- float64  // can only be used to send float64s
 	<-chan int      // can only be used to receive ints
 
-<-是靠左临近的，通道类型本身也开始被传递：
+<- 是靠左临近的，通道类型本身也开始被传递：
 
 	chan<- chan int    // same as chan<- (chan int)
 	chan<- <-chan int  // same as chan<- (<-chan int)

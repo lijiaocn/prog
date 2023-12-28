@@ -103,9 +103,6 @@
   * [路由管理](./go/gin/router.md)
   * [参数读取](./go/gin/param.md)
   * [响应数据](./go/gin/response.md)
-  * 日志管理
-  * 配置读取
-  * 静态文件
 * [Django 开发手册](./django/index.md )
    * [环境安装](./django/install.md )
    * [项目的创建](./django/first-project.md )
